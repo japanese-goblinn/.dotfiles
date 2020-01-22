@@ -133,3 +133,24 @@ md() {
     fi
 }
 
+
+: '
+- Description:
+    This function for local quick updates.
+'
+ru() {
+    git add .
+    git commit -m "Update"
+}
+
+
+: '
+- Description:
+    This function for remote quick updates.
+'
+rur() {
+    ru 
+    git push
+}
+
+
