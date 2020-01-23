@@ -139,8 +139,12 @@ md() {
     This function for local quick updates.
 '
 ru() {
-    git add .
-    git commit -m "Update"
+    if [[ -d .git ]]; then
+        git add .
+        git commit -m "Update"
+    else
+        echo -e "\e[31mNOT A GIT REPOSITORY\e[0m"
+    fi
 }
 
 
@@ -149,8 +153,13 @@ ru() {
     This function for remote quick updates.
 '
 rur() {
-    ru 
-    git push
+    if [[ -d .git ]]; then
+        git add .
+        git commit -m "Update"
+        git push
+    else
+        echo -e "\e[31mNOT A GIT REPOSITORY\e[0m"
+    fi
 }
 
 
