@@ -85,10 +85,17 @@ ghi() {}
 : '
 - Description:
     This function for local quick updates.
+
+- Usage: 
+    qu <files-to-git-add>
 '
 qu() {
     if [[ -d .git ]]; then
-        git add .
+        if [[ -n "$@" ]]; then
+            git add $@
+        else 
+            git add .
+        fi
         git commit -m "Update"
     else
         echo -e "\e[31mNOT A GIT REPOSITORY\e[0m"
@@ -99,10 +106,17 @@ qu() {
 : '
 - Description:
     This function for remote quick updates.
+
+- Usage: 
+    rqu <files-to-git-add>
 '
 rqu() {
     if [[ -d .git ]]; then
-        git add .
+        if [[ -n "$@" ]]; then
+            git add $@
+        else 
+            git add .
+        fi
         git commit -m "Update"
         git push
     else
