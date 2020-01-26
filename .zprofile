@@ -96,7 +96,7 @@ qu() {
         else 
             git add .
         fi
-        git commit -m "Update"
+        git commit -m "Update ⬆️"
     else
         echo -e "\e[31mNOT A GIT REPOSITORY\e[0m"
     fi
@@ -117,7 +117,7 @@ rqu() {
         else 
             git add .
         fi
-        git commit -m "Update"
+        git commit -m "Update ⬆️"
         git push
     else
         echo -e "\e[31mNOT A GIT REPOSITORY\e[0m"
