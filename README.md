@@ -1,10 +1,14 @@
 # My Dotfiles 
 
-## Overview 
-
 Collection of my `aliases` and other useful stuff. 
 
-## ⚠️ Important
+## Examples 
+
+
+
+## Install
+
+⚠️ **Important**
 
 1. You should use `zsh`
 2. Clone this repo into `~/.dotfiles`

@@ -18,32 +18,6 @@ fi
 
 : '
 - Description:
-    This function sets remote for git repository in current directory with currently opened Safari tab.
-'
-ghri() {
-    if [[ -d .git ]]; then
-        url=$(osascript -e 'tell application "Safari" to return URL of front document')
-        if git-remote-url-reachable "$url"; then
-            git add .
-            git commit -m "Init"
-            git remote add origin $url
-            git push -u origin master
-        else
-            echo -e "\e[31mBAD URL\e[0m"
-        fi
-    else 
-        echo -e "\e[31mNOT A GIT REPOSITORY\e[0m"
-    fi
-}
-
-## Returns errlvl 0 if $1 is a reachable git remote url 
-git-remote-url-reachable() {
-    git ls-remote "$1" CHECK_GIT_REMOTE_URL_REACHABILITY >/dev/null 2>&1
-}
-
-
-: '
-- Description:
     This function sets up new repository with everything you need. 
 
 - Usage: 
@@ -59,17 +33,86 @@ gi() {
         touch .gitignore
         echo -e ".DS_Store" > .gitignore
     else
-        echo -e "\e[31m!ERROR!\e[0m Directory name should be passed"
+        echo -e "\e[31mDIRECTORY NAME SHOULD BE PASSED\e[0m"
     fi
 }
 
 
+: '
+- Description:
+    This function creates GitHub repository from existing git repo and sets up origin.
+'
+rgi() {
+    if [[ -d .git ]]; then
+        hub create
+        git push -u origin HEAD
+        open https://github.$(git config remote.origin.url | cut -f2 -d. | tr ':' /)
+    else 
+        echo -e "\e[31mNOT A GIT REPOSITORY\e[0m"
+    fi
+}
+
+
+: '
+- Description:
+    This function sets up git repository, then make GitHub repo and sets up origin.
+
+- Usage: 
+    fgi <directory-name> <optional-commit-message>
+
+- Required:
+    https://hub.github.com
+'
+fgi() {
+    if [[ -n "$1" ]]; then
+        gi $1
+        git add .
+        if [[ -n "$2" ]]; then
+            git commit -m "$2"
+        else 
+            git commit -m "Init ✨"
+        fi
+        rgi
+    else 
+        echo -e "\e[31mDIRECTORY NAME SHOULD BE PASSED\e[0m"
+    fi
+}
+
 # TODO
 : '
 - Description:
-    This function creates directoy and git repository in it from currently created repo on GitHub. 
+    This function creates directory and git repository from currently opened GitHub repo in Safari . 
 '
 ghi() {}
+
+
+: '
+- Description:
+    This function for local quick updates.
+'
+qu() {
+    if [[ -d .git ]]; then
+        git add .
+        git commit -m "Update"
+    else
+        echo -e "\e[31mNOT A GIT REPOSITORY\e[0m"
+    fi
+}
+
+
+: '
+- Description:
+    This function for remote quick updates.
+'
+rqu() {
+    if [[ -d .git ]]; then
+        git add .
+        git commit -m "Update"
+        git push
+    else
+        echo -e "\e[31mNOT A GIT REPOSITORY\e[0m"
+    fi
+}
 
 
 : '
@@ -108,7 +151,7 @@ awd() { osascript -e "tell application \"Alfred 4\" to browse \"$(pwd)/\"" }
 - Usage:
     crnf <file.ext>
 '
-crnf() {
+cf() {
     if [[ -n "$1" ]]; then
         touch $1
         subl $1
@@ -132,34 +175,3 @@ md() {
         echo -e "\e[31m!ERROR!\e[0m File name should not be empty"
     fi
 }
-
-
-: '
-- Description:
-    This function for local quick updates.
-'
-ru() {
-    if [[ -d .git ]]; then
-        git add .
-        git commit -m "Update"
-    else
-        echo -e "\e[31mNOT A GIT REPOSITORY\e[0m"
-    fi
-}
-
-
-: '
-- Description:
-    This function for remote quick updates.
-'
-rur() {
-    if [[ -d .git ]]; then
-        git add .
-        git commit -m "Update"
-        git push
-    else
-        echo -e "\e[31mNOT A GIT REPOSITORY\e[0m"
-    fi
-}
-
-
