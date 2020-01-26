@@ -58,7 +58,7 @@ rgi() {
     This function sets up git repository, then make GitHub repo and sets up origin.
 
 - Usage: 
-    fgi <directory-name> <optional-commit-message>
+    fgi <directory-name>
 
 - Required:
     https://hub.github.com
@@ -67,11 +67,7 @@ fgi() {
     if [[ -n "$1" ]]; then
         gi $1
         git add .
-        if [[ -n "$2" ]]; then
-            git commit -m "$2"
-        else 
-            git commit -m "Init ✨"
-        fi
+        git commit -m "Init ✨"
         rgi
     else 
         echo -e "\e[31mDIRECTORY NAME SHOULD BE PASSED\e[0m"
