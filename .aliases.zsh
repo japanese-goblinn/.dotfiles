@@ -12,6 +12,7 @@ alias c='clear'
 alias o='open'
 alias f='open .'
 alias to='touch'
+alias e='subl'
 
 alias .='cd -'
 alias ..='cd ..'

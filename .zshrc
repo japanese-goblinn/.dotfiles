@@ -1,3 +1,9 @@
+autoload -U promptinit; promptinit
+
+zstyle :prompt:pure:path color white
+
+prompt pure
+
 source ~/.dotfiles/.zprofile;
 source ~/.dotfiles/.aliases.zsh
 
