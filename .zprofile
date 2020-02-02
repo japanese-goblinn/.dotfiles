@@ -1,10 +1,3 @@
-# Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
-
-# Setting PATH for Python 3.7
-# The original version is saved in .bash_profile.pysave
-export PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
-
 # Add color for directories 
 if ls --color > /dev/null 2>&1; then # GNU `ls`
     colorflag="--color"
