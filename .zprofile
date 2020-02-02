@@ -74,12 +74,34 @@ fgi() {
     fi
 }
 
-# TODO
+
+## Returns errlvl 0 if $1 is a reachable git remote url 
+git-remote-url-reachable() {
+    git ls-remote "$1" CHECK_GIT_REMOTE_URL_REACHABILITY >/dev/null 2>&1
+}
+
+
 : '
 - Description:
     This function creates directory and git repository from currently opened GitHub repo in Safari . 
 '
-ghi() {}
+ghi() {
+    url=$(osascript -e 'tell application "Safari" to return URL of front document')
+    if git-remote-url-reachable "$url"; then
+        dir_name=${url##*/}
+        cd ~/Downloads
+        mkdir $dir_name
+        cd $dir_name
+        git init
+        echo "$dir_name" >> README.md
+        git add README.md
+        git commit -m "Init ✨"
+        git remote add origin $url
+        git push -u origin master
+    else
+        echo -e "\e[31mBAD URL\e[0m"
+    fi
+}
 
 
 : '
@@ -185,3 +207,5 @@ md() {
         echo -e "\e[31m!ERROR!\e[0m File name should not be empty"
     fi
 }
+
+
