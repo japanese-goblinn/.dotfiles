@@ -93,7 +93,7 @@ ghi() {
         mkdir $dir_name
         cd $dir_name
         git init
-        echo "$dir_name" >> README.md
+        echo "# $dir_name" >> README.md
         git add README.md
         git commit -m "Init ✨"
         git remote add origin $url
