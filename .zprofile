@@ -1,3 +1,7 @@
+# to use pip3 as default pip
+export PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
+
+
 # Add color for directories 
 if ls --color > /dev/null 2>&1; then # GNU `ls`
     colorflag="--color"
@@ -6,6 +10,7 @@ else # macOS `ls`
     colorflag="-G"
     export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
 fi
+
 
 # Some useful functions
 
