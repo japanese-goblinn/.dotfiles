@@ -14,6 +14,7 @@ This repository is my current `dotfiles` setup.
     - `.aliases`
     - `.zprofile`
 - [Install](#install)
+- [Thanks](#thanks)
 
 
 ## Examples 
