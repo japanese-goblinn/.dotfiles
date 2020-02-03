@@ -11,8 +11,8 @@ This repository is my current `dotfiles` setup.
 ## ToC
 
 - [Examples](#examples)
-    - [`.aliases`](#.aliases)
-    - `[.zprofile`](#.zprofile)
+    - [`.aliases`](#`.aliases`)
+    - [`.zprofile`](#`.zprofile`)
 - [Install](#install)
 
 <!-- /MarkdownTOC -->
