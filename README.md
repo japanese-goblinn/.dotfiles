@@ -6,21 +6,17 @@ This repository is my current `dotfiles` setup.
 * `.zprofile` - useful fuctions and some shell configurations;
 * `.zshrc` - loading of `.aliases`, `.zprofile` and all dependencies.
 
-<!-- MarkdownTOC -->
-
 ## ToC
 
 - [Examples](#examples)
-    - [`.aliases`](#`.aliases`)
-    - [`.zprofile`](#`.zprofile`)
+    - `.aliases`
+    - `.zprofile`
 - [Install](#install)
-
-<!-- /MarkdownTOC -->
 
 
 ## Examples 
 
-Some examples. To s
+Some examples. To learn more, please, look into files itself 😇
 
 ### `.aliases`
 
