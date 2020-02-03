@@ -73,7 +73,7 @@ fgi() {
 }
 
 
-## Returns errlvl 0 if $1 is a reachable git remote url 
+# Returns errlvl 0 if $1 is a reachable git remote url 
 is_git_remote_url_reachable() {
     git ls-remote "$1" CHECK_GIT_REMOTE_URL_REACHABILITY >/dev/null 2>&1
 }

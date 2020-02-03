@@ -67,3 +67,7 @@ t() {
 2. Clone this repo into `~/.dotfiles`
 3. Create link to `.zshrc` in `~/` with next command `ln -s ~/.dotfiles/.zshrc ~/.zshrc` 
 4. ✅
+
+## Thanks
+
+[Special thanks to @nikitavoloboev for inspiration](https://github.com/nikitavoloboev)
