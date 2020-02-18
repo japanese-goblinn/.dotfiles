@@ -1,3 +1,7 @@
+# vim errors fix
+export LC_ALL=en_US.UTF-8
+
+
 # to use pip3 as default pip
 export PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
 
