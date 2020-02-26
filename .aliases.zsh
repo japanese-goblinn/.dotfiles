@@ -10,7 +10,7 @@ alias jp='jupyter notebook'
 alias ls='command ls ${colorflag} -tU' # ls by creation date (macOS only)
 alias c='clear'
 alias o='open'
-alias f='open .'
+alias of='open .'
 alias to='touch'
 alias e='subl'
 
