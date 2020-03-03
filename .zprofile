@@ -31,7 +31,7 @@ gi() {
         cd $1
         git init
         touch README.md
-        echo "# $1 project" > README.md
+        echo "# $1" > README.md
         touch .gitignore
         echo -e ".DS_Store" > .gitignore
     else
