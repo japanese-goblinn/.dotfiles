@@ -4,7 +4,6 @@ alias p='python3'
 alias p2='python'
 alias pip='pip3'
 alias pip2='pip'
-alias venv='python3 -m venv'
 alias deac='deactivate'
 alias jp='jupyter notebook'
 

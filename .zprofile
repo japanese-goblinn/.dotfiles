@@ -205,4 +205,23 @@ md() {
     fi
 }
 
+: '
+- Description:
+    Create new python virtual environment and activate it
+
+- Usage: 
+   venv <optional-venv-directory-name>
+'
+venv() {
+    if [[ -n "$1" ]]; then
+        python3 -m venv $1
+        source $1/bin/activate
+    else 
+        python3 -m venv venv
+        source venv/bin/activate
+    fi
+}
+
+
+
 
