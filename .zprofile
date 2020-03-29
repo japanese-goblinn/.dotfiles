@@ -162,6 +162,17 @@ t() {
 
 : '
 - Description:
+    Move to trash current folder.
+'
+tc() {
+    folderName=$(pwd)
+    cd ../
+    t $folderName
+}
+
+
+: '
+- Description:
     This function copies current directory path in clipboard.
 '
 cpwd() { pwd | pbcopy }
