@@ -178,7 +178,7 @@ awd() { osascript -e "tell application \"Alfred 4\" to browse \"$(pwd)/\"" }
 - Description:
     This function creates new file and opens it in Sublime.
 - Usage:
-    crnf <file.ext>
+    cf <file1.ext> <file2.ext>...
 '
 cf() {
     if [[ -n "$1" ]]; then
@@ -194,7 +194,7 @@ cf() {
 - Description:
     This function creates directory and then cd into it.
 - Usage:
-    crnf <file.ext>
+    md <directory-name>
 '
 md() {
     if [[ -n "$1" ]]; then
