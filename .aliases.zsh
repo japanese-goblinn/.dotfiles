@@ -8,7 +8,7 @@ alias deac='deactivate'
 alias jp='jupyter notebook'
 
 # General
-alias ls='command ls ${colorflag} -tU' # ls by creation date (macOS only)
+alias ls='ls -tU' # ls by creation date (macOS only)
 alias c='clear'
 alias o='open'
 alias of='open .'
