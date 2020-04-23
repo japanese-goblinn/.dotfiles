@@ -10,6 +10,7 @@ prompt pure
 
 source ~/.dotfiles/.zprofile
 source ~/.dotfiles/.aliases.zsh
+source ~/.dotfiles/.functions.zsh
 
 source ~/.dotfiles/dependencies/zsh-autosuggestions/zsh-autosuggestions.zsh
 
