@@ -66,7 +66,7 @@ t() {
 
 1. You should use `zsh`
 2. Clone this repo into `~/.dotfiles`
-3. Create link to `.zshrc` in `~/` with next command `ln -s ~/.dotfiles/.zshrc ~/.zshrc` 
+3. Create link to `.zshrc` in `~/` with next command `ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc` 
 4. ✅
 
 ## Thanks
