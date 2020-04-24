@@ -2,17 +2,21 @@
 
 # My Dotfiles 
 
-This repository is my current `dotfiles` setup. 
+This repository is my current `dotfiles` setup and all related stuff. 
 
-* `.aliases` - some useful shortcuts to do common stuff faster;
-* `.zprofile` - useful fuctions and some shell configurations;
-* `.zshrc` - loading of `.aliases`, `.zprofile` and all dependencies.
+* `zsh/` 
+  * `.aliases` - some useful shortcuts to do common stuff faster
+  * `.zprofile` - some shell configurations
+  * `.functions` - useful shell functions
+  * `.zshrc` - loading of `.aliases`, `.zprofile`, `.functions` and all dependencies
+* `dependencies/` - all zsh dependencies (like autocompletions or syntax highlighting)
+* `customization/` - everything related to shell customization
 
 ## ToC
 
 - [Examples](#examples)
     - `.aliases`
-    - `.zprofile`
+    - `.functions`
 - [Install](#install)
 - [Thanks](#thanks)
 
@@ -28,7 +32,7 @@ Some examples. To learn more, please, look into files itself 😇
 alias gho='open https://github.$(git config remote.origin.url | cut -f2 -d. | tr ':' /)'
 ```
 
-### `.zprofile`
+### `.functions`
 
 ```shell
 # Creates directory and git repository from currently opened GitHub repo in Safari	
