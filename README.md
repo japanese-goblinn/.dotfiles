@@ -25,14 +25,14 @@ This repository is my current `dotfiles` setup and all related stuff.
 
 Some examples. To learn more, please, look into files itself 😇
 
-### [`.aliases`](zsh/.functions.zsh)
+### [`.aliases`](zsh/.aliases.zsh)
 
 ```bash
 # Open GitHub repo for current direcroty
 alias gho='open https://github.$(git config remote.origin.url | cut -f2 -d. | tr ':' /)'
 ```
 
-### `.functions`
+### [`.functions`](zsh/.functions.zsh)
 
 ```shell
 # Creates directory and git repository from currently opened GitHub repo in Safari	
