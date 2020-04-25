@@ -25,7 +25,7 @@ This repository is my current `dotfiles` setup and all related stuff.
 
 Some examples. To learn more, please, look into files itself 😇
 
-### `.aliases`
+### [`.aliases`](zsh/.functions.zsh)
 
 ```bash
 # Open GitHub repo for current direcroty
