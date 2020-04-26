@@ -47,7 +47,7 @@ fgi() {
     if [[ -n "$1" ]]; then
         gi $1
         git add .
-        git commit -m "Init ✨"
+        git commit -m "init ✨"
         rgi
     else 
         echo -e "\e[31mDIRECTORY NAME SHOULD BE PASSED\e[0m"
@@ -73,7 +73,7 @@ ghi() {
         git init
         echo "# $dir_name" >> README.md
         git add README.md
-        git commit -m "Init ✨"
+        git commit -m "init ✨"
         git remote add origin $url
         git push -u origin master
     else
