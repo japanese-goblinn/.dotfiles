@@ -1,4 +1,4 @@
-# My Dotfiles 
+# Dotfiles 
 
 ![Setup](./media/setup.png)
 
