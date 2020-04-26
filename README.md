@@ -1,6 +1,6 @@
-![Setup](./media/setup.png)
-
 # My Dotfiles 
+
+![Setup](./media/setup.png)
 
 This repository is my current `dotfiles` setup and all related stuff. 
 
