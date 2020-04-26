@@ -23,8 +23,8 @@ alias dw='cd ~/Downloads'
 alias dtf='cd ~/.dotfiles'
 alias sbs='cd ~/Library/ApplicationSupport/Sublime\ Text\ 3/Packages/User'
 
-alias edit='subl ~/.dotfiles/.aliases.zsh'
-alias nedit='nano ~/.dotfiles/.aliases.zsh'
+alias edit='subl ~/.dotfiles/zsh/.aliases.zsh'
+alias nedit='nano ~/.dotfiles/zsh/.aliases.zsh'
 alias reload='source ~/.zshrc'
 
 # Git
