@@ -46,7 +46,7 @@ ghi() {
         git init
         echo "# $dir_name" >> README.md
         git add README.md
-        git commit -m "Init ✨"
+        git commit -m "init ✨"
         git remote add origin $url
         git push -u origin master
     else

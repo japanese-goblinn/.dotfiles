@@ -154,7 +154,8 @@ tc() {
 cpwd() { pwd | pbcopy }
 
 : '
-- Description:    This function opens current directory in Alfread search.   
+- Description:    
+    This function opens current directory in Alfread search.   
 ' 
 awd() { osascript -e "tell application \"Alfred 4\" to browse \"$(pwd)/\"" }
 
