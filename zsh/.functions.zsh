@@ -7,8 +7,8 @@
 '
 gi() {
     if [[ -n "$1" ]]; then
-        mkdir $1
-        cd $1
+        mkdir "$1"
+        cd "$1" || return
         git init
         touch README.md
         echo "# $1" > README.md
@@ -151,13 +151,13 @@ tc() {
 - Description:
     This function copies current directory path in clipboard.
 '
-cpwd() { pwd | pbcopy }
+cpwd() { pwd | pbcopy; }
 
 : '
 - Description:    
     This function opens current directory in Alfread search.   
 ' 
-awd() { osascript -e "tell application \"Alfred 4\" to browse \"$(pwd)/\"" }
+awd() { osascript -e "tell application \"Alfred 4\" to browse \"$(pwd)/\""; }
 
 : '
 - Description:
