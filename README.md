@@ -10,7 +10,7 @@ This repository is my current `dotfiles` setup and some macOS essential tools.
   * `.functions` - useful shell functions
   * `.zshrc` - loading of `.aliases`, `.zprofile`, `.functions` and all dependencies
 * `dependencies/` - all zsh dependencies (like autocompletions or syntax highlighting)
-* `customization/` - everything related to shell customization
+* `customization/` - everything related to my my currently used terminal app [iTerm](https://www.iterm2.com)
 * `alfred/` - [amazing](https://www.alfredapp.com) replacement for `Spotlight` with a lot of customizations to increase your productivity
 
 ## ToC
