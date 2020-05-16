@@ -15,11 +15,20 @@ This repository is my current `dotfiles` setup and some macOS essential tools.
 
 ## ToC
 
+* [Install](#install)
 * [Examples](#examples)
   * `.aliases`
   * `.functions`
-* [Install](#install)
 * [Thanks](#thanks)
+
+## Install
+
+⚠️ **Important**
+
+1. You should use `zsh`
+2. Clone this repo into `~/.dotfiles`
+3. Create link to `.zshrc` in `~/` with next command `ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc`
+4. ✅
 
 ## Examples
 
@@ -34,7 +43,7 @@ alias gho='open https://github.$(git config remote.origin.url | cut -f2 -d. | tr
 
 ### [`.functions`](zsh/.functions.zsh)
 
-```shell
+```bash
 # Creates directory and git repository from currently opened GitHub repo in Safari
 ghi() {
     url=$(osascript -e 'tell application "Safari" to return URL of front document')
@@ -63,15 +72,6 @@ t() {
     fi
 }
 ```
-
-## Install
-
-⚠️ **Important**
-
-1. You should use `zsh`
-2. Clone this repo into `~/.dotfiles`
-3. Create link to `.zshrc` in `~/` with next command `ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc`
-4. ✅
 
 ## Thanks
 
