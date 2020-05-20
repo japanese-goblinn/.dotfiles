@@ -15,13 +15,18 @@ This repository is my current `dotfiles` setup and some macOS essential tools.
 
 ## ToC
 
-* [Install](#install)
-* [Examples](#examples)
-  * `.aliases`
-  * `.functions`
+* Dotfiles
+  * [Install](#install)
+  * [Examples](#examples)
+    * `.aliases`
+    * `.functions`
+* Alfred
+  * [Workflows](#workflows)
 * [Thanks](#thanks)
 
-## Install
+## About dotfiles
+
+### Install
 
 ⚠️ **Important**
 
@@ -30,18 +35,18 @@ This repository is my current `dotfiles` setup and some macOS essential tools.
 3. Create link to `.zshrc` in `~/` with next command `ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc`
 4. ✅
 
-## Examples
+### Examples
 
 Some examples. To learn more, please, look into files itself 😇
 
-### [`.aliases`](zsh/.aliases.zsh)
+#### [`.aliases`](zsh/.aliases.zsh)
 
 ```bash
 # Open GitHub repo for current direcroty
 alias gho='open https://github.$(git config remote.origin.url | cut -f2 -d. | tr ':' /)'
 ```
 
-### [`.functions`](zsh/.functions.zsh)
+#### [`.functions`](zsh/.functions.zsh)
 
 ```bash
 # Creates directory and git repository from currently opened GitHub repo in Safari
@@ -72,6 +77,34 @@ t() {
     fi
 }
 ```
+
+## Alfred
+
+### Workflows
+
+* Colors - quick convert from any color format
+
+  ![Colors](./media/alfred-colors-workflow.png)
+
+* Emoji search - quick search some emoji
+
+    ![Colors](./media/alfred-emoji-workflow.png)
+
+* Github - any github manipulation right from alfred search
+
+    ![Colors](./media/alfred-github-workflow.png)
+
+* Google suggest - seach google with suggestions
+
+    ![Colors](./media/alfred-google-workflow.png)
+
+* Search notes - workflow to search Apple Notes app
+
+    ![Colors](./media/alfred-notes-workflow.png)
+
+* Terminal finder - open current finder window in termial or vice versa
+
+    ![Colors](./media/alfred-tf-workflow.png)
 
 ## Thanks
 
