@@ -8,7 +8,7 @@
 gi() {
     if [[ -n "$1" ]]; then
         mkdir "$1"
-        cd "$1" || return
+        cd "$1" || exit
         git init
         touch README.md
         echo "# $1" > README.md
@@ -45,7 +45,7 @@ rgi() {
 '
 fgi() {
     if [[ -n "$1" ]]; then
-        gi $1
+        gi "$1"
         git add .
         git commit -m "init ✨"
         rgi
@@ -67,9 +67,9 @@ ghi() {
     url=$(osascript -e 'tell application "Safari" to return URL of front document')
     if is_git_remote_url_reachable "$url"; then
         dir_name=${url##*/}
-        cd ~/Downloads
-        mkdir $dir_name
-        cd $dir_name
+        cd ~/Downloads || exit
+        mkdir "$dir_name"
+        cd "$dir_name" || exit
         git init
         echo "# $dir_name" >> README.md
         git add README.md
