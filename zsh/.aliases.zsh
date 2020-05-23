@@ -39,6 +39,9 @@ alias gpl='git pull'
 alias gfe='git fetch'
 alias gdf='git diff'
 
+# Web
+alias chrome='open -a "Google Chrome"'
+
 # GitHub
 alias gho='open https://github.$(git config remote.origin.url | cut -f2 -d. | tr ':' /)'
 
