@@ -91,7 +91,7 @@ ghi() {
 qu() {
     if [[ -d .git ]]; then
         if [[ -n "$@" ]]; then
-            git add $@
+            git add "$@"
         else 
             git add .
         fi
@@ -111,7 +111,7 @@ qu() {
 rqu() {
     if [[ -d .git ]]; then
         if [[ -n "$@" ]]; then
-            git add $@
+            git add "$@"
         else 
             git add .
         fi
@@ -131,7 +131,7 @@ rqu() {
 '
 t() {
     if [[ -n "$1" ]]; then
-        mv $@ ~/.Trash
+        mv "$@" ~/.Trash
     else
         echo -e "\e[31m!ERROR!\e[0m At least one file/directory name should be passed"
     fi
@@ -144,7 +144,7 @@ t() {
 tc() {
     folderName=$(pwd)
     cd ../
-    t $folderName
+    t "$folderName"
 }
 
 : '
