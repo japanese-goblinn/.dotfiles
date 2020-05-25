@@ -74,7 +74,7 @@ ghi() {
         echo "# $dir_name" >> README.md
         git add README.md
         git commit -m "init ✨"
-        git remote add origin $url
+        git remote add origin "$url"
         git push -u origin master
     else
         echo -e "\e[31mBAD URL\e[0m"
