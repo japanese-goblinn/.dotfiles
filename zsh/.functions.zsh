@@ -167,8 +167,8 @@ awd() { osascript -e "tell application \"Alfred 4\" to browse \"$(pwd)/\""; }
 '
 cf() {
     if [[ -n "$1" ]]; then
-        touch $@
-        subl $@
+        touch "$@"
+        subl "$@"
     else
         echo -e "\e[31m!ERROR!\e[0m File name should not be empty"
     fi
