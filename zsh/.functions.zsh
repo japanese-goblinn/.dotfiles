@@ -182,7 +182,7 @@ cf() {
 '
 md() {
     if [[ -n "$1" ]]; then
-        mkdir $1
+        mkdir "$1"
         cd $1
     else
         echo -e "\e[31m!ERROR!\e[0m File name should not be empty"
