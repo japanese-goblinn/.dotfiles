@@ -198,7 +198,7 @@ md() {
 '
 venv() {
     if [[ -n "$1" ]]; then
-        python3 -m venv $1
+        python3 -m venv "$1"
         source $1/bin/activate
     else 
         python3 -m venv venv
