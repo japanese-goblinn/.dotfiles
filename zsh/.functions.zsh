@@ -1,3 +1,5 @@
+# shellcheck shell=bash
+
 : '
 - Description:
     This function sets up new repository with everything you need. 
@@ -199,7 +201,7 @@ md() {
 venv() {
     if [[ -n "$1" ]]; then
         python3 -m venv "$1"
-        source $1/bin/activate
+        source "$1"/bin/activate
     else 
         python3 -m venv venv
         source venv/bin/activate
