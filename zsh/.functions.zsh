@@ -1,4 +1,4 @@
-# shellcheck shell=bash
+#!/bin/bash
 
 : '
 - Description:
