@@ -38,6 +38,7 @@ alias gph='git push'
 alias gpl='git pull'
 alias gfe='git fetch'
 alias gdf='git diff'
+alias gcl='git clone'
 
 # Web
 alias chrome='open -a "Google Chrome"'
