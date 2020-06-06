@@ -25,7 +25,7 @@ alias пше='git'
 alias gb='git branch'
 
 alias gcm='git commit -m'
-alias gcmi='git commit -m "init ✨"'
+alias gcmi='git commit -m "init: ✨"'
 alias gcmr='git commit -m "doc: update README.md"'
 
 alias gch='git checkout'
