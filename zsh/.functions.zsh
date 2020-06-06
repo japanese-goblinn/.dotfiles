@@ -163,6 +163,12 @@ awd() { osascript -e "tell application \"Alfred 4\" to browse \"$(pwd)/\""; }
 
 : '
 - Description:
+    This function copies currently opened page in Safari URL into clipboard.
+'
+cpsf() { osascript -e 'tell application "Safari" to return URL of front document' | pbcopy; }
+
+: '
+- Description:
     This function creates new file and opens it in Sublime.
 - Usage:
     cf <file1.ext> <file2.ext>...
