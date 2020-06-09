@@ -112,10 +112,10 @@ qu() {
 '
 rqu() {
     if [[ -d .git ]]; then
-        if [[ -n "$@" ]]; then
-            git add "$@"
-        else 
+        if [ -z "$@" ]; then
             git add .
+        else 
+            git add "$@"
         fi
         git commit -m "Update ⬆️"
         git push
