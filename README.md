@@ -88,23 +88,23 @@ t() {
 
 * Emoji search - quick search some emoji
 
-    ![Colors](./media/alfred-emoji-workflow.png)
+  ![Colors](./media/alfred-emoji-workflow.png)
 
 * Github - any github manipulation right from alfred search
 
-    ![Colors](./media/alfred-github-workflow.png)
+  ![Colors](./media/alfred-github-workflow.png)
 
 * Google suggest - seach google with suggestions
 
-    ![Colors](./media/alfred-google-workflow.png)
+  ![Colors](./media/alfred-google-workflow.png)
 
 * Search notes - workflow to search Apple Notes app
 
-    ![Colors](./media/alfred-notes-workflow.png)
+  ![Colors](./media/alfred-notes-workflow.png)
 
 * Terminal finder - open current finder window in termial or vice versa
 
-    ![Colors](./media/alfred-tf-workflow.png)
+  ![Colors](./media/alfred-tf-workflow.png)
 
 ## Thanks
 
