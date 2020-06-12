@@ -20,7 +20,6 @@ alias reload='source ~/.zshrc'
 
 # Git
 alias g='git'
-alias пше='git'
 
 alias gb='git branch'
 
