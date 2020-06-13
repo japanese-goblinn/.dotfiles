@@ -98,10 +98,6 @@ t() {
 
   ![Colors](./media/alfred-google-workflow.png)
 
-* Search notes - workflow to search Apple Notes app
-
-  ![Colors](./media/alfred-notes-workflow.png)
-
 * Terminal finder - open current finder window in termial or vice versa
 
   ![Colors](./media/alfred-tf-workflow.png)
