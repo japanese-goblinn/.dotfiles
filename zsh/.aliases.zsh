@@ -22,6 +22,7 @@ alias g='git'
 
 alias gb='git branch'
 
+alias gc='git commit'
 alias gcm='git commit -m'
 alias gcmi='git commit -m "init: ✨"'
 alias gcmr='git commit -m "doc: update README.md"'
