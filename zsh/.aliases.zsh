@@ -4,7 +4,7 @@ alias c='clear'
 alias o='open'
 alias of='open .'
 alias to='touch'
-alias e='subl'
+alias e='micro'
 
 alias .='cd -'
 alias ..='cd ..'
@@ -14,7 +14,7 @@ alias dw='cd ~/Downloads'
 alias dtf='cd ~/.dotfiles'
 alias sbs='cd ~/Library/ApplicationSupport/Sublime\ Text\ 3/Packages/User'
 
-alias edit='subl ~/.dotfiles/zsh/.aliases.zsh'
+alias edit='micro ~/.dotfiles/zsh/.aliases.zsh'
 alias nedit='nano ~/.dotfiles/zsh/.aliases.zsh'
 alias reload='source ~/.zshrc'
 

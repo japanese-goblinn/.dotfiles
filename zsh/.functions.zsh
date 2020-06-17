@@ -169,14 +169,14 @@ cpsf() { osascript -e 'tell application "Safari" to return URL of front document
 
 : '
 - Description:
-    This function creates new file and opens it in Sublime.
+    This function creates new file and opens it in micro.
 - Usage:
     cf <file1.ext> <file2.ext>...
 '
 cf() {
     if [[ -n "$1" ]]; then
         touch "$@"
-        subl "$@"
+        micro "$@"
     else
         echo -e "\e[31m!ERROR!\e[0m File name should not be empty"
     fi
