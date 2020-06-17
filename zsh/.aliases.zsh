@@ -12,7 +12,6 @@ alias ...='cd ../../'
 
 alias dw='cd ~/Downloads'
 alias dtf='cd ~/.dotfiles'
-alias sbs='cd ~/Library/ApplicationSupport/Sublime\ Text\ 3/Packages/User'
 
 alias edit='micro ~/.dotfiles/zsh/.aliases.zsh'
 alias nedit='nano ~/.dotfiles/zsh/.aliases.zsh'
