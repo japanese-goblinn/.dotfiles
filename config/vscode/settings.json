@@ -1,0 +1,36 @@
+{
+    "editor.fontSize": 12,
+    "editor.fontFamily": "JetBrains Mono, Monaco, 'Courier New', monospace",
+    "editor.minimap.enabled": false,
+    "files.autoSave": "afterDelay",
+    "explorer.confirmDelete": false,
+    "workbench.editor.highlightModifiedTabs": true,
+    "editor.cursorBlinking": "smooth",
+    "terminal.integrated.rendererType": "dom",
+    "breadcrumbs.enabled": true,
+    "workbench.editor.tabCloseButton": "left",
+    "window.zoomLevel": 0,
+    "workbench.panel.defaultLocation": "right",
+    "workbench.colorCustomizations": {
+        "[Dracula]": {
+            "panel.border": "#1E2028",
+            "editorGroup.border": "#1E2028"
+        }
+    },
+    "explorer.confirmDragAndDrop": false,
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.ChromeDebuggingAttachment": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.colorTheme": "GitHub Dark",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "meta.function-call.generic",
+                "settings": {
+                    "foreground":"#79B8FF"
+                }
+            }
+        ]
+    }
+}
+
