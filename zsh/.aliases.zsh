@@ -17,6 +17,8 @@ alias edit='micro ~/.dotfiles/zsh/.aliases.zsh'
 alias nedit='nano ~/.dotfiles/zsh/.aliases.zsh'
 alias reload='source ~/.zshrc'
 
+alias cdiff='code -d'
+
 # Git
 alias g='git'
 
