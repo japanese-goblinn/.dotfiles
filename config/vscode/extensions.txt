@@ -3,7 +3,7 @@ CoenraadS.bracket-pair-colorizer
 DavidAnson.vscode-markdownlint
 dracula-theme.theme-dracula
 GitHub.github-vscode-theme
-golang.Go
+golang.go
 hediet.vscode-drawio
 ms-azuretools.vscode-docker
 ms-python.python
@@ -11,6 +11,7 @@ msjsdiag.debugger-for-chrome
 pnp.polacode
 ritwickdey.LiveServer
 stevemoser.xcode-keybindings
+timonwong.shellcheck
 vincaslt.highlight-matching-tag
 vknabel.vscode-apple-swift-format
 wayou.vscode-todo-highlight
