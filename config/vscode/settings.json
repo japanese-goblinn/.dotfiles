@@ -21,17 +21,32 @@
     "liveServer.settings.CustomBrowser": "chrome",
     "liveServer.settings.ChromeDebuggingAttachment": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "workbench.colorTheme": "GitHub Dark",
     "editor.tokenColorCustomizations": {
-        "textMateRules": [
-            {
-                "scope": "meta.function-call.generic",
-                "settings": {
-                    "foreground":"#79B8FF"
+        "[GitHub Dark]": {
+            "textMateRules": [
+                {
+                    "scope": "meta.function-call.generic",
+                    "settings": {
+                        "foreground":"#79B8FF"
+                    }
                 }
-            }
-        ]
+            ]
+        },
+        "[GitHub Light]": {
+            "textMateRules": [
+                {
+                    "scope": "meta.function-call.generic",
+                    "settings": {
+                        "foreground":"#045FC6"
+                    }
+                }
+            ]
+        }
     },
-    "workbench.activityBar.visible": false
+    "workbench.activityBar.visible": false,
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredLightColorTheme": "GitHub Light",
+    "workbench.preferredDarkColorTheme": "GitHub Dark",
+    "workbench.colorTheme": "GitHub Dark"
 }
 
