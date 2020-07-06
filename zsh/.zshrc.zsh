@@ -8,7 +8,7 @@ fpath=("$HOME/.dotfiles/dependencies/pure" $fpath)
 autoload -U promptinit; promptinit
 prompt pure
 
-source ~/.dotfiles/zsh/.zprofile
+source ~/.dotfiles/zsh/.zprofile.zsh
 source ~/.dotfiles/zsh/.aliases.zsh
 source ~/.dotfiles/zsh/.functions.zsh
 

@@ -33,7 +33,7 @@ This repository is my current `dotfiles` setup and some macOS essential tools.
 
 1. You should use `zsh`
 2. Clone this repo into `~/.dotfiles`
-3. Create link to `.zshrc` in `~/` with next command `ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc`
+3. Create link to `.zshrc` in `~/` with next command `ln -s ~/.dotfiles/zsh/.zshrc.zsh ~/.zshrc`
 4. ✅
 
 ### Examples
