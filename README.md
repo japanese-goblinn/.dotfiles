@@ -16,8 +16,8 @@ This repository is my current `dotfiles` setup and some macOS essential tools.
 
 ## ToC
 
+* [Install](#install)
 * Dotfiles
-  * [Install](#install)
   * [Examples](#examples)
     * `.aliases`
     * `.functions`
@@ -25,9 +25,7 @@ This repository is my current `dotfiles` setup and some macOS essential tools.
   * [Workflows](#workflows)
 * [Thanks](#thanks)
 
-## About dotfiles
-
-### Install
+## Install
 
 ⚠️ **Important**
 
@@ -35,6 +33,8 @@ This repository is my current `dotfiles` setup and some macOS essential tools.
 2. Clone this repo into `~/.dotfiles`
 3. Create link to `.zshrc` in `~/` with next command `ln -s ~/.dotfiles/zsh/.zshrc.zsh ~/.zshrc`
 4. ✅
+
+## About dotfiles
 
 ### Examples
 
