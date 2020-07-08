@@ -2,25 +2,6 @@
     "editor.fontSize": 12,
     "editor.fontFamily": "JetBrains Mono, Monaco, 'Courier New', monospace",
     "editor.minimap.enabled": false,
-    "files.autoSave": "afterDelay",
-    "explorer.confirmDelete": false,
-    "workbench.editor.highlightModifiedTabs": true,
-    "editor.cursorBlinking": "smooth",
-    "terminal.integrated.rendererType": "dom",
-    "breadcrumbs.enabled": true,
-    "workbench.editor.tabCloseButton": "left",
-    "window.zoomLevel": 0,
-    "workbench.panel.defaultLocation": "right",
-    "workbench.colorCustomizations": {
-        "[Dracula]": {
-            "panel.border": "#1E2028",
-            "editorGroup.border": "#1E2028"
-        }
-    },
-    "explorer.confirmDragAndDrop": false,
-    "liveServer.settings.CustomBrowser": "chrome",
-    "liveServer.settings.ChromeDebuggingAttachment": true,
-    "javascript.updateImportsOnFileMove.enabled": "always",
     "editor.tokenColorCustomizations": {
         "[GitHub Dark]": {
             "textMateRules": [
@@ -43,10 +24,29 @@
             ]
         }
     },
+    "files.autoSave": "afterDelay",
+    "explorer.confirmDelete": false,
+    "workbench.editor.highlightModifiedTabs": true,
+    "editor.cursorBlinking": "smooth",
+    "terminal.integrated.rendererType": "dom",
+    "breadcrumbs.enabled": true,
+    "workbench.editor.tabCloseButton": "left",
+    "workbench.panel.defaultLocation": "right",
+    "workbench.colorCustomizations": {
+        "[Dracula]": {
+            "panel.border": "#1E2028",
+            "editorGroup.border": "#1E2028"
+        }
+    },
     "workbench.activityBar.visible": false,
-    "window.autoDetectColorScheme": true,
     "workbench.preferredLightColorTheme": "GitHub Light",
     "workbench.preferredDarkColorTheme": "GitHub Dark",
-    "workbench.colorTheme": "GitHub Dark"
+    "workbench.colorTheme": "GitHub Light",
+    "window.zoomLevel": 0,
+    "window.autoDetectColorScheme": true,
+    "explorer.confirmDragAndDrop": false,
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.ChromeDebuggingAttachment": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
 }
 
