@@ -7,3 +7,4 @@ export LSCOLORS='DxBxhxDxfxhxhxhxhxcxcx'
 
 # set default editor to micro
 export VISUAL=micro
+export MICRO_TRUECOLOR=1
