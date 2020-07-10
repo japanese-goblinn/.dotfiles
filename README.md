@@ -2,6 +2,8 @@
 
 ![Setup](./media/setup.png)
 
+> Dark & Light appearance depends on macOS theme
+
 This repository is my current `dotfiles` setup and some macOS essential tools.
 
 * `zsh/`
