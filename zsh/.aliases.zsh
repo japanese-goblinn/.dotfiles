@@ -5,21 +5,17 @@ alias o='open'
 alias of='open .'
 alias to='touch'
 alias e='micro'
-
 alias .='cd -'
 alias ..='cd ..'
 alias ...='cd ../../'
-
 alias dw='cd ~/Downloads'
 alias dtf='cd ~/.dotfiles'
-
 alias edit='micro ~/.dotfiles/zsh/.aliases.zsh'
 alias nedit='nano ~/.dotfiles/zsh/.aliases.zsh'
 alias reload='source ~/.zshrc'
-
 alias cdiff='code -d'
-
 alias bat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo zenburn || echo GitHub)"
+alias man="tldr"
 
 # Git
 alias g='git'
