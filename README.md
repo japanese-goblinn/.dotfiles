@@ -105,6 +105,10 @@ t() {
 
   ![Colors](./media/alfred-tf-workflow.png)
 
+* Dash - quick search for docs
+
+  ![](./media/alfred-dash-workflow.png)
+
 ## Thanks
 
 [Special thanks to @nikitavoloboev for inspiration](https://github.com/nikitavoloboev)
