@@ -48,5 +48,12 @@
     "liveServer.settings.CustomBrowser": "chrome",
     "liveServer.settings.ChromeDebuggingAttachment": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "terminal.external.osxExec": "iTerm.app",
+    "code-runner.runInTerminal": true,
+    "code-runner.executorMap": {
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && g++ --std=c++17 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    }
 }
 
