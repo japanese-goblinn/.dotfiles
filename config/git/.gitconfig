@@ -2,3 +2,5 @@
 	email = cool45akol@gmail.com
 	name = japanese-goblinn 
 	signingkey = BB41A70F4E42B77D
+[commit]
+	gpgsign = true
