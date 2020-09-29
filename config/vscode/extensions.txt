@@ -1,4 +1,5 @@
 13xforever.language-x86-64-assembly
+be5invis.toml
 CoenraadS.bracket-pair-colorizer
 DavidAnson.vscode-markdownlint
 dracula-theme.theme-dracula
@@ -12,6 +13,7 @@ ms-vscode.cpptools
 msjsdiag.debugger-for-chrome
 pnp.polacode
 ritwickdey.LiveServer
+rust-lang.rust
 stevemoser.xcode-keybindings
 timonwong.shellcheck
 vincaslt.highlight-matching-tag
