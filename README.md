@@ -89,9 +89,9 @@ t() {
 
   ![Colors](./media/alfred-colors-workflow.png)
 
-* Emoji search - quick search some emoji
+* Dash - quick search for docs
 
-  ![Emoji](./media/alfred-emoji-workflow.png)
+  ![Dash](./media/alfred-dash-workflow.png)
 
 * Github - any github manipulation right from alfred search
 
@@ -105,9 +105,6 @@ t() {
 
   ![TF](./media/alfred-tf-workflow.png)
 
-* Dash - quick search for docs
-
-  ![Dash](./media/alfred-dash-workflow.png)
 
 ## Thanks
 
