@@ -1340,7 +1340,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>608057336.92702401</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>351</integer>
+	<integer>357</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1354,7 +1354,7 @@
 	<key>NoSyncPersistentRateLimitedUpdates</key>
 	<dict>
 		<key>CheckForUpdatedPythonRuntime</key>
-		<real>619554609.23300004</real>
+		<real>623714925.13052595</real>
 	</dict>
 	<key>NoSyncRecordedVariables</key>
 	<dict>
@@ -2137,7 +2137,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-08-17T20:50:05Z</date>
+	<date>2020-10-06T19:53:57Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>

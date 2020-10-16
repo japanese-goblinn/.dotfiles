@@ -7,6 +7,7 @@ formulahendry.code-runner
 GitHub.github-vscode-theme
 golang.go
 hediet.vscode-drawio
+mathiasfrohlich.Kotlin
 ms-azuretools.vscode-docker
 ms-python.python
 ms-vscode.cpptools

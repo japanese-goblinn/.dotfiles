@@ -54,6 +54,7 @@
     "code-runner.executorMap": {
         "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "cpp": "cd $dir && g++ --std=c++17 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    }
+    },
+    "python.pythonPath": "/usr/local/bin/python3"
 }
 
