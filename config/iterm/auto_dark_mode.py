@@ -9,7 +9,7 @@ async def update(connection, theme):
     if "dark" in parts:
         preset = await iterm2.ColorPreset.async_get(connection, "3024 Night")
     else:
-        preset = await iterm2.ColorPreset.async_get(connection, "3024 Day")
+        preset = await iterm2.ColorPreset.async_get(connection, "Light Background")
     profiles = await iterm2.PartialProfile.async_query(connection)
     for partial in profiles:
         profile = await partial.async_get_full_profile()
