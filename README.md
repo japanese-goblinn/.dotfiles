@@ -23,8 +23,7 @@ This repository is my current `dotfiles` setup and some macOS essential tools.
   * [Examples](#examples)
     * `.aliases`
     * `.functions`
-* Alfred
-  * [Workflows](#workflows)
+* [Raycast](#raycast)
 * [Thanks](#thanks)
 
 ## Install
@@ -81,30 +80,11 @@ t() {
 }
 ```
 
-## Alfred
+## Raycast
 
-### Workflows
+Wonderfull tool to user your mac much more efficiently
 
-* Colors - quick convert from any color format
-
-  ![Colors](./media/alfred-colors-workflow.png)
-
-* Dash - quick search for docs
-
-  ![Dash](./media/alfred-dash-workflow.png)
-
-* Github - any github manipulation right from alfred search
-
-  ![Github](./media/alfred-github-workflow.png)
-
-* Google suggest - seach google with suggestions
-
-  ![Google Suggest](./media/alfred-google-workflow.png)
-
-* Terminal finder - open current finder window in termial or vice versa
-
-  ![TF](./media/alfred-tf-workflow.png)
-
+![Raycast](./media/raycast.png)
 
 ## Thanks
 
