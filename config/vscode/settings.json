@@ -43,7 +43,6 @@
     "workbench.preferredDarkColorTheme": "GitHub Dark",
     "workbench.colorTheme": "GitHub Light",
     "window.zoomLevel": 0,
-    "window.autoDetectColorScheme": true,
     "explorer.confirmDragAndDrop": false,
     "liveServer.settings.CustomBrowser": "chrome",
     "liveServer.settings.ChromeDebuggingAttachment": true,
@@ -56,6 +55,7 @@
         "cpp": "cd $dir && g++ --std=c++17 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     },
     "python.pythonPath": "/usr/local/bin/python3",
-    "editor.renderWhitespace": "all"
+    "editor.renderWhitespace": "all",
+    "window.autoDetectColorScheme": true
 }
 
