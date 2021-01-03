@@ -1,5 +1,5 @@
 {
-  "Working Directory" : "\/Users\/saisuicied\/Downloads",
+  "Working Directory" : "\/Users\/japanese_goblinn\/Downloads",
   "Prompt Before Closing 2" : false,
   "Selected Text Color" : {
     "Red Component" : 0.25098040699958801,
@@ -72,7 +72,7 @@
     "Green Component" : 0.9268307089805603
   },
   "BM Growl" : true,
-  "AWDS Window Directory" : "\/Users\/saisuicied\/Downloads",
+  "AWDS Window Directory" : "\/Users\/japanese_goblinn\/Downloads",
   "Icon" : 1,
   "Ansi 3 Color" : {
     "Red Component" : 0.85490196943283081,
@@ -454,7 +454,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.5058823823928833
   },
-  "AWDS Tab Directory" : "\/Users\/saisuicied\/Downloads",
+  "AWDS Tab Directory" : "\/Users\/japanese_goblinn\/Downloads",
   "AWDS Pane Option" : "Recycle",
   "Command" : "",
   "Terminal Type" : "xterm-256color",
