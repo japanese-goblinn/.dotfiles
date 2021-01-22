@@ -57,3 +57,8 @@ alias pip='pip3'
 alias pip2='pip'
 alias deac='deactivate'
 alias jp='jupyter notebook'
+
+# iOS
+alias pu='pod update --verbose'
+alias pi='pod install --verbose'
+alias pd='pod deintegrate --verbose'
