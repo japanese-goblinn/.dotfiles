@@ -33,7 +33,9 @@ brew install httpie || exit
 brew install tldr || exit
 brew install hub || exit
 
+# ios
 brew install cocoapods || exit
+(cd ~/.dotfiles/config/xcode/xcode-github-theme/ && ./install.sh) || exit
 
 brew install --cask transmission || exit
 
