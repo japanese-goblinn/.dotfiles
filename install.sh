@@ -8,11 +8,7 @@ print_error() {
 }
 
 mv ~/dotfiles-plus-plus/ ~/.dotfiles/ || exit
-cd .dotfiles/ || exit
-git submodule update --init --recursive || exit
-cd .. || exit
-
-# link zshrc
+(cd .dotfiles/ && git submodule update --init --recursive) || exit
 ln -s ~/.dotfiles/zsh/.zshrc.zsh ~/.zshrc || exit
 
 # git
