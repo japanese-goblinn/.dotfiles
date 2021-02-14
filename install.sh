@@ -18,8 +18,10 @@ ln -s ~/.dotfiles/zsh/.zshrc.zsh ~/.zshrc || exit
 # git
 ln -s ~/.dotfiles/config/git/.gitconfig ~/.gitconfig || exit
 
-# brew 
+# crontab
+crontab ~/.dotfiles/config/cronetab/cronetab.txt && crontab -l || exit
 
+# brew 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" || exit
 
 brew install iterm2 || exit
