@@ -67,3 +67,4 @@ ln -s ~/.dotfiles/config/iterm/auto_dark_mode.py ~/Library/ApplicationSupport/iT
 
 # ssh for github
 echo "Go and generate SSH key in Xcode"
+# ssh-keyscan github.com >> ~/.ssh/known_hosts
