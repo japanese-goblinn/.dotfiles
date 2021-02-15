@@ -1,9 +1,9 @@
 #!/bin/bash
 
 print_error() { 
-	local RED="\033[0;31m"
-	local NC="\033[0m"
-	echo "${RED}$1${NC}"
+    local RED="\033[0;31m"
+    local NC="\033[0m"
+    echo "${RED}$1${NC}"
     exit 1
 }
 
