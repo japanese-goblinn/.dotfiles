@@ -26,6 +26,7 @@ brew install iina || exit
 brew install paw || exit
 brew install figma || exit
 brew install fork || exit
+brew install google-chrome || exit
 
 brew install micro || exit
 brew install bat || exit
