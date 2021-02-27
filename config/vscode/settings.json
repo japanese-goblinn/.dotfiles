@@ -1,6 +1,6 @@
 {
     "editor.fontSize": 12,
-    "editor.fontFamily": "JetBrains Mono, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "SF Mono, Monaco, 'Courier New', monospace",
     "editor.minimap.enabled": false,
     "editor.tokenColorCustomizations": {
         "[GitHub Dark]": {
@@ -41,7 +41,7 @@
     "workbench.activityBar.visible": false,
     "workbench.preferredLightColorTheme": "GitHub Light",
     "workbench.preferredDarkColorTheme": "GitHub Dark",
-    "workbench.colorTheme": "GitHub Light",
+    "workbench.colorTheme": "GitHub Dark",
     "window.zoomLevel": 0,
     "explorer.confirmDragAndDrop": false,
     "liveServer.settings.CustomBrowser": "chrome",
