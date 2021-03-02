@@ -469,13 +469,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.13725490196078433</real>
+				<real>0.0</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.12549019607843137</real>
+				<real>0.011764706112444401</real>
 				<key>Red Component</key>
-				<real>0.14117647058823529</real>
+				<real>0.035294119268655777</real>
 			</dict>
 			<key>Background Image Location</key>
 			<string></string>
@@ -499,7 +499,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>28.63130046411888</real>
+			<real>24.753117433528313</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -1058,7 +1058,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SFMono-Regular 12</string>
+			<string>SF-Mono-Powerline-Regular 12</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Option Key Sends</key>
@@ -1128,7 +1128,7 @@
 			<key>Title Components</key>
 			<integer>513</integer>
 			<key>Transparency</key>
-			<real>0.070982864222575645</real>
+			<real>0.056895446777343754</real>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
