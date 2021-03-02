@@ -11,6 +11,7 @@ idleberg.applescript
 mathiasfrohlich.Kotlin
 ms-azuretools.vscode-docker
 ms-python.python
+ms-toolsai.jupyter
 ms-vscode.cpptools
 msjsdiag.debugger-for-chrome
 pnp.polacode
