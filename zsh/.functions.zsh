@@ -68,7 +68,7 @@ is_git_remote_url_reachable() {
 ghi() {
     url=$(osascript -e 'tell application "Safari" to return URL of front document')
     if is_git_remote_url_reachable "$url"; then
-        dir_name=${url##*/}
+        local dir_name=${url##*/}
         cd ~/Downloads || exit
         mkdir "$dir_name"
         cd "$dir_name" || exit
@@ -144,7 +144,7 @@ t() {
     Move to trash current folder.
 '
 tc() {
-    folderName=$(pwd)
+    local folderName=$(pwd)
     cd ../
     t "$folderName"
 }
@@ -154,12 +154,6 @@ tc() {
     This function copies current directory path in clipboard.
 '
 cpwd() { pwd | pbcopy; }
-
-: '
-- Description:    
-    This function opens current directory in Alfread search.   
-' 
-awd() { osascript -e "tell application \"Alfred 4\" to browse \"$(pwd)/\""; }
 
 : '
 - Description:
@@ -190,7 +184,7 @@ cf() {
 '
 md() {
     if [[ -n "$1" ]]; then
-        mkdir "$1"
+        mkdir -p "$1"
         cd "$1" || exit
     else
         echo -e "\e[31m!ERROR!\e[0m File name should not be empty"
