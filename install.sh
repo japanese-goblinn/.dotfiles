@@ -1,65 +1,63 @@
 #!/bin/bash
 
-print_error() { 
-    local RED="\033[0;31m"
-    local NC="\033[0m"
-    echo "${RED}$1${NC}"
-    exit 1
-}
+set -ex
 
-mv ~/dotfiles-plus-plus/ ~/.dotfiles/ || exit
-(cd .dotfiles/ && git submodule update --init --recursive) || exit
-ln -s ~/.dotfiles/zsh/.zshrc.zsh ~/.zshrc || exit
+mv ./dotfiles-plus-plus/ ~/.dotfiles/ 
+(cd ~/.dotfiles/ && git submodule update --init --recursive) 
+ln -s ~/.dotfiles/zsh/.zshrc.zsh ~/.zshrc 
+
+# cli tools
+xcode-select --install
 
 # git
-ln -s ~/.dotfiles/config/git/.gitconfig ~/.gitconfig || exit
+ln -s ~/.dotfiles/config/git/.gitconfig ~/.gitconfig 
 
 # crontab
-crontab ~/.dotfiles/config/cronetab/cronetab.txt && crontab -l || exit
+crontab ~/.dotfiles/config/cronetab/cronetab.txt && crontab -l 
 
 # brew 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" || exit
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" 
 
-brew install iterm2 || exit
-brew install visual-studio-code || exit
-brew install iina || exit
-brew install paw || exit
-brew install figma || exit
-brew install fork || exit
-brew install google-chrome || exit
+brew install iterm2 
+brew install visual-studio-code 
+brew install iina 
+brew install paw 
+brew install figma 
+brew install fork 
+brew install google-chrome 
 
-brew install micro || exit
-brew install bat || exit
-brew install httpie || exit
-brew install tldr || exit
-brew install hub || exit
+brew install bat 
+brew install httpie 
+brew install tldr 
+brew install hub 
 
 # ios
-brew install cocoapods || exit
-(cd ~/.dotfiles/config/xcode/xcode-github-theme/ && ./install.sh) || exit
+brew install cocoapods 
+(cd ~/.dotfiles/config/xcode/xcode-github-theme/ && ./install.sh)   
 
-brew install --cask transmission || exit
+brew install --cask transmission
 
 # install jetbrains-mono font
-brew tap homebrew/cask-fonts || exit
-brew install --cask font-jetbrains-mono || exit
+brew tap homebrew/cask-fonts 
+brew install --cask font-jetbrains-mono
 
-# micro config
-ln -s ~/.dotfiles/config/micro ~/.config/ || exit
+# micro 
+brew install micro 
+ln -s ~/.dotfiles/config/micro ~/.config/ 
 
 # vscode
-xargs -L1 code --install-extension < ~/.dotfiles/config/vscode/extensions.txt || exit
-ln -s ~/.dotfiles/config/vscode/settings.json "$HOME/Library/Application\ Support/Code/User/settings.json" || exit
+xargs -L1 code --install-extension < ~/.dotfiles/config/vscode/extensions.txt
+ln -s ~/.dotfiles/config/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 
 # raycast
-git clone "https://github.com/japanese-goblinn/script-commands.git" || exit
+git clone "https://github.com/japanese-goblinn/script-commands.git"
 
 # iterm2
-# need manual install of iterm config
-ln -s ~/.dotfiles/config/iterm/auto_dark_mode.py ~/Library/ApplicationSupport/iTerm2/Scripts/auto_dark_mode.py || exit
+echo "iTerm needs manual install of config"
+ln -s ~/.dotfiles/config/iterm/auto_dark_mode.py ~/Library/ApplicationSupport/iTerm2/Scripts/auto_dark_mode.py
 
 # gpg key
-(brew install gpg-suite && echo "Go and generate a new key") || exit
+brew install gpg-suite && echo "Go and generate a new GPG key"
 # gpg --list-secret-keys --keyid-format LONG (get A3CDF698F9B37035 from this)
 # gpg --armor --export A3CDF698F9B37035
 # add to github
