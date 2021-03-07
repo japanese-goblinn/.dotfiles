@@ -28,12 +28,11 @@ This repository is my current `dotfiles` setup and some macOS essential tools.
 
 ## Install
 
-⚠️ **Important**
+⚠️ **Please use `zsh` instead of `bash`**
 
-1. You should use `zsh`
-2. Clone this repo into `~/.dotfiles`
-3. Create link to `.zshrc` in `~/` with next command `ln -s ~/.dotfiles/zsh/.zshrc.zsh ~/.zshrc`
-4. ✅
+1. Clone this repo in any directory
+2. Run following command `./dotfiles-plus-plus/install.sh` and script will do the rest
+3. If no errors occurred everything is ready to use ✅
 
 ## About dotfiles
 
