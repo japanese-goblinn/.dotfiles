@@ -1,61 +1,62 @@
 {
-    "editor.fontSize": 12,
-    "editor.fontFamily": "SF Mono, Monaco, 'Courier New', monospace",
-    "editor.minimap.enabled": false,
-    "editor.tokenColorCustomizations": {
-        "[GitHub Dark]": {
-            "textMateRules": [
-                {
-                    "scope": "meta.function-call.generic",
-                    "settings": {
-                        "foreground":"#79B8FF"
-                    }
-                }
-            ]
-        },
-        "[GitHub Light]": {
-            "textMateRules": [
-                {
-                    "scope": "meta.function-call.generic",
-                    "settings": {
-                        "foreground":"#045FC6"
-                    }
-                }
-            ]
+  "python.pythonPath" : "\/usr\/local\/bin\/python3",
+  "workbench.colorCustomizations" : {
+    "[Dracula]" : {
+      "panel.border" : "#1E2028",
+      "editorGroup.border" : "#1E2028"
+    }
+  },
+  "workbench.activityBar.visible" : false,
+  "workbench.panel.defaultLocation" : "right",
+  "workbench.editor.highlightModifiedTabs" : true,
+  "terminal.integrated.rendererType" : "dom",
+  "javascript.updateImportsOnFileMove.enabled" : "always",
+  "code-runner.executorMap" : {
+    "c" : "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "cpp" : "cd $dir && g++ --std=c++17 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+  },
+  "explorer.confirmDelete" : false,
+  "editor.tokenColorCustomizations" : {
+    "[GitHub Dark]" : {
+      "textMateRules" : [
+        {
+          "scope" : "meta.function-call.generic",
+          "settings" : {
+            "foreground" : "#79B8FF"
+          }
         }
+      ]
     },
-    "files.autoSave": "afterDelay",
-    "explorer.confirmDelete": false,
-    "workbench.editor.highlightModifiedTabs": true,
-    "editor.cursorBlinking": "smooth",
-    "terminal.integrated.rendererType": "dom",
-    "breadcrumbs.enabled": true,
-    "workbench.editor.tabCloseButton": "left",
-    "workbench.panel.defaultLocation": "right",
-    "workbench.colorCustomizations": {
-        "[Dracula]": {
-            "panel.border": "#1E2028",
-            "editorGroup.border": "#1E2028"
+    "[GitHub Light]" : {
+      "textMateRules" : [
+        {
+          "scope" : "meta.function-call.generic",
+          "settings" : {
+            "foreground" : "#045FC6"
+          }
         }
-    },
-    "workbench.activityBar.visible": false,
-    "workbench.preferredLightColorTheme": "GitHub Light",
-    "workbench.preferredDarkColorTheme": "GitHub Dark",
-    "workbench.colorTheme": "GitHub Dark",
-    "window.zoomLevel": 0,
-    "explorer.confirmDragAndDrop": false,
-    "liveServer.settings.CustomBrowser": "chrome",
-    "liveServer.settings.ChromeDebuggingAttachment": true,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "liveServer.settings.donotShowInfoMsg": true,
-    "terminal.external.osxExec": "iTerm.app",
-    "code-runner.runInTerminal": true,
-    "code-runner.executorMap": {
-        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        "cpp": "cd $dir && g++ --std=c++17 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    },
-    "python.pythonPath": "/usr/local/bin/python3",
-    "editor.renderWhitespace": "all",
-    "window.autoDetectColorScheme": true
+      ]
+    }
+  },
+  "workbench.preferredDarkColorTheme" : "GitHub Dark",
+  "code-runner.runInTerminal" : true,
+  "terminal.integrated.inheritEnv" : false,
+  "editor.cursorBlinking" : "smooth",
+  "liveServer.settings.ChromeDebuggingAttachment" : true,
+  "liveServer.settings.donotShowInfoMsg" : true,
+  "workbench.preferredLightColorTheme" : "GitHub Light",
+  "editor.accessibilitySupport" : "off",
+  "terminal.external.osxExec" : "iTerm.app",
+  "window.zoomLevel" : 0,
+  "editor.fontFamily" : "SF Mono, Monaco, 'Courier New', monospace",
+  "workbench.colorTheme" : "GitHub Dark",
+  "editor.renderWhitespace" : "all",
+  "files.autoSave" : "afterDelay",
+  "window.autoDetectColorScheme" : true,
+  "editor.minimap.enabled" : false,
+  "editor.fontSize" : 12,
+  "liveServer.settings.CustomBrowser" : "chrome",
+  "explorer.confirmDragAndDrop" : false,
+  "breadcrumbs.enabled" : true,
+  "workbench.editor.tabCloseButton" : "left"
 }
-
