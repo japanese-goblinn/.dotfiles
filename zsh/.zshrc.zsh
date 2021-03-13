@@ -16,3 +16,7 @@ source ~/.dotfiles/dependencies/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # This should be last command
 source ~/.dotfiles/dependencies/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
+# Fig ENV VARIABLES
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh

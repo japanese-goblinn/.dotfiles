@@ -54,7 +54,7 @@ git clone "https://github.com/japanese-goblinn/script-commands.git"
 
 # iterm2
 echo "iTerm needs manual install of config"
-ln -s ~/.dotfiles/config/iterm/auto_dark_mode.py ~/Library/ApplicationSupport/iTerm2/Scripts/auto_dark_mode.py
+ln -s ~/.dotfiles/config/iterm/auto_dark_mode.py ~/Library/Application Support/iTerm2/Scripts/AutoLaunch/auto_dark_mode.py
 
 # gpg key
 brew install gpg-suite && echo "Go and generate a new GPG key"
