@@ -7,3 +7,6 @@
 [submodule "dependencies/zsh-syntax-highlighting"]
 	path = dependencies/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule "dependencies/zsh-autocomplete"]
+	path = dependencies/zsh-autocomplete
+	url = git@github.com:marlonrichert/zsh-autocomplete.git

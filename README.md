@@ -1,4 +1,4 @@
-# Dotfiles++
+# .dotfiles
 
 ![Setup](./media/setup.png)
 
@@ -28,11 +28,11 @@ This repository is my current `dotfiles` setup and some macOS essential tools.
 
 ## Install
 
-⚠️ **Please use `zsh` instead of `bash`**
+⚠️ **To make it work please use `zsh`**
 
 1. Clone this repo in any directory
-2. Run following command `./dotfiles-plus-plus/install.sh` and script will do the rest
-3. If no errors occurred everything is ready to use ✅
+2. Run `install.sh` and script will do the rest (you may need to `chmod +x install.sh`)
+3. If no errors occurred everything is ready to use
 
 ## About dotfiles
 
