@@ -3,7 +3,7 @@
 # 1. `unlink /usr/local/share/zsh/site-functions/prompt_pure_setup`
 # 2. `ln -s $DOTFILES_DEPENDECIES_PATH/pure/pure.zsh /usr/local/share/zsh/site-functions/prompt_pure_setup`
 
-fpath=("$HOME/.dotfiles/dependencies/pure" $fpath)
+fpath=("$DOTFILES_DEPENDECIES_PATH/pure" $fpath)
 
 autoload -U promptinit; promptinit
 prompt pure
