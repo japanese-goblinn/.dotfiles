@@ -1,21 +1,24 @@
 {
-  "python.pythonPath" : "\/usr\/local\/bin\/python3",
-  "workbench.colorCustomizations" : {
-    "[Dracula]" : {
-      "panel.border" : "#1E2028",
-      "editorGroup.border" : "#1E2028"
-    }
-  },
-  "workbench.activityBar.visible" : false,
-  "workbench.panel.defaultLocation" : "right",
-  "workbench.editor.highlightModifiedTabs" : true,
+  "files.autoSave" : "afterDelay",
+
+  "window.autoDetectColorScheme" : true,
+  "window.zoomLevel" : 0,
+
   "terminal.integrated.rendererType" : "dom",
-  "javascript.updateImportsOnFileMove.enabled" : "always",
-  "code-runner.executorMap" : {
-    "c" : "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "cpp" : "cd $dir && g++ --std=c++17 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
-  },
+  "terminal.external.osxExec" : "iTerm.app",
+  "terminal.integrated.inheritEnv" : false,
+
   "explorer.confirmDelete" : false,
+  "explorer.confirmDragAndDrop" : false,
+
+  "breadcrumbs.enabled" : true,
+  
+  "editor.fontSize" : 12,
+  "editor.fontFamily" : "SF Mono, Monaco, 'Courier New', monospace",
+  "editor.renderWhitespace" : "all",
+  "editor.accessibilitySupport" : "off",
+  "editor.minimap.enabled" : false,
+  "editor.cursorBlinking" : "smooth",
   "editor.tokenColorCustomizations" : {
     "[GitHub Dark]" : {
       "textMateRules" : [
@@ -38,25 +41,30 @@
       ]
     }
   },
-  "workbench.preferredDarkColorTheme" : "GitHub Dark",
-  "code-runner.runInTerminal" : true,
-  "terminal.integrated.inheritEnv" : false,
-  "editor.cursorBlinking" : "smooth",
-  "liveServer.settings.ChromeDebuggingAttachment" : true,
-  "liveServer.settings.donotShowInfoMsg" : true,
-  "workbench.preferredLightColorTheme" : "GitHub Light",
-  "editor.accessibilitySupport" : "off",
-  "terminal.external.osxExec" : "iTerm.app",
-  "window.zoomLevel" : 0,
-  "editor.fontFamily" : "SF Mono, Monaco, 'Courier New', monospace",
+
+  "workbench.editor.highlightModifiedTabs" : true,
+  "workbench.panel.defaultLocation" : "right",
+  "workbench.editor.tabCloseButton" : "left",
   "workbench.colorTheme" : "GitHub Dark",
-  "editor.renderWhitespace" : "all",
-  "files.autoSave" : "afterDelay",
-  "window.autoDetectColorScheme" : true,
-  "editor.minimap.enabled" : false,
-  "editor.fontSize" : 12,
-  "liveServer.settings.CustomBrowser" : "chrome",
-  "explorer.confirmDragAndDrop" : false,
-  "breadcrumbs.enabled" : true,
-  "workbench.editor.tabCloseButton" : "left"
+  "workbench.preferredDarkColorTheme" : "GitHub Dark",
+  "workbench.preferredLightColorTheme" : "GitHub Light",
+  "workbench.colorCustomizations" : {
+    "[Dracula]" : {
+      "panel.border" : "#1E2028",
+      "editorGroup.border" : "#1E2028"
+    }
+  },
+
+  "javascript.updateImportsOnFileMove.enabled" : "always",
+  
+  "C_Cpp.updateChannel" : "Insiders",
+  
+  "python.pythonPath" : "\/usr\/local\/bin\/python3",
+  
+  "liveServer.settings.donotShowInfoMsg" : true,
+  "liveServer.settings.CustomBrowser": "chrome",
+  "liveServer.settings.ChromeDebuggingAttachment" : true,
+    
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.autoBuild.run": "never",
 }
