@@ -176,6 +176,8 @@ cf() {
     fi
 }
 
+mk() { mkdir -p "$1" }
+
 : '
 - Description:
     This function creates directory and then cd into it.

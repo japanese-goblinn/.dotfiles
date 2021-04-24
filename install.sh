@@ -1,9 +1,19 @@
 #!/bin/zsh
 
-set -ex
+set -e
 
-pre_scripts_install() {
-    xcode-select --install
+YELLOW="\033[33m"
+GREEN="\033[32m"
+PURPLE="\033[95m"
+RED="\033[31m"
+COLOR_RESET="\033[0m"
+
+print_warning() { echo -e "⚠️  ${YELLOW}${1}${COLOR_RESET}" }
+print_error() { echo -e "⛔️ ${RED}${1}${COLOR_RESET}" }
+print_success() { echo -e "✅ ${GREEN}${1}${COLOR_RESET}" }
+
+pre_scripts_install() { 
+    xcode-select --install 2>/dev/null || print_warning "Xcode CLI tools already installed" 
 }
 
 brew_install() {
@@ -13,14 +23,16 @@ brew_install() {
     brew install iterm2 
     brew install visual-studio-code 
     brew install iina 
-    brew install paw 
-    brew install figma 
+    brew install paw
     brew install fork 
     brew install google-chrome 
     brew install --cask transmission
+    brew install --cask telegram
+    brew install --cask discord
     
     # cli tools
     brew install micro # prime cli text editor
+    brew install shellcheck
     brew install bat 
     brew install httpie 
     brew install tldr 
@@ -62,8 +74,9 @@ configs_install() {
     gcl "https://github.com/japanese-goblinn/script-commands.git"
     
     # iterm2
-    echo "iTerm needs manual install of config"
-    ln -s ~/.dotfiles/config/iterm/auto_dark_mode.py ~/Library/Application Support/iTerm2/Scripts/AutoLaunch/auto_dark_mode.py
+    print_warning "iTerm needs manual install of config"
+    mk "$HOME/Library/Application Support/iTerm2/Scripts/AutoLaunch/"
+    ln -s ~/.dotfiles/config/iterm/auto_dark_mode.py ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch/auto_dark_mode.py
 }
 
 keys_install() {
@@ -74,13 +87,16 @@ keys_install() {
     # add to github
     
     # ssh for github
-    echo "Go and generate SSH key in Xcode"
+    print_warning "Go and generate SSH key in Xcode"
     # ssh-keyscan github.com >> ~/.ssh/known_hosts
 }
+
+additional_setup() { print_warning "SF Mono install needed" }
 
 pre_scripts_install
 brew_install
 dotfiles_install
 configs_install
 keys_install
+additional_setup
 source ~/.zshrc

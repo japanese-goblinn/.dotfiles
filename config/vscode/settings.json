@@ -45,9 +45,9 @@
   "workbench.editor.highlightModifiedTabs" : true,
   "workbench.panel.defaultLocation" : "right",
   "workbench.editor.tabCloseButton" : "left",
-  "workbench.colorTheme" : "GitHub Dark",
-  "workbench.preferredDarkColorTheme" : "GitHub Dark",
-  "workbench.preferredLightColorTheme" : "GitHub Light",
+  "workbench.colorTheme" : "GitHub Light Default",
+  "workbench.preferredDarkColorTheme" : "GitHub Dark Default",
+  "workbench.preferredLightColorTheme" : "GitHub Light Default",
   "workbench.colorCustomizations" : {
     "[Dracula]" : {
       "panel.border" : "#1E2028",
@@ -57,9 +57,7 @@
 
   "javascript.updateImportsOnFileMove.enabled" : "always",
   
-  "C_Cpp.updateChannel" : "Insiders",
-  
-  "python.pythonPath" : "\/usr\/local\/bin\/python3",
+  "C_Cpp.updateChannel": "Insiders",
   
   "liveServer.settings.donotShowInfoMsg" : true,
   "liveServer.settings.CustomBrowser": "chrome",
@@ -67,4 +65,11 @@
     
   "latex-workshop.view.pdf.viewer": "tab",
   "latex-workshop.latex.autoBuild.run": "never",
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "python.defaultInterpreterPath": "/usr/local/bin/python3",
 }

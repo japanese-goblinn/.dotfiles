@@ -1,3 +1,5 @@
+export PATH="$PATH:/opt/homebrew/bin/"
+
 export DOTFILES_PATH=$(dirname $(realpath ${(%):-%N}))
 
 SHELL_CONFIGS_PATH="$DOTFILES_PATH/shell"

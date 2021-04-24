@@ -1,6 +1,6 @@
 [user]
 	email = cool45akol@gmail.com
 	name = japanese-goblinn
-	signingkey = 6ACBBF4DF78F400A
-[commit]
-	gpgsign = true
+	# signingkey = 6ACBBF4DF78F400A
+# [commit]
+	# gpgsign = true
