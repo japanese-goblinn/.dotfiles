@@ -4,7 +4,6 @@
   "window.autoDetectColorScheme" : true,
   "window.zoomLevel" : 0,
 
-  "terminal.integrated.rendererType" : "dom",
   "terminal.external.osxExec" : "iTerm.app",
   "terminal.integrated.inheritEnv" : false,
 
@@ -63,8 +62,6 @@
   "liveServer.settings.CustomBrowser": "chrome",
   "liveServer.settings.ChromeDebuggingAttachment" : true,
     
-  "latex-workshop.view.pdf.viewer": "tab",
-  "latex-workshop.latex.autoBuild.run": "never",
   "workbench.editorAssociations": [
     {
       "viewType": "jupyter.notebook.ipynb",
@@ -72,4 +69,6 @@
     }
   ],
   "python.defaultInterpreterPath": "/usr/local/bin/python3",
+  "terminal.integrated.tabs.enabled": true,
+  "workbench.productIconTheme": "fluent-icons",
 }

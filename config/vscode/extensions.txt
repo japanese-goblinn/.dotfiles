@@ -15,6 +15,7 @@ ms-toolsai.jupyter
 ms-vscode.cpptools
 msjsdiag.debugger-for-chrome
 pnp.polacode
+rangav.vscode-thunder-client
 ritwickdey.LiveServer
 rust-lang.rust
 stevemoser.xcode-keybindings
