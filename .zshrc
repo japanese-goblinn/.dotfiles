@@ -1,4 +1,4 @@
-export PATH="$PATH:/opt/homebrew/bin/"
+export PATH="/opt/homebrew/bin:$PATH"
 
 export DOTFILES_PATH=$(dirname $(realpath ${(%):-%N}))
 
