@@ -29,6 +29,7 @@ brew_install() {
     brew install --cask transmission
     brew install --cask telegram
     brew install --cask discord
+    brew install --cask slack
     
     # cli tools
     brew install micro # prime cli text editor
@@ -38,7 +39,10 @@ brew_install() {
     brew install tldr 
     brew install hub 
     brew install coreutils
+    brew install gnupg
+    
     brew install cocoapods 
+    gem install xcode-install
     
     # fonts
     brew tap homebrew/cask-fonts 
