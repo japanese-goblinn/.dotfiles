@@ -20,6 +20,7 @@ brew_install() {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" 
     
     # applications
+    brew install raycast
     brew install iterm2 
     brew install visual-studio-code 
     brew install iina 

@@ -9,8 +9,10 @@ golang.go
 hediet.vscode-drawio
 idleberg.applescript
 mathiasfrohlich.Kotlin
+miguelsolorio.fluent-icons
 ms-azuretools.vscode-docker
 ms-python.python
+ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-vscode.cpptools
 msjsdiag.debugger-for-chrome

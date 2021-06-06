@@ -16,7 +16,7 @@ alias nedit='nano ~/.dotfiles/zsh/.aliases.zsh'
 alias reload='source ~/.zshrc'
 alias cdiff='code -d'
 alias bat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo zenburn || echo GitHub)"
-alias bri='brew install'
+alias bw='brew install'
 
 # Git
 alias g='git'
