@@ -33,6 +33,7 @@ brew_install() {
     brew install --cask slack
     
     # cli tools
+    brew install jq # json processor
     brew install micro # prime cli text editor
     brew install shellcheck
     brew install bat 
