@@ -10,5 +10,6 @@ source "$SHELL_CONFIGS_PATH/.aliases.zsh"
 source "$SHELL_CONFIGS_PATH/.functions.zsh"
 source "$SHELL_CONFIGS_PATH/.prompt.zsh"
 
+source "$DOTFILES_DEPENDECIES_PATH/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
 source "$DOTFILES_DEPENDECIES_PATH/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$DOTFILES_DEPENDECIES_PATH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" # This should be last command
