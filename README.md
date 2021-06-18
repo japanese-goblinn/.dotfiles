@@ -1,3 +1,8 @@
+
+```txt
+⚠️ This repository is no longer maintained. I've decided to move from git backuping to just use cloud file storage. Leave it here for the history.
+```
+
 # .dotfiles
 
 ![Setup](./media/setup.png)
