@@ -1,8 +1,6 @@
 {
   "files.autoSave" : "afterDelay",
   "files.insertFinalNewline": true,
-
-  "window.autoDetectColorScheme" : true,
   "window.zoomLevel" : 0,
 
   "terminal.external.osxExec" : "iTerm.app",
@@ -13,8 +11,13 @@
 
   "breadcrumbs.enabled" : true,
   
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true, // always use spaces
+  "editor.detectIndentation": false, // do not inherit indentation from file
+
   "editor.fontSize" : 12,
   "editor.fontFamily" : "SF Mono, Monaco, 'Courier New', monospace",
+  "editor.suggest.preview": true,
   "editor.renderWhitespace" : "all",
   "editor.accessibilitySupport" : "off",
   "editor.minimap.enabled" : false,
@@ -45,16 +48,9 @@
   "workbench.editor.highlightModifiedTabs" : true,
   "workbench.panel.defaultLocation" : "right",
   "workbench.editor.tabCloseButton" : "left",
-  "workbench.colorTheme" : "GitHub Dark Default",
   "workbench.preferredDarkColorTheme" : "GitHub Dark Default",
   "workbench.preferredLightColorTheme" : "GitHub Light Default",
-  "workbench.colorCustomizations" : {
-    "[Dracula]" : {
-      "panel.border" : "#1E2028",
-      "editorGroup.border" : "#1E2028"
-    }
-  },
-
+  
   "javascript.updateImportsOnFileMove.enabled" : "always",
   
   "C_Cpp.updateChannel": "Insiders",
@@ -63,15 +59,14 @@
   "liveServer.settings.CustomBrowser": "chrome",
   "liveServer.settings.ChromeDebuggingAttachment" : true,
     
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
   "python.defaultInterpreterPath": "/usr/local/bin/python3",
   "terminal.integrated.tabs.enabled": true,
   "workbench.productIconTheme": "fluent-icons",
-  "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWxcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwiZm9ybWF0V2lkdGhcIjpcIjI0MFwiLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODI3LFwiaGVpZ2h0XCI6MTE2OX0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9In0=",
-  "hediet.vscode-drawio.theme": "automatic",
+  "workbench.preferredHighContrastColorTheme": "GitHub Dark Dimmed",
+  "window.autoDetectHighContrast": false,
+  "window.autoDetectColorScheme": true,
+  "workbench.colorTheme": "GitHub Dark Default"
 }

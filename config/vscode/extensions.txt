@@ -2,11 +2,8 @@
 be5invis.toml
 CoenraadS.bracket-pair-colorizer
 DavidAnson.vscode-markdownlint
-dracula-theme.theme-dracula
 formulahendry.code-runner
 GitHub.github-vscode-theme
-golang.go
-hediet.vscode-drawio
 idleberg.applescript
 mathiasfrohlich.Kotlin
 miguelsolorio.fluent-icons
@@ -16,8 +13,7 @@ ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-vscode.cpptools
 msjsdiag.debugger-for-chrome
-pnp.polacode
-rangav.vscode-thunder-client
+quicktype.quicktype
 ritwickdey.LiveServer
 rust-lang.rust
 stevemoser.xcode-keybindings
