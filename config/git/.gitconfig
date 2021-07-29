@@ -1,3 +1,5 @@
 [user]
 	email = cool45akol@gmail.com
 	name = japanese-goblinn
+[init]
+	defaultBranch = main
