@@ -3,10 +3,9 @@
 
 : '
 - Description:
-  This function sets up new repository with everything you need. 
-
+    This function sets up new repository with everything you need. 
 - Usage: 
-  gi <directory-name> 
+    gi <directory-name> 
 '
 gi() {
   if [[ -n "$1" ]]; then
@@ -24,7 +23,9 @@ gi() {
 
 : '
 - Description:
-    This function creates GitHub repository from existing git repo and sets up origin.
+    This function creates GitHub repository from existing repo and sets up origin.
+- Dependencies:
+    https://hub.github.com
 '
 rgi() {
   if [[ -d .git ]]; then
@@ -39,11 +40,9 @@ rgi() {
 : '
 - Description:
     This function sets up git repository, then make GitHub repo and sets up origin.
-
 - Usage: 
     fgi <directory-name>
-
-- Required:
+- Dependencies:
     https://hub.github.com
 '
 fgi() {
@@ -86,7 +85,6 @@ ghi() {
 : '
 - Description:
     This function acts like rm command, but in safer maner (moves your files and/or directories into Trash).
-    
 - Usage: 
     t <list-of-files-and/or-directories> (also works if there are only one file/directory)
 '
@@ -161,7 +159,6 @@ md() {
 : '
 - Description:
     Create new python virtual environment and activate it
-
 - Usage: 
     venv <optional-venv-directory-name>
 '
