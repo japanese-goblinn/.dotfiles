@@ -2,99 +2,104 @@
 
 set -e
 
-YELLOW="\033[33m"
-GREEN="\033[32m"
-PURPLE="\033[95m"
-RED="\033[31m"
-COLOR_RESET="\033[0m"
+readonly YELLOW="\033[33m"
+readonly GREEN="\033[32m"
+readonly PURPLE="\033[95m"
+readonly RED="\033[31m"
+readonly COLOR_RESET="\033[0m"
 
 print_warning() { echo -e "⚠️  ${YELLOW}${1}${COLOR_RESET}" }
 print_error() { echo -e "⛔️ ${RED}${1}${COLOR_RESET}" }
 print_success() { echo -e "✅ ${GREEN}${1}${COLOR_RESET}" }
 
 pre_scripts_install() { 
-    xcode-select --install 2>/dev/null || print_warning "Xcode CLI tools already installed" 
+  xcode-select --install 2>/dev/null || print_warning "Xcode CLI tools already installed" 
 }
 
+_get_parent_dir_abs_path() {  echo "$(cd "$(dirname "$1")" && pwd)" }
+
 brew_install() {
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" 
-    
-    # applications
-    brew install raycast
-    brew install iterm2 
-    brew install visual-studio-code 
-    brew install iina 
-    brew install paw
-    brew install fork 
-    brew install google-chrome 
-    brew install --cask transmission
-    brew install --cask telegram
-    brew install --cask discord
-    brew install --cask slack
-    
-    # cli tools
-    brew install jq # json processor
-    brew install micro # prime cli text editor
-    brew install shellcheck
-    brew install bat 
-    brew install httpie 
-    brew install tldr 
-    brew install hub 
-    brew install coreutils
-    brew install gnupg
-    
-    brew install cocoapods 
-    gem install xcode-install
-    
-    # fonts
-    brew tap homebrew/cask-fonts 
-    brew install --cask font-jetbrains-mono
+  /bin/bash -c "$( curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh )" 
+  
+  # applications
+  brew install raycast
+  brew install iterm2 
+  brew install visual-studio-code 
+  brew install iina 
+  brew install paw
+  brew install fork 
+  brew install google-chrome 
+  brew install --cask transmission
+  brew install --cask telegram
+  brew install --cask discord
+  brew install --cask slack
+  
+  # cli 
+  brew install xxh # ssh with own dotfiles config
+  brew install jq # json processor
+  brew install micro # cli text editor
+  brew install shellcheck # tool for static analysis of shellscript
+  brew install bat # beautiful printing directly to terminal
+  brew install exa # modern ls replacement
+  brew install httpie # fancy curl
+  brew install tldr # short intro to any command
+  brew install hub # working with github from cli
+  brew install coreutils # some linux utils that now available by default on macOS
+  brew install gnupg # gpg
+  
+  # apple
+  brew install cocoapods 
+  gem install xcode-install
+  
+  # fonts
+  brew tap homebrew/cask-fonts 
+  brew install --cask font-jetbrains-mono
 }
 
 dotfiles_install() {
-    export DOTFILES_PATH=$(dirname $(realpath $0))
-    (cd $DOTFILES_PATH && git submodule update --init --recursive) 
-    source "$DOTFILES_PATH/.zshrc"
-    ln -s "$DOTFILES_PATH/.zshrc" ~/.
+  export DOTFILES_PATH=$( _get_parent_dir_abs_path $0 )
+  (cd $DOTFILES_PATH && git submodule update --init --recursive) 
+  source "$DOTFILES_PATH/.zshrc"
+  ln -s "$DOTFILES_PATH/.zshrc" ~/.
 }
 
 configs_install() {
-    # git
-    ln -s "$DOTFILES_CONFIG_PATH/git/.gitconfig" ~/.gitconfig 
-    
-    # crontab
-    crontab "$DOTFILES_CONFIG_PATH/cronetab/cronetab.txt" && crontab -l 
-    
-    # micro
-    ln -s "$DOTFILES_CONFIG_PATH/micro" ~/.config/
-    
-    # xcode
-    (cd "$DOTFILES_CONFIG_PATH/xcode/xcode-github-theme/" && ./install.sh) 
-    
-    # vscode
-    local VSCODE_PATH="$DOTFILES_CONFIG_PATH/vscode/"
-    xargs -L1 code --install-extension < "$VSCODE_PATH/extensions.txt"
-    ln -s "$VSCODE_PATH/settings.json" ~/Library/Application\ Support/Code/User/settings.json
-    
-    # raycast
-    gcl "https://github.com/japanese-goblinn/script-commands.git"
-    
-    # iterm2
-    print_warning "iTerm needs manual install of config"
-    mk "$HOME/Library/Application Support/iTerm2/Scripts/AutoLaunch/"
-    ln -s ~/.dotfiles/config/iterm/auto_dark_mode.py ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch/auto_dark_mode.py
+  # git
+  ln -s "$DOTFILES_CONFIG_PATH/git/.gitconfig" ~/.gitconfig 
+  
+  # run crontab
+  crontab "$DOTFILES_CONFIG_PATH/auto_backups/cronetab.txt" && crontab -l 
+  
+  # micro
+  ln -s "$DOTFILES_CONFIG_PATH/micro" ~/.config/
+  
+  # xcode
+  (cd "$DOTFILES_CONFIG_PATH/xcode/xcode-github-theme/" && ./install.sh) 
+  
+  # vscode
+  local VSCODE_PATH="$DOTFILES_CONFIG_PATH/vscode/"
+  xargs -L1 code --install-extension < "$VSCODE_PATH/extensions.txt"
+  ln -s "$VSCODE_PATH/settings.json" ~/Library/Application\ Support/Code/User/settings.json
+  
+  # raycast
+  gcl "https://github.com/japanese-goblinn/script-commands.git"
+  
+  # iterm2
+  print_warning "iTerm needs manual install of config"
+  mk "$HOME/Library/Application Support/iTerm2/Scripts/AutoLaunch/"
+  ln -s ~/.dotfiles/config/iterm/auto_dark_mode.py ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch/auto_dark_mode.py
 }
 
 keys_install() {
-    # gpg key
-    brew install gpg-suite && echo "Go and generate a new GPG key"
-    # gpg --list-secret-keys --keyid-format LONG (get A3CDF698F9B37035 from this)
-    # gpg --armor --export A3CDF698F9B37035
-    # add to github
-    
-    # ssh for github
-    print_warning "Go and generate SSH key in Xcode"
-    # ssh-keyscan github.com >> ~/.ssh/known_hosts
+  # gpg key
+  brew install gpg-suite && echo "Go and generate a new GPG key"
+  # gpg --list-secret-keys --keyid-format LONG (get A3CDF698F9B37035 from this)
+  # gpg --armor --export A3CDF698F9B37035
+  # add to github
+  
+  # ssh for github
+  print_warning "Go and generate SSH key in Xcode"
+  # ssh-keyscan github.com >> ~/.ssh/known_hosts
 }
 
 additional_setup() { print_warning "SF Mono install needed" }

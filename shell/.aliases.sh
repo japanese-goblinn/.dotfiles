@@ -1,5 +1,7 @@
-# General
-alias ls='ls -tU' # ls by creation date (macOS only)
+# useful aliases i'm using
+
+# general
+alias ls='exa'
 alias c='clear'
 alias o='open'
 alias of='open .'
@@ -14,11 +16,11 @@ alias dtf='cd ~/.dotfiles'
 alias edit='micro ~/.dotfiles/zsh/.aliases.zsh'
 alias nedit='nano ~/.dotfiles/zsh/.aliases.zsh'
 alias reload='source ~/.zshrc'
-alias cdiff='code -d'
+alias diff='code -nd'
+alias bri='brew install'
 alias bat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo zenburn || echo GitHub)"
-alias bw='brew install'
 
-# Git
+# git
 alias g='git'
 
 alias gb='git branch'
@@ -37,19 +39,15 @@ alias gl='git log --pretty=oneline --graph'
 alias gph='git push'
 alias gpl='git pull'
 alias gfe='git fetch'
-alias gdf='git diff'
 alias gcl='git clone'
 
-# Web
+# web
 alias chrome='open -a "Google Chrome"'
 
-# GitHub
+# github
 alias gho='open https://github.$(git config remote.origin.url | cut -f2 -d. | tr ':' /)'
 
-# Use this command on file or with some request 
-alias json='pygmentize -l json'
-
-#Python
+# python
 alias ip='ipython'
 alias p='python3' 
 alias p2='python'
@@ -58,7 +56,7 @@ alias pip2='pip'
 alias deac='deactivate'
 alias jp='jupyter notebook'
 
-# iOS
+# ios
 alias pu='pod update --verbose'
 alias pi='pod install --verbose'
 alias pd='pod deintegrate --verbose'
