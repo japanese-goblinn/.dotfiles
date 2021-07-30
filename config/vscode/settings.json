@@ -46,15 +46,13 @@
   },
 
   "workbench.editor.highlightModifiedTabs" : true,
-  "workbench.panel.defaultLocation" : "right",
+  "workbench.panel.defaultLocation" : "bottom", // terminal and stuff location
   "workbench.editor.tabCloseButton" : "left",
   "workbench.preferredDarkColorTheme" : "GitHub Dark Default",
   "workbench.preferredLightColorTheme" : "GitHub Light Default",
   
   "javascript.updateImportsOnFileMove.enabled" : "always",
-  
-  "C_Cpp.updateChannel": "Insiders",
-  
+    
   "liveServer.settings.donotShowInfoMsg" : true,
   "liveServer.settings.CustomBrowser": "chrome",
   "liveServer.settings.ChromeDebuggingAttachment" : true,
