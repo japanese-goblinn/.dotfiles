@@ -1,13 +1,18 @@
 #!/bin/bash
 # some helpful functions to do commonly used stuff quicker
 
+function clear_vscode_cache() {
+  rm -rf ~/Library/Application\ Support/Code/Cache/*
+  rm -rf ~/Library/Application\ Support/Code/CachedData/*
+}
+
 : '
 - Description:
     This function sets up new repository with everything you need. 
 - Usage: 
     gi <directory-name> 
 '
-gi() {
+function gi() {
   if [[ -n "$1" ]]; then
     mkdir "$1"
     cd "$1" || exit
@@ -23,72 +28,11 @@ gi() {
 
 : '
 - Description:
-    This function creates GitHub repository from existing repo and sets up origin.
-- Dependencies:
-    https://hub.github.com
-'
-rgi() {
-  if [[ -d .git ]]; then
-    hub create
-    git push -u origin HEAD
-    open https://github.$(git config remote.origin.url | cut -f2 -d. | tr ':' /)
-  else 
-    echo -e "\e[31mNOT A GIT REPOSITORY\e[0m"
-  fi
-}
-
-: '
-- Description:
-    This function sets up git repository, then make GitHub repo and sets up origin.
-- Usage: 
-    fgi <directory-name>
-- Dependencies:
-    https://hub.github.com
-'
-fgi() {
-  if [[ -n "$1" ]]; then
-    gi "$1"
-    git add .
-    git commit -m "init: ✨"
-    rgi
-  else 
-    echo -e "\e[31mDIRECTORY NAME SHOULD BE PASSED\e[0m"
-  fi
-}
-
-is_git_remote_url_reachable() {
-  git ls-remote "$1" CHECK_GIT_REMOTE_URL_REACHABILITY > /dev/null 2>&1
-}
-
-: '
-- Description:
-    This function creates directory and git repository from currently opened GitHub repo in Safari (also sets  up remote). 
-'
-ghi() {
-  url=$(osascript -e 'tell application "Safari" to return URL of front document')
-  if is_git_remote_url_reachable "$url"; then
-    local dir_name=${url##*/}
-    cd ~/Downloads || exit
-    mkdir "$dir_name"
-    cd "$dir_name" || exit
-    git init
-    echo "# $dir_name" >> README.md
-    git add README.md
-    git commit -m "init: ✨"
-    git remote add origin "$url"
-    git push -u origin master
-  else
-    echo -e "\e[31mBAD URL\e[0m"
-  fi
-}
-
-: '
-- Description:
     This function acts like rm command, but in safer maner (moves your files and/or directories into Trash).
 - Usage: 
     t <list-of-files-and/or-directories> (also works if there are only one file/directory)
 '
-t() {
+function t() {
   if [[ -n "$1" ]]; then
     mv "$@" ~/.Trash
   else
@@ -100,7 +44,7 @@ t() {
 - Description:
     Move to trash current folder.
 '
-tc() {
+function tc() {
   local folderName=$(pwd)
   cd ../
   t "$folderName"
@@ -110,7 +54,7 @@ tc() {
 - Description:
     This function copies current directory path in clipboard.
 '
-cpwd() { 
+function cpwd() { 
   pwd | pbcopy
 }
 
@@ -118,7 +62,7 @@ cpwd() {
 - Description:
     This function copies currently opened page in Safari URL into clipboard.
 '
-cpsf() { 
+function cpsf() { 
   osascript -e 'tell application "Safari" to return URL of front document' | pbcopy
 }
 
@@ -128,7 +72,7 @@ cpsf() {
 - Usage:
     cf <file1.ext> <file2.ext>...
 '
-cf() {
+function cf() {
   if [[ -n "$1" ]]; then
     touch "$@"
     micro "$@"
@@ -137,7 +81,7 @@ cf() {
   fi
 }
 
-mk() { 
+function mk() { 
   mkdir -p "$1" 
 }
 
@@ -147,7 +91,7 @@ mk() {
 - Usage:
     md <directory-name>
 '
-md() {
+function md() {
   if [[ -n "$1" ]]; then
     mkdir -p "$1"
     cd "$1" || exit
@@ -162,7 +106,7 @@ md() {
 - Usage: 
     venv <optional-venv-directory-name>
 '
-venv() {
+function venv() {
   if [[ -n "$1" ]]; then
     python3 -m venv "$1"
     source "$1/bin/activate"
