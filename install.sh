@@ -8,9 +8,9 @@ readonly PURPLE="\033[95m"
 readonly RED="\033[31m"
 readonly COLOR_RESET="\033[0m"
 
-print_warning() { echo -e "⚠️  ${YELLOW}${1}${COLOR_RESET}" }
-print_error() { echo -e "⛔️ ${RED}${1}${COLOR_RESET}" }
-print_success() { echo -e "✅ ${GREEN}${1}${COLOR_RESET}" }
+print_warning() { echo -e "⚠️  ${YELLOW}${1}${COLOR_RESET}"; }
+print_error() { echo -e "❌ ${RED}${1}${COLOR_RESET}"; }
+print_success() { echo -e "✅ ${GREEN}${1}${COLOR_RESET}"; }
 
 pre_scripts_install() { 
   xcode-select --install 2>/dev/null || print_warning "Xcode CLI tools already installed" 
