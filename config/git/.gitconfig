@@ -3,3 +3,5 @@
 	name = japanese-goblinn
 [init]
 	defaultBranch = main
+[credential]
+	helper = osxkeychain
