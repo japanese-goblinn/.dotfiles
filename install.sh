@@ -46,6 +46,7 @@ brew_install() {
   brew install hub # working with github from cli
   brew install coreutils # some linux utils that now available by default on macOS
   brew install gnupg # gpg
+  brew install gping # ping but with graph
   
   # apple
   brew install cocoapods 
