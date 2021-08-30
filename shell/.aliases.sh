@@ -4,8 +4,6 @@
 alias ls='exa'
 alias c='clear'
 alias o='open'
-alias of='open .'
-alias to='touch'
 alias e='micro'
 alias .='cd -'
 alias ..='cd ..'

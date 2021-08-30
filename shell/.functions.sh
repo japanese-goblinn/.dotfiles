@@ -1,6 +1,19 @@
 #!/bin/bash
 # some helpful functions to do commonly used stuff quicker
 
+ERROR_CODE=1
+
+function to() {
+  local file_name="$1"
+  if [ -z $file_name ]; then 
+    echo -e "\e[31mFILE NAME SHOULD BE PASSED\e[0m"
+    return $ERROR_CODE
+  fi
+  touch $file_name
+  e "file_name"
+}
+
+
 function clear_vscode_cache() {
   rm -rf ~/Library/Application\ Support/Code/Cache/*
   rm -rf ~/Library/Application\ Support/Code/CachedData/*
