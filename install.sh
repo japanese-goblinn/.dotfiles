@@ -43,7 +43,7 @@ brew_install() {
   brew install exa # modern ls replacement
   brew install httpie # fancy curl
   brew install tldr # short intro to any command
-  brew install hub # working with github from cli
+  brew install gh # working with github from cli
   brew install coreutils # some linux utils that now available by default on macOS
   brew install gnupg # gpg
   brew install gping # ping but with graph
