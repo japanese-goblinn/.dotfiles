@@ -67,4 +67,5 @@
   "window.autoDetectHighContrast": false,
   "window.autoDetectColorScheme": true,
   "workbench.colorTheme": "GitHub Dark Default"
+  "git.autofetch": true
 }
