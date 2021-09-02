@@ -1,6 +1,3 @@
-#!/bin/bash
-# some helpful functions to do commonly used stuff quicker
-
 ERROR_CODE=1
 
 function to() {

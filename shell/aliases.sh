@@ -1,5 +1,3 @@
-# useful aliases i'm using
-
 # general
 alias ls='exa'
 alias c='clear'
