@@ -47,6 +47,7 @@ brew_install() {
   brew install coreutils # some linux utils that now available by default on macOS
   brew install gnupg # gpg
   brew install gping # ping but with graph
+  brew install fzf # fuzzy search thing
   
   # apple
   brew install cocoapods 
