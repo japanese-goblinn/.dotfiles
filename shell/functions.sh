@@ -9,9 +9,18 @@ function _print_error() { echo -e "\n❌ ${BOLD}${RED}${1}${RESET}"; }
 
 ERROR_CODE=1
 
+function fix_audio() {
+  sudo launchctl stop com.apple.audio.coreaudiod && sudo launchctl start com.apple.audio.coreaudiod
+}
+
+function fix_safari_extensions() {
+  "/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister" -f "/Applications/Safari.app"
+}
+
 function set_personal_macos_defaults() {
   source "$DOTFILES_PATH/macos/defaults.sh"
 }
+
 function to() {
   local file_name="$1"
   if [ -z $file_name ]; then 
