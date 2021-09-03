@@ -17,6 +17,7 @@ alias diff="code -nd"
 alias bri="brew install"
 alias bat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo OneHalfDark || echo Coldark-Cold)"
 alias ping="gping"
+alias lg='lazygit'
 
 # git
 alias g="git"

@@ -49,7 +49,8 @@ brew_install() {
   brew install gping # ping but with graph
   brew install fzf # fuzzy search 
   $(brew --prefix)/opt/fzf/install
-  
+  brew install lazygit # better work with git from cli
+
   # apple
   brew install cocoapods 
   gem install xcode-install
