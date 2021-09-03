@@ -9,6 +9,9 @@ function _print_error() { echo -e "\n❌ ${BOLD}${RED}${1}${RESET}"; }
 
 ERROR_CODE=1
 
+function set_personal_macos_defaults() {
+  source "$DOTFILES_PATH/macos/defaults.sh"
+}
 function to() {
   local file_name="$1"
   if [ -z $file_name ]; then 

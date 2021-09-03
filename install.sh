@@ -64,6 +64,7 @@ dotfiles_install() {
   (cd $DOTFILES_PATH && git submodule update --init --recursive) 
   source "$DOTFILES_PATH/.zshrc"
   ln -s "$DOTFILES_PATH/.zshrc" ~/.
+  set_personal_macos_defaults
 }
 
 configs_install() {
