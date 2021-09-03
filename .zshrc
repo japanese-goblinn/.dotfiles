@@ -4,7 +4,7 @@ export DOTFILES_PATH=$( dirname $( realpath ${(%):-%N} ) )
 
 SHELL_CONFIGS_PATH="$DOTFILES_PATH/shell"
 
-source "$SHELL_CONFIGS_PATH/shell_exports.sh"
+source "$SHELL_CONFIGS_PATH/exports.sh"
 source "$SHELL_CONFIGS_PATH/aliases.sh"
 source "$SHELL_CONFIGS_PATH/functions.sh"
 source "$SHELL_CONFIGS_PATH/prompt.sh"
