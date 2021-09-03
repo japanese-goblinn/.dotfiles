@@ -68,4 +68,6 @@
   "window.autoDetectColorScheme": true,
   "workbench.colorTheme": "GitHub Dark Default"
   "git.autofetch": true
+  "window.zoomLevel": 0,
+  "git.autofetch": true,
 }
