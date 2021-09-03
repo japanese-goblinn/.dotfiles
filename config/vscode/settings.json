@@ -1,7 +1,6 @@
 {
   "files.autoSave" : "afterDelay",
   "files.insertFinalNewline": true,
-  "window.zoomLevel" : 0,
 
   "terminal.external.osxExec" : "iTerm.app",
   "terminal.integrated.inheritEnv" : false,
@@ -14,7 +13,7 @@
   "editor.tabSize": 2,
   "editor.insertSpaces": true, // always use spaces
   "editor.detectIndentation": false, // do not inherit indentation from file
-
+  "editor.bracketPairColorization.enabled": true,
   "editor.fontSize" : 12,
   "editor.fontFamily" : "SF Mono, Monaco, 'Courier New', monospace",
   "editor.suggest.preview": true,
@@ -22,6 +21,7 @@
   "editor.accessibilitySupport" : "off",
   "editor.minimap.enabled" : false,
   "editor.cursorBlinking" : "smooth",
+  "workbench.settings.editor": "json",
   "editor.tokenColorCustomizations" : {
     "[GitHub Dark]" : {
       "textMateRules" : [
