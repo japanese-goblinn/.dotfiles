@@ -79,3 +79,23 @@ function venv() {
     source "venv/bin/activate"
   fi
 }
+
+# brew. update (one or multiple) selected application(s)
+function brup() {
+  local upd=$(brew leaves | fzf -m)
+
+  if [[ $upd ]]; then
+    for prog in $(echo $upd);
+    do; brew upgrade $prog; done;
+  fi
+}
+
+# brew. delete (one or multiple) selected application(s)
+function brde() {
+  local uninst=$(brew leaves | fzf -m)
+
+  if [[ $uninst ]]; then
+    for prog in $(echo $uninst);
+    do; brew uninstall $prog; done;
+  fi
+}

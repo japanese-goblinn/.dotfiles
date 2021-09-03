@@ -15,7 +15,7 @@ alias dtf="cd ~/.dotfiles"
 alias reload="source ~/.zshrc"
 alias diff="code -nd"
 alias bri="brew install"
-alias bat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo zenburn || echo GitHub)"
+alias bat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo OneHalfDark || echo Coldark-Cold)"
 alias ping="gping"
 
 # git
