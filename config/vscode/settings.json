@@ -1,9 +1,14 @@
 {
+  "window.autoDetectHighContrast": false,
+  "window.autoDetectColorScheme": true,
+  "window.zoomLevel": 0,
+
   "files.autoSave" : "afterDelay",
   "files.insertFinalNewline": true,
 
   "terminal.external.osxExec" : "iTerm.app",
   "terminal.integrated.inheritEnv" : false,
+  "terminal.integrated.tabs.enabled": true,
 
   "explorer.confirmDelete" : false,
   "explorer.confirmDragAndDrop" : false,
@@ -21,7 +26,6 @@
   "editor.accessibilitySupport" : "off",
   "editor.minimap.enabled" : false,
   "editor.cursorBlinking" : "smooth",
-  "workbench.settings.editor": "json",
   "editor.tokenColorCustomizations" : {
     "[GitHub Dark]" : {
       "textMateRules" : [
@@ -45,29 +49,26 @@
     }
   },
 
+  "workbench.settings.editor": "json",
   "workbench.editor.highlightModifiedTabs" : true,
-  "workbench.panel.defaultLocation" : "bottom", // terminal and stuff location
+  "workbench.panel.defaultLocation" : "right", // terminal and stuff location
   "workbench.editor.tabCloseButton" : "left",
   "workbench.preferredDarkColorTheme" : "GitHub Dark Default",
   "workbench.preferredLightColorTheme" : "GitHub Light Default",
-  
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.preferredHighContrastColorTheme": "GitHub Dark Dimmed",
+  "workbench.colorTheme": "GitHub Light Default",
+
   "javascript.updateImportsOnFileMove.enabled" : "always",
+
+  "python.defaultInterpreterPath": "/usr/local/bin/python3",
     
   "liveServer.settings.donotShowInfoMsg" : true,
   "liveServer.settings.CustomBrowser": "chrome",
   "liveServer.settings.ChromeDebuggingAttachment" : true,
-    
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
-  },
-  "python.defaultInterpreterPath": "/usr/local/bin/python3",
-  "terminal.integrated.tabs.enabled": true,
-  "workbench.productIconTheme": "fluent-icons",
-  "workbench.preferredHighContrastColorTheme": "GitHub Dark Dimmed",
-  "window.autoDetectHighContrast": false,
-  "window.autoDetectColorScheme": true,
-  "workbench.colorTheme": "GitHub Dark Default"
-  "git.autofetch": true
-  "window.zoomLevel": 0,
+
   "git.autofetch": true,
 }
