@@ -21,10 +21,12 @@ function lg() {
   lazygit
 }
 
+# use this when airpods audio quality is broken
 function fix_audio() {
   sudo launchctl stop com.apple.audio.coreaudiod && sudo launchctl start com.apple.audio.coreaudiod
 }
 
+# use this when safari extension install returning error
 function fix_safari_extensions() {
   "/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister" -f "/Applications/Safari.app"
 }
@@ -33,6 +35,7 @@ function set_personal_macos_defaults() {
   source "$DOTFILES_PATH/macos/defaults.sh"
 }
 
+# touch and edit
 function to() {
   local file_name="$1"
   if [ -z $file_name ]; then 
