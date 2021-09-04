@@ -9,6 +9,18 @@ function _print_error() { echo -e "\n❌ ${BOLD}${RED}${1}${RESET}"; }
 
 ERROR_CODE=1
 
+# lazygit
+function lg() {
+  local config_location="$HOME/Library/Application Support/lazygit/config.yml"
+  local is_dark_theme=$( defaults read -globalDomain AppleInterfaceStyle &>/dev/null && echo true || echo false )
+  if [ $is_dark_theme = true ]; then
+    cat "$LAZYGIT_CONFIG_PATH/dark_theme.yml" > $config_location
+  else 
+    cat "$LAZYGIT_CONFIG_PATH/light_theme.yml" > $config_location
+  fi
+  lazygit
+}
+
 function fix_audio() {
   sudo launchctl stop com.apple.audio.coreaudiod && sudo launchctl start com.apple.audio.coreaudiod
 }

@@ -1,6 +1,7 @@
 # path's
 export DOTFILES_DEPENDECIES_PATH="$DOTFILES_PATH/dependencies"
 export DOTFILES_CONFIG_PATH="$DOTFILES_PATH/config"
+export LAZYGIT_CONFIG_PATH="$DOTFILES_CONFIG_PATH/lazygit"
 
 # zsh-autosuggestions
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#cf2f98"
