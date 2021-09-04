@@ -24,3 +24,6 @@ export FZF_DEFAULT_OPTS="
 
 # bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+# fuck
+export THEFUCK_NO_COLORS="true"
