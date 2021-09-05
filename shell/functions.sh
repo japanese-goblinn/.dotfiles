@@ -1,3 +1,5 @@
+#!/bin/bash
+
 RED="\033[31m"
 GREEN="\033[32m"
 YELLOW="\033[33m"
@@ -5,9 +7,93 @@ BOLD="\033[1m"
 PURPLE="\033[95m"
 RESET="\033[0m"
 
-function _print_error() { echo -e "\n❌ ${BOLD}${RED}${1}${RESET}"; }
-
 ERROR_CODE=1
+
+# -------------------------------------- UTILS -------------------------------------------
+
+function _is_git_repo() { 
+  git rev-parse --is-inside-work-tree 2>/dev/null && echo true || echo false 
+}
+
+function _print_error() { 
+  echo -e "\n❌ ${BOLD}${RED}${1}${RESET}"
+}
+
+# ------------------------------------ FUNCTIONS -----------------------------------------
+
+# brew. update (one or multiple) selected application(s)
+function fbrup() {
+  local upd
+  upd=$(brew leaves | fzf -m)
+
+  if [[ $upd ]]; then
+    for prog in $(echo $upd);
+    do; brew upgrade $prog; done;
+  fi
+}
+
+# brew. delete (one or multiple) selected application(s)
+function fbrde() {
+  local uninst=$(brew leaves | fzf -m)
+
+  if [[ $uninst ]]; then
+    for prog in $(echo $uninst);
+    do; brew uninstall $prog; done;
+  fi
+}
+
+# fuzzy cd
+function fcd() {
+  local file
+  local dir
+  file=$(fzf +m -q "$1") && dir=$(dirname "$file") && cd "$dir"
+}
+
+# fuzzy git log
+function gl() {
+  if [ "$(_is_git_repo)" = false ]; then _print_error "NOT A GIT REPO"; return $ERROR_CODE; fi
+  local is_dark_theme=$( defaults read -globalDomain AppleInterfaceStyle &>/dev/null && echo true || echo false )
+  local light_option=""
+  if [ $is_dark_theme = false ]; then
+    light_option="--light"
+  fi
+  git log \
+    --graph \
+    --color=always \
+    --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" \
+  | fzf \
+    --ansi \
+    --no-sort \
+    --reverse \
+    --tiebreak=index \
+    --preview="f() { set -- \$(echo -- \$@ | grep -o '[a-f0-9]\{7\}'); [ \$# -eq 0 ] || git show --color=always \$1 | delta --line-numbers $light_option; }; f {}"
+}
+
+# fzf serach env
+function fenv() {
+  local out
+  out=$(env | fzf)
+  echo $(echo $out | cut -d= -f2)
+}
+
+# delta
+function d() {
+  local file0="$1"
+  local file1="$2"
+  local is_dark_theme=$( defaults read -globalDomain AppleInterfaceStyle &>/dev/null && echo true || echo false )
+  local light_option=""
+  if [ $is_dark_theme = false  ]; then
+    light_option="--light"
+  fi
+  delta $light_option $file0 $file1
+}
+
+# bat
+function b() {
+  local file="$1"
+  local theme=$( defaults read -globalDomain AppleInterfaceStyle &>/dev/null && echo $BAT_DARK_THEME || echo $BAT_LIGHT_THEME )
+  bat --theme=$theme --color=always $file
+}
 
 # lazygit
 function lg() {
@@ -75,7 +161,8 @@ function t() {
 }
 
 function tc() {
-  local folderName=$(pwd)
+  local folderName
+  folderName=$( pwd )
   cd ../
   t "$folderName"
 }
@@ -104,25 +191,5 @@ function venv() {
   else 
     python3 -m venv venv
     source "venv/bin/activate"
-  fi
-}
-
-# brew. update (one or multiple) selected application(s)
-function brup() {
-  local upd=$(brew leaves | fzf -m)
-
-  if [[ $upd ]]; then
-    for prog in $(echo $upd);
-    do; brew upgrade $prog; done;
-  fi
-}
-
-# brew. delete (one or multiple) selected application(s)
-function brde() {
-  local uninst=$(brew leaves | fzf -m)
-
-  if [[ $uninst ]]; then
-    for prog in $(echo $uninst);
-    do; brew uninstall $prog; done;
   fi
 }
