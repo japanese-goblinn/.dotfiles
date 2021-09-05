@@ -1,4 +1,8 @@
-#!/bin/sh
+#!/bin/bash
+
+set -e
+
+echo "Configuring macOS defaults..."
 
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
@@ -19,10 +23,18 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # View modes: `Nlsv`, `icnv`, `Clmv`, `glyv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Clmv"
 
-# Show the ~/Library folder
-chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
+# Keep folders on top when sorting by name:
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
+# Show file extensions in Finder:
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 killall Finder
+
+# ACTIVITY MONITOR
+
+# Show all processes in Activity Monitor
+defaults write com.apple.ActivityMonitor ShowCategory -int 0
 
 # DOCK
 
@@ -93,3 +105,5 @@ defaults write org.m0k.transmission WarningDonate -bool false
 defaults write org.m0k.transmission WarningLegal -bool false
 
 killall Transmission
+
+echo "✅ Configured successfully"
