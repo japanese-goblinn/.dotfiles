@@ -6,4 +6,7 @@
 fpath=("$DOTFILES_DEPENDECIES_PATH/pure" $fpath)
 
 autoload -U promptinit; promptinit
+
+zstyle :prompt:pure:git:stash show yes
+
 prompt pure
