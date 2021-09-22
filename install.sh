@@ -11,7 +11,8 @@ COLOR_RESET="\033[0m"
 function print_warning() { echo -e "⚠️  ${YELLOW}${1}${COLOR_RESET}"; }
 function print_error() { echo -e "❌ ${RED}${1}${COLOR_RESET}"; }
 function print_success() { echo -e "✅ ${GREEN}${1}${COLOR_RESET}"; }
-function _get_parent_dir_abs_path() {  echo "$( cd "$(dirname "$1")" && pwd )" }
+# TODO: remove
+function _get_parent_dir_abs_path() { echo "$( cd "$(dirname "$1")" && pwd )" }
 
 function pre_scripts_install() { 
   xcode-select --install 2>/dev/null || print_warning "Xcode CLI tools already installed" 
@@ -26,7 +27,7 @@ function brew_install() {
   brew install --cask visual-studio-code 
   brew install --cask iina 
   brew install --cask paw
-  brew install --cask fork 
+  brew install --cask fork
   brew install --cask google-chrome 
   brew install --cask transmission
   brew install --cask telegram
@@ -62,8 +63,8 @@ function brew_install() {
 function dotfiles_install() {
   export DOTFILES_PATH=$( _get_parent_dir_abs_path $0 )
   (cd $DOTFILES_PATH && git submodule update --init --recursive) 
-  source "$DOTFILES_PATH/.zshrc"
-  ln -s "$DOTFILES_PATH/.zshrc" ~/.
+  source "$SHELL_CONFIGS_PATH/exports.sh"
+  (cd "$DOTFILES_DEPENDECIES_PATH/xcode_theme" && ./install.sh) 
   set_personal_macos_defaults
 }
 
@@ -76,10 +77,7 @@ function configs_install() {
   
   # micro
   ln -s "$DOTFILES_CONFIG_PATH/micro" ~/.config/
-  
-  # xcode
-  (cd "$DOTFILES_CONFIG_PATH/xcode/xcode-github-theme/" && ./install.sh) 
-  
+    
   # vscode
   local VSCODE_PATH="$DOTFILES_CONFIG_PATH/vscode/"
   xargs -L1 code --install-extension < "$VSCODE_PATH/extensions.txt"
@@ -106,7 +104,9 @@ function keys_install() {
   # ssh-keyscan github.com >> ~/.ssh/known_hosts
 }
 
-function additional_setup() { print_warning "SF Mono install needed" }
+function additional_setup() { 
+  print_warning "SF Mono install needed" 
+}
 
 pre_scripts_install
 brew_install
@@ -114,4 +114,4 @@ dotfiles_install
 configs_install
 keys_install
 additional_setup
-source ~/.zshrc
+source "$HOME/.zshrc"
