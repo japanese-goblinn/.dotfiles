@@ -106,4 +106,9 @@ defaults write org.m0k.transmission WarningLegal -bool false
 
 killall Transmission
 
+# XCODE
+
+# show invisibles
+defaults write com.apple.dt.Xcode DVTTextShowInvisibleCharacters 1
+
 echo "✅ Configured successfully"
