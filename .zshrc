@@ -1,4 +1,6 @@
-export PATH="/opt/homebrew/bin:$PATH"
+HOMEBREW_PATH="/opt/homebrew/bin"
+RUST_PATH="$HOME/.cargo/bin"
+export PATH="$HOMEBREW_PATH:$RUST_PATH:$PATH"
 
 export DOTFILES_PATH=$( dirname $( realpath ${(%):-%N} ) )
 
