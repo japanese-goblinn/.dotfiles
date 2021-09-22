@@ -71,4 +71,6 @@
   "liveServer.settings.ChromeDebuggingAttachment" : true,
 
   "git.autofetch": true,
+
+  "shellcheck.executablePath": "/opt/homebrew/bin/shellcheck",
 }
