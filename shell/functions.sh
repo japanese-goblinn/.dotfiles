@@ -21,6 +21,13 @@ function _print_error() {
 
 # ------------------------------------ FUNCTIONS -----------------------------------------
 
+function cht() { 
+  local prog
+  prog=$1
+  if [ -z "$prog" ]; then return $ERROR_CODE; fi
+  curl -s "http://cht.sh/$prog"
+}
+
 # brew. update (one or multiple) selected application(s)
 function fbrup() {
   local upd
