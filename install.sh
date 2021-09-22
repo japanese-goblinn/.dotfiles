@@ -18,6 +18,10 @@ function pre_scripts_install() {
   xcode-select --install 2>/dev/null || print_warning "Xcode CLI tools already installed" 
 }
 
+function install_rust() {
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+}
+
 function brew_install() {
   /bin/bash -c "$( curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh )" 
   
