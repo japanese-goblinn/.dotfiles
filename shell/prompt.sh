@@ -7,6 +7,7 @@ fpath=("$DOTFILES_DEPENDECIES_PATH/pure" $fpath)
 
 autoload -U promptinit; promptinit
 
+export PURE_PROMPT_SYMBOL="✨"
 zstyle :prompt:pure:git:stash show yes
 
 prompt pure
