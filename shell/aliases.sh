@@ -11,6 +11,8 @@ alias e="micro"
 alias ping="gping"
 alias diff="code -nd"
 alias reload="source ~/.zshrc"
+alias f="fork"
+alias m="make"
 
 # Navigation
 alias .="cd -"
@@ -39,13 +41,10 @@ alias gpl="git pull"
 alias gfe="git fetch"
 alias gcl="git clone"
 
-# Web
-alias chrome="open -a "Google Chrome""
-
 # GitHub
 alias gho='open https://github.$( git config remote.origin.url | cut -f2 -d. | tr ":" / )'
 
-# python
+# Python
 alias ip="ipython"
 alias p="python3" 
 alias p2="python"
