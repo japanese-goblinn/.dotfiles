@@ -56,7 +56,6 @@ function brew_install() {
   $(brew --prefix)/opt/fzf/install
   brew install lazygit # better work with git from cli
   brew install tree # print tree of directories structure
-  brew install thefuck # fix last command
   brew install ripgrep # better grep
 
   # apple

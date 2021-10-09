@@ -30,8 +30,5 @@ export FZF_DEFAULT_OPTS="
 --preview '([[ -f {} ]] && (bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo $BAT_DARK_THEME || echo $BAT_LIGHT_THEME) --style=numbers --color=always --line-range=:500  {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
 "
 
-# fuck
-export THEFUCK_NO_COLORS="true"
-
 # homebrew
 export HOMEBREW_NO_ANALYTICS=1  # disables statistics that brew collects

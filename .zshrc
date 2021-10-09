@@ -1,3 +1,4 @@
+# TODO: move to another config file
 HOMEBREW_PATH="/opt/homebrew/bin"
 RUST_PATH="$HOME/.cargo/bin"
 export PATH="$HOMEBREW_PATH:$RUST_PATH:$PATH"
@@ -16,5 +17,3 @@ source "$SHELL_CONFIGS_PATH/prompt.sh"
 source "$DOTFILES_DEPENDECIES_PATH/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
 source "$DOTFILES_DEPENDECIES_PATH/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$DOTFILES_DEPENDECIES_PATH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-
-eval $(thefuck --alias fix)

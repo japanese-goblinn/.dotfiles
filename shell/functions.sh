@@ -21,6 +21,18 @@ function _print_error() {
 
 # ------------------------------------ FUNCTIONS -----------------------------------------
 
+# print impementation of some shell function or other stuff
+function wht() {
+  local prog
+  prog=$1
+  if [ -z "$prog" ]; then
+   print_error "NAME SHOULD BE PASSED"
+   return $ERROR_CODE
+  fi
+  whence -f "$prog" | bat --language bash
+}
+
+# abother tldr
 function cht() { 
   local prog
   prog=$1
