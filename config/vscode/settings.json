@@ -15,7 +15,7 @@
 
   "breadcrumbs.enabled" : true,
   
-  "editor.tabSize": 2,
+  "editor.tabSize": 2, // tab is always 2 spaces
   "editor.insertSpaces": true, // always use spaces
   "editor.detectIndentation": false, // do not inherit indentation from file
   "editor.bracketPairColorization.enabled": true,
@@ -26,28 +26,6 @@
   "editor.accessibilitySupport" : "off",
   "editor.minimap.enabled" : false,
   "editor.cursorBlinking" : "smooth",
-  "editor.tokenColorCustomizations" : {
-    "[GitHub Dark]" : {
-      "textMateRules" : [
-        {
-          "scope" : "meta.function-call.generic",
-          "settings" : {
-            "foreground" : "#79B8FF"
-          }
-        }
-      ]
-    },
-    "[GitHub Light]" : {
-      "textMateRules" : [
-        {
-          "scope" : "meta.function-call.generic",
-          "settings" : {
-            "foreground" : "#045FC6"
-          }
-        }
-      ]
-    }
-  },
 
   "workbench.settings.editor": "json",
   "workbench.editor.highlightModifiedTabs" : true,
@@ -58,19 +36,16 @@
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter.notebook.ipynb"
   },
-  "workbench.productIconTheme": "fluent-icons",
   "workbench.preferredHighContrastColorTheme": "GitHub Dark Dimmed",
   "workbench.colorTheme": "GitHub Light Default",
 
+  "git.autofetch": true,
+  "git.showUnpublishedCommitsButton": "always",
+
   "javascript.updateImportsOnFileMove.enabled" : "always",
 
-  "python.defaultInterpreterPath": "/usr/local/bin/python3",
+  "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
     
-  "liveServer.settings.donotShowInfoMsg" : true,
-  "liveServer.settings.CustomBrowser": "chrome",
-  "liveServer.settings.ChromeDebuggingAttachment" : true,
-
-  "git.autofetch": true,
-
   "shellcheck.executablePath": "/opt/homebrew/bin/shellcheck",
+  "workbench.productIconTheme": "fluent-icons",
 }
