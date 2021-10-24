@@ -21,7 +21,7 @@ function _print_error() {
 
 # ------------------------------------ FUNCTIONS -----------------------------------------
 
-# print impementation of some shell function or other stuff
+# print impementation
 function wht() {
   local prog
   prog=$1
@@ -32,7 +32,7 @@ function wht() {
   whence -f "$prog" | bat --language bash
 }
 
-# abother tldr
+# another tldr
 function cht() { 
   local prog
   prog=$1
@@ -46,18 +46,17 @@ function fbrup() {
   upd=$(brew leaves | fzf -m)
 
   if [[ $upd ]]; then
-    for prog in $(echo $upd);
-    do; brew upgrade $prog; done;
+    for prog in $upd; do brew upgrade "$prog"; done
   fi
 }
 
 # brew. delete (one or multiple) selected application(s)
 function fbrde() {
-  local uninst=$(brew leaves | fzf -m)
+  local uninst
+  uninst=$(brew leaves | fzf -m)
 
   if [[ $uninst ]]; then
-    for prog in $(echo $uninst);
-    do; brew uninstall $prog; done;
+    for prog in $uninst; do brew uninstall "$prog"; done
   fi
 }
 
@@ -75,9 +74,10 @@ function fcd() {
 # fuzzy git log
 function gl() {
   if [ "$(_is_git_repo)" = false ]; then _print_error "NOT A GIT REPO"; return $ERROR_CODE; fi
-  local is_dark_theme=$( defaults read -globalDomain AppleInterfaceStyle &>/dev/null && echo true || echo false )
-  local light_option=""
-  if [ $is_dark_theme = false ]; then
+  local is_dark_theme
+  is_dark_theme=$( defaults read -globalDomain AppleInterfaceStyle &>/dev/null && echo true || echo false )
+  local light_option
+  if [ "$is_dark_theme" = false ]; then
     light_option="--light"
   fi
   git log \
@@ -120,12 +120,14 @@ function b() {
 
 # lazygit
 function lg() {
-  local config_location="$HOME/Library/Application Support/lazygit/config.yml"
-  local is_dark_theme=$( defaults read -globalDomain AppleInterfaceStyle &>/dev/null && echo true || echo false )
-  if [ $is_dark_theme = true ]; then
-    cat "$LAZYGIT_CONFIG_PATH/dark_theme.yml" > $config_location
+  local config_location
+  config_location="$HOME/Library/Application Support/lazygit/config.yml"
+  local is_dark_theme
+  is_dark_theme=$( defaults read -globalDomain AppleInterfaceStyle &>/dev/null && echo true || echo false )
+  if [ "$is_dark_theme" = true ]; then
+    cat "$LAZYGIT_CONFIG_PATH/dark_theme.yml" > "$config_location"
   else 
-    cat "$LAZYGIT_CONFIG_PATH/light_theme.yml" > $config_location
+    cat "$LAZYGIT_CONFIG_PATH/light_theme.yml" > "$config_location"
   fi
   lazygit
 }
@@ -141,18 +143,19 @@ function fix_safari_extensions() {
 }
 
 function set_personal_macos_defaults() {
-  source "$DOTFILES_PATH/macos/defaults.sh"
+  source "$DOTFILES_PATH/config/macos/defaults.sh"
 }
 
 # touch and edit
 function to() {
-  local file_name="$1"
-  if [ -z $file_name ]; then 
+  local file_name
+  file_name=$1
+  if [ -z "$file_name" ]; then 
     _print_error "FILE NAME SHOULD BE PASSED"
     return $ERROR_CODE
   fi
-  touch $file_name
-  e "file_name"
+  touch "$file_name"
+  e "$file_name"
 }
 
 function clear_vscode_cache() {
@@ -160,7 +163,7 @@ function clear_vscode_cache() {
   rm -rf ~/Library/Application\ Support/Code/CachedData/*
 }
 
-# This function sets up new repository with everything you need.
+# sets up new repository with everything you need.
 function gi() {
   if [[ -n "$1" ]]; then
     mkdir "$1"
@@ -190,18 +193,25 @@ function tc() {
   t "$folderName"
 }
 
-function cpwd() {  pwd | pbcopy; }
+function cpwd() {  
+  pwd | pbcopy
+}
 
 # copies currently opened page in Safari URL into clipboard.
-function cpsf() {  osascript -e 'tell application "Safari" to return URL of front document' | pbcopy; }
+function cpsf() {  
+  osascript -e 'tell application "Safari" to return URL of front document' | pbcopy; 
+}
 
-function mk() {  mkdir -p "$1"; }
+function mk() {  
+  mkdir -p "$1"
+}
 
 function md() {
-  local dir="$1"
-  if [[ -n $dir ]]; then
-    mkdir -p $dir
-    cd $dir || exit
+  local dir
+  dir=$1
+  if [[ -n "$dir" ]]; then
+    mkdir -p "$dir"
+    cd "$dir" || return $ERROR_CODE
   else
     _print_error "DIRECTORY NAME SHOULD NOT BE EMPTY"
   fi
