@@ -37,6 +37,7 @@ function brew_install() {
   brew install --cask telegram
   brew install --cask discord
   brew install --cask slack
+  brew install --cask sublime-text
   brew install --cask karabiner-elements # keyboard configuration
   
   # cli 

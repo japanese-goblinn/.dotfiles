@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# vim errors fix
-export LC_ALL=en_US.UTF-8
-
-# set default editor to micro
-export VISUAL=micro
-export MICRO_TRUECOLOR=1
-
 # path's
 export DOTFILES_DEPENDECIES_PATH="$DOTFILES_PATH/dependencies"
 export DOTFILES_CONFIG_PATH="$DOTFILES_PATH/config"
@@ -15,9 +8,10 @@ export LAZYGIT_CONFIG_PATH="$DOTFILES_CONFIG_PATH/lazygit"
 # zsh-autosuggestions
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#cf2f98"
 
-# bat
-export MANPAGER="sh -c 'col -bx | bat -l man -p'" # colorized man page
+# micro
+export MICRO_TRUECOLOR=1
 
+# bat
 export BAT_LIGHT_THEME="Coldark-Cold"
 export BAT_DARK_THEME="OneHalfDark"
 
@@ -32,3 +26,12 @@ export FZF_DEFAULT_OPTS="
 
 # homebrew
 export HOMEBREW_NO_ANALYTICS=1  # disables statistics that brew collects
+
+# colorized man page
+export MANPAGER="sh -c 'col -bx | bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo $BAT_DARK_THEME || echo $BAT_LIGHT_THEME) -l man -p'"
+
+# vim errors fix
+export LC_ALL="en_US.UTF-8"
+
+# set default editor
+export VISUAL="subl"
