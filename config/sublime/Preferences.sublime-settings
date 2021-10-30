@@ -11,8 +11,6 @@
 	"save_on_focus_lost": true,
 	"hide_tab_scrolling_buttons": true,
 	
-	"theme": "auto",
-	"color_scheme": "auto",
 	"theme": "Adaptive.sublime-theme",
 	"dark_color_scheme": "Packages/GitHub Theme/schemes/GitHub Dark.sublime-color-scheme",
 	"light_color_scheme": "Packages/GitHub Theme/schemes/GitHub Light.sublime-color-scheme",
