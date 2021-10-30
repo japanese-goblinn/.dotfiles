@@ -1,0 +1,20 @@
+// Settings in here override those in "User/Preferences.sublime-settings"
+{
+	"font_size": 16,
+	"line_padding_bottom": 3,
+  	"line_padding_top": 3,
+  	"wrap_width": 72,
+  	"caret_extra_width": 2,
+	"draw_white_space": ["none"],
+	"gutter": false,
+	"line_padding_bottom": 3,
+	"line_padding_top": 3,
+	"margin": 10,
+	"scroll_context_lines": 2,
+  	"scroll_past_end": 0.5,
+  	"word_wrap": true,
+  	"wrap_width": 72,
+
+	"dark_color_scheme": "Packages/GitHub Theme/schemes/Writer Dark.sublime-color-scheme",
+	"light_color_scheme": "Packages/GitHub Theme/schemes/Writer.sublime-color-scheme",
+}

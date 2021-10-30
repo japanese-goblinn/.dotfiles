@@ -1,0 +1,4 @@
+[
+	{ "keys": ["option+command+["], "command": "swap_line_up" },
+	{ "keys": ["option+command+]"], "command": "swap_line_down" },
+]

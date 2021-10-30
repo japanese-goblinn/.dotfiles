@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO: try symlink -> if file exists delete it and try symlink again or https://github.com/anishathalye/dotbot
+
 set -e
 
 YELLOW="\033[33m"
@@ -94,6 +96,19 @@ function configs_install() {
   print_warning "iTerm needs manual install of config"
   mk "$HOME/Library/Application Support/iTerm2/Scripts/AutoLaunch/"
   ln -s ~/.dotfiles/config/iterm/auto_dark_mode.py ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch/auto_dark_mode.py
+
+  # sublime 
+  local sublime_path="$HOME/Library/Application Support/Sublime Text/Packages/User/"
+  
+  # key bindings
+  ln -s "$DOTFILES_CONFIG_PATH/sublime/Default (OSX).sublime-keymap" "$sublime_path"
+  
+  # settings
+  ln -s "$DOTFILES_CONFIG_PATH/sublime/Preferences.sublime-settings" "$sublime_path"
+  ln -s "$DOTFILES_CONFIG_PATH/sublime/Markdown.sublime-settings" "$sublime_path"
+  
+  # packages
+  ln -s "$DOTFILES_CONFIG_PATH/sublime/Package Control.sublime-settings" "$sublime_path"
 }
 
 function keys_install() {
