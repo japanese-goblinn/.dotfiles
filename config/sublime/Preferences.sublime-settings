@@ -12,6 +12,7 @@
 	"hide_tab_scrolling_buttons": true,
 	
 	"theme": "Adaptive.sublime-theme",
-	"dark_color_scheme": "Packages/GitHub Theme/schemes/GitHub Dark.sublime-color-scheme",
-	"light_color_scheme": "Packages/GitHub Theme/schemes/GitHub Light.sublime-color-scheme",
+	"color_scheme": "auto",
+	"light_color_scheme": "Alabaster.sublime-color-scheme",
+	"dark_color_scheme": "Alabaster Dark.sublime-color-scheme",
 }
