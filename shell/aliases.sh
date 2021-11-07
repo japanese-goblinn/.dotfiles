@@ -14,6 +14,7 @@ alias f="fork"
 alias m="make"
 alias e="subl"
 alias nano="micro"
+alias sz="du -sh ."
 
 # Navigation
 alias .="cd -"
