@@ -33,14 +33,14 @@ function brew_install() {
   brew install --cask visual-studio-code 
   brew install --cask iina 
   brew install --cask paw
-  brew install --cask fork
-  brew install --cask google-chrome 
+  brew install --cask fork 
   brew install --cask transmission
   brew install --cask telegram
   brew install --cask discord
   brew install --cask slack
   brew install --cask sublime-text
   brew install --cask karabiner-elements # keyboard configuration
+  brew install alt-tab
   
   # cli 
   brew install xxh # ssh with own dotfiles config
