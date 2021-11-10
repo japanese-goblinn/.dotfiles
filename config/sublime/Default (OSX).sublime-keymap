@@ -1,4 +1,5 @@
 [
 	{ "keys": ["option+command+["], "command": "swap_line_up" },
 	{ "keys": ["option+command+]"], "command": "swap_line_down" },
+	{ "keys": ["command+0"], "command": "toggle_side_bar"},
 ]
