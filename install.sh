@@ -97,6 +97,9 @@ function configs_install() {
   mk "$HOME/Library/Application Support/iTerm2/Scripts/AutoLaunch/"
   ln -s ~/.dotfiles/config/iterm/auto_dark_mode.py ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch/auto_dark_mode.py
 
+  # color picker
+  cp "$DOTFILES_CONFIG_PATH/color_picker/Color Picker.app" "/Applications"
+
   # sublime 
   local sublime_path="$HOME/Library/Application Support/Sublime Text/Packages/User/"
   
