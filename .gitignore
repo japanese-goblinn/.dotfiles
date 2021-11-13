@@ -1,3 +1,4 @@
 .DS_Store
 config/micro/buffers/history
 config/micro/backups/
+*.user-ca-bundle
