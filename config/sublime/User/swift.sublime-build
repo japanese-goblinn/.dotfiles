@@ -1,0 +1,4 @@
+{
+	"cmd": ["swift", "$file"],
+	"selector": "source.swift",
+}
