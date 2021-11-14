@@ -21,8 +21,8 @@ function _print_error() {
 
 # ------------------------------------ FUNCTIONS -----------------------------------------
 
-# print impementation
-function wht() {
+# show function implementation, show alias definition etc.
+function wh() {
   local prog
   prog=$1
   if [ -z "$prog" ]; then
