@@ -111,7 +111,7 @@ killall Transmission
 
 # XCODE
 
-# show invisibles
-defaults write com.apple.dt.Xcode DVTTextShowInvisibleCharacters 1
+# show build time
+defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
 
 echo "✅ Configured successfully"
