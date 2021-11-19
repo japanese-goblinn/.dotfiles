@@ -4,7 +4,7 @@
 	"save_on_focus_lost": true,
 
 	"font_face": "SF Mono",
-	"font_size": 13,
+	"font_size": 12.2,
 
 	"theme": "Adaptive.sublime-theme",
 	"color_scheme": "auto",
@@ -20,8 +20,8 @@
 	"caret_extra_top": 3,
 	"caret_extra_bottom": 3,
 
-	"line_padding_top": 2,
-	"line_padding_bottom": 2,
+	"line_padding_top": 3,
+	"line_padding_bottom": 3,
 
 	"hide_tab_scrolling_buttons": true,
 	"hide_new_tab_button": true,
