@@ -77,6 +77,8 @@ function dotfiles_install() {
 function configs_install() {
   # git
   ln -s "$DOTFILES_CONFIG_PATH/git/.gitconfig" ~/.gitconfig 
+  ln -s "$DOTFILES_CONFIG_PATH/git/.github_token" ~/.github_token 
+  ln -s "$DOTFILES_CONFIG_PATH/git/.gitignore" ~/.gitignore 
   
   # run crontab
   crontab "$DOTFILES_CONFIG_PATH/auto_backups/cronetab.txt" && crontab -l 

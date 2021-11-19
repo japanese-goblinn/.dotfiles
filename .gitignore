@@ -1,5 +1,6 @@
-.DS_Store
 config/micro/buffers/history
 config/micro/backups/
+
+config/git/.github_token
+
 *.user-ca-bundle
-config/git/.gitconfig-token

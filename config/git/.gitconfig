@@ -1,9 +1,11 @@
 [user]
 	email = cool45akol@gmail.com
 	name = japanese-goblinn
-[include]
-	path = $DOTFILES_CONFIG_PATH/git/.gitconfig-token
 [init]
 	defaultBranch = main
 [credential]
 	helper = osxkeychain
+[core]
+	excludesfile = ~/.gitignore
+[include]
+	path = ~/.github_token
