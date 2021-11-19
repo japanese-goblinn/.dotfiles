@@ -36,8 +36,6 @@
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter.notebook.ipynb"
   },
-  "workbench.preferredHighContrastColorTheme": "GitHub Dark Dimmed",
-  "workbench.colorTheme": "GitHub Light Default",
 
   "git.autofetch": true,
   "git.showUnpublishedCommitsButton": "always",
@@ -48,4 +46,5 @@
     
   "shellcheck.executablePath": "/opt/homebrew/bin/shellcheck",
   "workbench.productIconTheme": "fluent-icons",
+  "workbench.colorTheme": "GitHub Dark Default",
 }
