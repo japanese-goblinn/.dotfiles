@@ -41,6 +41,7 @@ function brew_install() {
   brew install --cask sublime-text
   brew install --cask karabiner-elements # keyboard configuration
   brew install alt-tab
+  brew install --cask steam
   
   # cli 
   brew install xxh # ssh with own dotfiles config

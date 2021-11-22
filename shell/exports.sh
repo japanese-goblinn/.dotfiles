@@ -10,7 +10,6 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#cf2f98"
 
 # zsh-you-should-use
 export YSU_MESSAGE_POSITION="after"
-export YSU_HARDCORE=1 # enforces to use aliases
 
 # micro
 export MICRO_TRUECOLOR=1
