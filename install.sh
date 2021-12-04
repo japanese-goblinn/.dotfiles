@@ -42,6 +42,7 @@ function brew_install() {
   brew install --cask karabiner-elements # keyboard configuration
   brew install alt-tab
   brew install --cask steam
+  brew install --cask airbuddy
   
   # cli 
   brew install xxh # ssh with own dotfiles config
