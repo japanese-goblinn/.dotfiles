@@ -56,3 +56,5 @@ alias jp="jupyter notebook"
 alias pu="pod update --verbose"
 alias pi="pod install --verbose"
 alias pd="pod deintegrate --verbose"
+alias srm="xcrun simctl uninstall booted"
+
