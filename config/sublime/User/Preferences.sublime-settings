@@ -4,7 +4,7 @@
 	"save_on_focus_lost": true,
 
 	"font_face": "SF Mono",
-	"font_size": 12.2,
+	"font_size": 12.5,
 
 	"theme": "Adaptive.sublime-theme",
 	"color_scheme": "auto",
@@ -17,17 +17,17 @@
 
 	"bold_folder_labels": true,
 
-	"caret_extra_top": 3,
-	"caret_extra_bottom": 3,
+	"caret_extra_top": 2,
+	"caret_extra_bottom": 2,
 
-	"line_padding_top": 3,
-	"line_padding_bottom": 3,
+	"line_padding_top": 2,
+	"line_padding_bottom": 2,
 
 	"hide_tab_scrolling_buttons": true,
 	"hide_new_tab_button": true,
 
-	"auto_complete": false,
-	"auto_complete_commit_on_tab": true,
+	"auto_complete": true,
+	"auto_complete_commit_on_tab": false, // false to use Enter for completion
 
 	"show_definitions": false,
 }
