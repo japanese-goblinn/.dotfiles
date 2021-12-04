@@ -22,7 +22,6 @@
   "editor.fontSize" : 12,
   "editor.fontFamily" : "SF Mono, Monaco, 'Courier New', monospace",
   "editor.suggest.preview": true,
-  "editor.renderWhitespace" : "all",
   "editor.accessibilitySupport" : "off",
   "editor.minimap.enabled" : false,
   "editor.cursorBlinking" : "smooth",
