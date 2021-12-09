@@ -28,22 +28,22 @@ function brew_install() {
   /bin/bash -c "$( curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh )" 
   
   # GUI apps
-  brew install --cask raycast
-  brew install --cask iterm2 
+  brew install --cask raycast # best relacement of spotlight and smol tools
+  brew install --cask sublime-text # best text editor
+  brew install --cask iterm2 # best terminal 
+  brew install --cask fork # best git client
+  brew install --cask iina # best video player
+  brew install --cask telegram # best messanger
+  brew install --cask airbuddy # better airpods experience 
+  
   brew install --cask visual-studio-code 
-  brew install --cask iina 
-  brew install --cask paw
-  brew install --cask fork 
-  brew install --cask transmission
-  brew install --cask telegram
+  brew install --cask paw # api tool (http client and more)
+  brew install --cask transmission # torrent client 
   brew install --cask discord
   brew install --cask slack
-  brew install --cask sublime-text
-  brew install --cask karabiner-elements # keyboard configuration
-  brew install alt-tab
+  # brew install --cask karabiner-elements
   brew install --cask steam
-  brew install --cask airbuddy
-  
+
   # cli 
   brew install xxh # ssh with own dotfiles config
   brew install jq # json processor
@@ -105,17 +105,8 @@ function configs_install() {
   cp "$DOTFILES_CONFIG_PATH/color_picker/Color Picker.app" "/Applications"
 
   # sublime 
-  local sublime_path="$HOME/Library/Application Support/Sublime Text/Packages/User/"
-  
-  # key bindings
-  ln -s "$DOTFILES_CONFIG_PATH/sublime/Default (OSX).sublime-keymap" "$sublime_path"
-  
-  # settings
-  ln -s "$DOTFILES_CONFIG_PATH/sublime/Preferences.sublime-settings" "$sublime_path"
-  ln -s "$DOTFILES_CONFIG_PATH/sublime/Markdown.sublime-settings" "$sublime_path"
-  
-  # packages
-  ln -s "$DOTFILES_CONFIG_PATH/sublime/Package Control.sublime-settings" "$sublime_path"
+  ln -s "$DOTFILES_CONFIG_PATH/sublime/sublime-profiles/" "$HOME/Library/Application Support/Sublime Text/Packages/"
+  ln -s "$DOTFILES_CONFIG_PATH/sublime/User "$HOME/Library/Application Support/Sublime Text/Packages/User/"
 }
 
 function keys_install() {
