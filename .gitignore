@@ -4,3 +4,5 @@ config/micro/backups/
 config/git/.github_token
 
 *.user-ca-bundle
+config/sublime/sublime-profiles/Data/current
+config/sublime/sublime-profiles/Data/previous

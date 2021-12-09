@@ -11,10 +11,6 @@
 	"light_color_scheme": "GitHub Light.sublime-color-scheme",
 	"dark_color_scheme": "GitHub Dark.sublime-color-scheme",
 	
-	"draw_centered": true,
-	"word_wrap": true,
-	"wrap_width": 90,
-
 	"bold_folder_labels": true,
 
 	"caret_extra_top": 2,

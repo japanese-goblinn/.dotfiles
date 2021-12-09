@@ -28,7 +28,7 @@
 
   "workbench.settings.editor": "json",
   "workbench.editor.highlightModifiedTabs" : true,
-  "workbench.panel.defaultLocation" : "right", // terminal and stuff location
+  "workbench.panel.defaultLocation" : "bottom", // terminal and stuff location
   "workbench.editor.tabCloseButton" : "left",
   "workbench.preferredDarkColorTheme" : "GitHub Dark Default",
   "workbench.preferredLightColorTheme" : "GitHub Light Default",
