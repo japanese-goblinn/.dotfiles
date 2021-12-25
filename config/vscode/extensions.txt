@@ -19,4 +19,5 @@ stevemoser.xcode-keybindings
 timonwong.shellcheck
 vknabel.vscode-apple-swift-format
 wayou.vscode-todo-highlight
+usernamehw.errorlens
 wingrunr21.vscode-ruby
