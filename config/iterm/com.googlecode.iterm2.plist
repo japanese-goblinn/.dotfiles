@@ -909,6 +909,8 @@
 	<false/>
 	<key>DisableFullscreenTransparency</key>
 	<false/>
+	<key>DisableMetalWhenIdle</key>
+	<true/>
 	<key>EnableAPIServer</key>
 	<string>1</string>
 	<key>HapticFeedbackForEsc</key>
@@ -1845,6 +1847,8 @@
 			<string>/Users/japanese_goblinn/Downloads</string>
 		</dict>
 	</array>
+	<key>OnlyWhenMoreTabs</key>
+	<false/>
 	<key>PMPrintingExpandedStateForPrint2</key>
 	<false/>
 	<key>PointerActions</key>
@@ -1900,7 +1904,11 @@
 	<integer>16</integer>
 	<key>UseBorder</key>
 	<false/>
+	<key>UseMetal</key>
+	<true/>
 	<key>VisualIndicatorForEsc</key>
+	<false/>
+	<key>disableMetalWhenUnplugged</key>
 	<false/>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
@@ -1908,5 +1916,7 @@
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
 	<false/>
+	<key>preferIntegratedGPU</key>
+	<true/>
 </dict>
 </plist>
