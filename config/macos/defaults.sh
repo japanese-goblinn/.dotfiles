@@ -52,6 +52,9 @@ defaults write com.apple.dock autohide -bool true
 
 killall Dock
 
+# FONTS
+defaults -currentHost write -g AppleFontSmoothing -int 0
+
 # SAFARI
 
 # Privacy: don’t send search queries to Apple
