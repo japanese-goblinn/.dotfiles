@@ -1,6 +1,6 @@
 # .dotfiles
 
-Light Theme             |  Dark Theme
+‎             |  ‎
 :-------------------------:|:-------------------------:
 ![Light Theme](media/light.jpg)  |  ![Dark Theme](media/dark.jpg)
 
