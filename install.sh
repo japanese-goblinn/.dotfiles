@@ -62,6 +62,7 @@ function brew_install() {
   brew install lazygit # better work with git from cli
   brew install tree # print tree of directories structure
   brew install ripgrep # better grep
+  brew install fd # better find
 
   # apple
   brew install cocoapods 
