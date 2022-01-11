@@ -4,6 +4,9 @@ set -e
 
 echo "Configuring macOS defaults..."
 
+echo "Disabling automatically adjusting brightness..."
+sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Automatic Display Enabled" -bool false
+
 # Disable automatically rearrange Spaces based on recent use
 defaults write com.apple.dock mru-spaces -bool false
 
