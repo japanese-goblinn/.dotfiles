@@ -2,6 +2,10 @@
 
 # TODO: try symlink -> if file exists delete it and try symlink again or https://github.com/anishathalye/dotbot
 
+# Using touch id for sudo authentication:
+# Add auth sufficient pam_tid.so to top of /etc/pam.d/sudo.
+# In iTerm2, Open settings —> Advanced —> Allow sessions to survive logging out and back in —> No
+
 set -e
 
 YELLOW="\033[33m"
@@ -10,14 +14,19 @@ PURPLE="\033[95m"
 RED="\033[31m"
 COLOR_RESET="\033[0m"
 
+function color_string() {
+  # TODO $1 - color, $2 - text
+}
+
 function print_warning() { echo -e "⚠️  ${YELLOW}${1}${COLOR_RESET}"; }
 function print_error() { echo -e "❌ ${RED}${1}${COLOR_RESET}"; }
 function print_success() { echo -e "✅ ${GREEN}${1}${COLOR_RESET}"; }
+
 # TODO: remove
 function _get_parent_dir_abs_path() { echo "$( cd "$(dirname "$1")" && pwd )" }
 
 function pre_scripts_install() { 
-  xcode-select --install 2>/dev/null || print_warning "Xcode CLI tools already installed" 
+  xcode-select --install 2> /dev/null || print_warning "Xcode CLI tools already installed"
 }
 
 function install_rust() {
@@ -32,6 +41,7 @@ function brew_install() {
   brew install --cask sublime-text # best text editor
   brew install --cask iterm2 # best terminal 
   brew install --cask fork # best git client
+  brew install --cask sublime-merge
   brew install --cask iina # best video player
   brew install --cask telegram # best messanger
   brew install --cask airbuddy # better airpods experience 
@@ -107,7 +117,11 @@ function configs_install() {
 
   # sublime 
   ln -s "$DOTFILES_CONFIG_PATH/sublime/sublime-profiles/" "$HOME/Library/Application Support/Sublime Text/Packages/"
-  ln -s "$DOTFILES_CONFIG_PATH/sublime/User "$HOME/Library/Application Support/Sublime Text/Packages/User/"
+  ln -s "$DOTFILES_CONFIG_PATH/sublime/User" "$HOME/Library/Application Support/Sublime Text/Packages/User/"
+
+  # sublime merge
+  print_success "Installing CLI tool of Sublime Merge..."
+  sudo ln -s "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" "/usr/local/bin"
 }
 
 function keys_install() {
