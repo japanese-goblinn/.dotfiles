@@ -23,6 +23,7 @@ alias ...="cd ../../"
 alias dev="cd ~/Developer"
 alias dw="cd ~/Downloads"
 alias dtf="cd ~/.dotfiles"
+alias knbs="cd ~/Documents/Knowledge\ Base"
 
 # brew
 alias br="brew"
