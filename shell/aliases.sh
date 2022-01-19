@@ -59,3 +59,6 @@ alias pi="pod install --verbose"
 alias pd="pod deintegrate --verbose"
 alias srm="xcrun simctl uninstall booted"
 
+# Rust
+alias cg="cargo"
+
