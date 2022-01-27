@@ -19,7 +19,7 @@ defaults write com.apple.screencapture location -string "$HOME/Downloads"
 
 # FINDER
 
-# Show status bar
+# Show status bar (at bottom number of items and size)
 defaults write com.apple.finder ShowStatusBar -bool true
 
 # Disable the warning when changing a file extension
@@ -34,6 +34,16 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
 # Show file extensions in Finder:
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Show full path
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
+# Show hidden files
+defaults write com.apple.Finder AppleShowAllFiles -bool true
+defaults write com.apple.finder AppleShowAllFiles TRUE
+
+# Avoid creation of .DS_Store files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 killall Finder
 
@@ -56,6 +66,8 @@ defaults write com.apple.dock autohide -bool true
 killall Dock
 
 # FONTS
+
+# disable font smoothing
 defaults -currentHost write -g AppleFontSmoothing -int 0
 
 # SAFARI
