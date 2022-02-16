@@ -37,22 +37,22 @@ function brew_install() {
   /bin/bash -c "$( curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh )" 
   
   # GUI apps
+  brew install --cask firefox # primary browser 
   brew install --cask raycast # best relacement of spotlight and smol tools
-  brew install --cask sublime-text # best text editor
-  brew install --cask iterm2 # best terminal 
-  brew install --cask fork # best git client
-  brew install --cask sublime-merge
   brew install --cask iina # best video player
   brew install --cask telegram # best messanger
   brew install --cask airbuddy # better airpods experience 
-  
-  brew install --cask visual-studio-code 
+  brew install --cask iterm2 # best terminal 
+  brew install --cask fork # amazing git client
+  brew install --cask sublime-text # amazing text editor
+  brew install --cask sublime-merge # another amazing git client
+  brew install --cask visual-studio-code # 
   brew install --cask paw # api tool (http client and more)
   brew install --cask transmission # torrent client 
   brew install --cask discord
   brew install --cask slack
-  # brew install --cask karabiner-elements
   brew install --cask steam
+  # brew install --cask karabiner-elements
 
   # cli 
   brew install xxh # ssh with own dotfiles config
