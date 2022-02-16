@@ -7,6 +7,9 @@ echo "Configuring macOS defaults..."
 echo "Disabling automatically adjusting brightness..."
 sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Automatic Display Enabled" -bool false
 
+# Disable the “Are you sure you want to open this application?” dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
 # Disable automatically rearrange Spaces based on recent use
 defaults write com.apple.dock mru-spaces -bool false
 
@@ -17,7 +20,19 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Save screenshots to the ~/Downloads
 defaults write com.apple.screencapture location -string "$HOME/Downloads"
 
+# Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
+defaults write com.apple.screencapture type -string "png"
+
+# Allow text selection in the Quick Look window
+defaults write com.apple.finder QLEnableTextSelection -bool true
+
 # FINDER
+
+# Show the ~/Library directory
+chflags nohidden "${HOME}/Library"
+
+# Save to disk (not to iCloud) by default
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 # Show status bar (at bottom number of items and size)
 defaults write com.apple.finder ShowStatusBar -bool true
@@ -52,6 +67,10 @@ killall Finder
 # Show all processes in Activity Monitor
 defaults write com.apple.ActivityMonitor ShowCategory -int 0
 
+# Sort Activity Monitor results by CPU usage
+defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
+defaults write com.apple.ActivityMonitor SortDirection -int 0
+
 # DOCK
 
 # Wipe all (default) app icons from the Dock
@@ -62,6 +81,9 @@ defaults write com.apple.dock mru-spaces -bool false
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
+
+# Make Dock icons of hidden applications translucent
+defaults write com.apple.dock showhidden -bool true
 
 killall Dock
 
@@ -131,5 +153,8 @@ killall Transmission
 
 # show build time
 defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
+
+# Skip the code folding animation in refactoring
+defaults write com.apple.dt.Xcode CodeFoldingAnimationSpeed -int 0
 
 echo "✅ Configured successfully"
