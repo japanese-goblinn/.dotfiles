@@ -27,8 +27,8 @@ export FZF_DEFAULT_OPTS="
 --preview '([[ -f {} ]] && (bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo $BAT_DARK_THEME || echo $BAT_LIGHT_THEME) --style=numbers --color=always --line-range=:500  {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
 "
 
-# homebrew
-export HOMEBREW_NO_ANALYTICS=1  # disables statistics that brew collects
+# disables statistics that brew collects
+export HOMEBREW_NO_ANALYTICS=1  
 
 # colorized man page
 export MANPAGER="sh -c 'col -bx | bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo $BAT_DARK_THEME || echo $BAT_LIGHT_THEME) -l man -p'"

@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# TODO: try symlink -> if file exists delete it and try symlink again or https://github.com/anishathalye/dotbot
-
-# Using touch id for sudo authentication:
-# Add auth sufficient pam_tid.so to top of /etc/pam.d/sudo.
-# In iTerm2, Open settings —> Advanced —> Allow sessions to survive logging out and back in —> No
-
 set -e
 
 YELLOW="\033[33m"
@@ -14,16 +8,9 @@ PURPLE="\033[95m"
 RED="\033[31m"
 COLOR_RESET="\033[0m"
 
-function color_string() {
-  # TODO $1 - color, $2 - text
-}
-
 function print_warning() { echo -e "⚠️  ${YELLOW}${1}${COLOR_RESET}"; }
 function print_error() { echo -e "❌ ${RED}${1}${COLOR_RESET}"; }
 function print_success() { echo -e "✅ ${GREEN}${1}${COLOR_RESET}"; }
-
-# TODO: remove
-function _get_parent_dir_abs_path() { echo "$( cd "$(dirname "$1")" && pwd )" }
 
 function pre_scripts_install() { 
   xcode-select --install 2> /dev/null || print_warning "Xcode CLI tools already installed"
@@ -52,10 +39,10 @@ function brew_install() {
   brew install --cask discord
   brew install --cask slack
   brew install --cask steam
-  # brew install --cask karabiner-elements
 
   # cli 
-  brew install xxh # ssh with own dotfiles config
+  brew install ripgrep # better grep
+  brew install fd # better find
   brew install jq # json processor
   brew install micro # cli text editor
   brew install shellcheck # tool for static analysis of shellscript
@@ -66,13 +53,11 @@ function brew_install() {
   brew install gh # working with github from cli
   brew install coreutils # some linux utils that now available by default on macOS
   brew install gnupg # gpg
-  brew install gping # ping but with graph
   brew install fzf # fuzzy search 
   $(brew --prefix)/opt/fzf/install
   brew install lazygit # better work with git from cli
   brew install tree # print tree of directories structure
-  brew install ripgrep # better grep
-  brew install fd # better find
+  brew install git-delta # syntax-highlighting pager for git, diff, and grep output
 
   # apple
   brew install cocoapods 
@@ -80,7 +65,7 @@ function brew_install() {
 }
 
 function dotfiles_install() {
-  export DOTFILES_PATH=$( _get_parent_dir_abs_path $0 )
+  export DOTFILES_PATH="$( cd "$(dirname "$0")" && pwd )"
   (cd $DOTFILES_PATH && git submodule update --init --recursive) 
   source "$SHELL_CONFIGS_PATH/exports.sh"
   (cd "$DOTFILES_DEPENDECIES_PATH/xcode_theme" && ./install.sh) 

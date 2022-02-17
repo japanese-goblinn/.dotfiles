@@ -197,11 +197,6 @@ function cpwd() {
   pwd | pbcopy
 }
 
-# copies currently opened page in Safari URL into clipboard.
-function cpsf() {  
-  osascript -e 'tell application "Safari" to return URL of front document' | pbcopy; 
-}
-
 function mk() {  
   mkdir -p "$1"
 }
