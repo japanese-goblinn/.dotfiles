@@ -158,3 +158,5 @@ defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
 defaults write com.apple.dt.Xcode CodeFoldingAnimationSpeed -int 0
 
 echo "✅ Configured successfully"
+
+echo "ℹ️ Settings -> Trackpad -> More Gestures -> App Exposé"
