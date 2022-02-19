@@ -3,6 +3,6 @@
 	{ "keys": ["option+command+]"], "command": "swap_line_down" },
 	{ "keys": ["command+0"], "command": "toggle_side_bar"},
 	{ "keys": ["ctrl+p"], "command": "toggle_profile"},
-	{ "keys": ["super+shift+o"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
-	{ "keys": ["super+p"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
+	{ "keys": ["command+shift+o"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+	{ "keys": ["command+p"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
 ]
