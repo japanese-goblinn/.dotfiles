@@ -1,3 +1,4 @@
 {
-	"mde.auto_fold_link.enabled": false
+	"mde.auto_fold_link.enabled": true,
+	"mde.list_indent_bullets": ["-"],
 }
