@@ -17,8 +17,8 @@ defaults write com.apple.dock mru-spaces -bool false
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-# Save screenshots to the ~/Downloads
-defaults write com.apple.screencapture location -string "$HOME/Downloads"
+# Save screenshots to the clipboard
+defaults write com.apple.screencapture target -string "clipboard"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
