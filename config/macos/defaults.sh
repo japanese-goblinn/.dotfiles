@@ -76,9 +76,6 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 # Wipe all (default) app icons from the Dock
 defaults write com.apple.dock persistent-apps -array
 
-# Don’t automatically rearrange Spaces based on most recent use
-defaults write com.apple.dock mru-spaces -bool false
-
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
