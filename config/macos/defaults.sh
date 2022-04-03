@@ -148,11 +148,17 @@ killall Transmission
 
 # XCODE
 
-# show build time
+# Show build time
 defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
 
 # Skip the code folding animation in refactoring
 defaults write com.apple.dt.Xcode CodeFoldingAnimationSpeed -int 0
+
+# This will show you why a particular file is having trouble being compiled for indexing.
+defaults write com.apple.dt.Xcode IDEIndexShowLog -bool YES
+
+# Show Indexing numeric progress
+defaults write com.apple.dt.Xcode IDEIndexerActivityShowNumericProgress -bool YES
 
 echo "✅ Configured successfully"
 
