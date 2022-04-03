@@ -1,4 +1,5 @@
 {
 	"mde.auto_fold_link.enabled": true,
 	"mde.list_indent_bullets": ["-"],
+	"mde.italic_marker_asterisk": true,
 }

@@ -7,4 +7,11 @@
 	{ "keys": ["command+p"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
 	{ "keys": ["ctrl+command+left"], "command": "jump_back" },
 	{ "keys": ["ctrl+command+right"], "command": "jump_forward" },
+	{ "keys": ["super+alt+l"], "command": "mde_reference_new_inline_link", "context":
+		[
+			{ "key": "selector", "operator": "equal", "operand": "text.html.markdown", "match_all": true },
+			{ "key": "setting.mde.keymap_disable.reference_new_inline_link", "operator": "not_equal", "operand": true }
+		]
+	},
+	{ "keys": ["command+shift+j"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"} },
 ]
