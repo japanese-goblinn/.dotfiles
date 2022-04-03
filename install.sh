@@ -128,6 +128,7 @@ function keys_install() {
 
 function additional_setup() { 
   print_warning "SF Mono install needed" 
+  print_warning "Raycast config needed"
 }
 
 pre_scripts_install
