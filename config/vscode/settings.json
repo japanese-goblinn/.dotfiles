@@ -46,4 +46,7 @@
   "shellcheck.executablePath": "/opt/homebrew/bin/shellcheck",
   "workbench.productIconTheme": "fluent-icons",
   "workbench.colorTheme": "GitHub Dark Default",
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
 }

@@ -21,6 +21,10 @@ function _print_error() {
 
 # ------------------------------------ FUNCTIONS -----------------------------------------
 
+function link_fig_config() {
+  ln -sF "$DOTFILES_CONFIG_PATH/fig/settings.json" "$HOME/.fig/"
+}
+
 # show function implementation, show alias definition etc.
 function wh() {
   local prog

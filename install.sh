@@ -58,6 +58,7 @@ function brew_install() {
   brew install lazygit # better work with git from cli
   brew install tree # print tree of directories structure
   brew install git-delta # syntax-highlighting pager for git, diff, and grep output
+  brew install fig # autocomplete tool
 
   # apple
   brew install cocoapods 
@@ -67,27 +68,28 @@ function brew_install() {
 function dotfiles_install() {
   export DOTFILES_PATH="$( cd "$(dirname "$0")" && pwd )"
   (cd $DOTFILES_PATH && git submodule update --init --recursive) 
-  source "$SHELL_CONFIGS_PATH/exports.sh"
+  source "$DOTFILES_PATH/shell/exports.sh"
+  source "$DOTFILES_PATH/shell/functions.sh"
   (cd "$DOTFILES_DEPENDECIES_PATH/xcode_theme" && ./install.sh) 
   set_personal_macos_defaults
 }
 
 function configs_install() {
   # git
-  ln -s "$DOTFILES_CONFIG_PATH/git/.gitconfig" ~/.gitconfig 
-  ln -s "$DOTFILES_CONFIG_PATH/git/.github_token" ~/.github_token 
-  ln -s "$DOTFILES_CONFIG_PATH/git/.gitignore" ~/.gitignore 
+  ln -sF "$DOTFILES_CONFIG_PATH/git/.gitconfig" ~/.gitconfig 
+  ln -sF "$DOTFILES_CONFIG_PATH/git/.github_token" ~/.github_token 
+  ln -sF "$DOTFILES_CONFIG_PATH/git/.gitignore" ~/.gitignore 
   
   # run crontab
   crontab "$DOTFILES_CONFIG_PATH/auto_backups/cronetab.txt" && crontab -l 
   
   # micro
-  ln -s "$DOTFILES_CONFIG_PATH/micro" ~/.config/
+  ln -sF "$DOTFILES_CONFIG_PATH/micro" ~/.config/
     
   # vscode
   local VSCODE_PATH="$DOTFILES_CONFIG_PATH/vscode/"
   xargs -L1 code --install-extension < "$VSCODE_PATH/extensions.txt"
-  ln -s "$VSCODE_PATH/settings.json" ~/Library/Application\ Support/Code/User/settings.json
+  ln -sF "$VSCODE_PATH/settings.json" ~/Library/Application\ Support/Code/User/settings.json
   
   # raycast
   git clone "https://github.com/japanese-goblinn/script-commands.git"
@@ -95,18 +97,21 @@ function configs_install() {
   # iterm2
   print_warning "iTerm needs manual install of config"
   mk "$HOME/Library/Application Support/iTerm2/Scripts/AutoLaunch/"
-  ln -s ~/.dotfiles/config/iterm/auto_dark_mode.py ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch/auto_dark_mode.py
+  ln -sF "$DOTFILES_CONFIG_PATH/iterm/auto_dark_mode.py" ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch/auto_dark_mode.py
 
   # color picker
   cp "$DOTFILES_CONFIG_PATH/color_picker/Color Picker.app" "/Applications"
 
   # sublime 
-  ln -s "$DOTFILES_CONFIG_PATH/sublime/sublime-profiles/" "$HOME/Library/Application Support/Sublime Text/Packages/"
-  ln -s "$DOTFILES_CONFIG_PATH/sublime/User" "$HOME/Library/Application Support/Sublime Text/Packages/User/"
+  ln -sF "$DOTFILES_CONFIG_PATH/sublime/sublime-profiles/" "$HOME/Library/Application Support/Sublime Text/Packages/"
+  ln -sF "$DOTFILES_CONFIG_PATH/sublime/User" "$HOME/Library/Application Support/Sublime Text/Packages/User/"
 
   # sublime merge
   print_success "Installing CLI tool of Sublime Merge..."
-  sudo ln -s "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" "/usr/local/bin"
+  sudo ln -sF "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" "/usr/local/bin"
+
+  # fig
+
 }
 
 function keys_install() {
