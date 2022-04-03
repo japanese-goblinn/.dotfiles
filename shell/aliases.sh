@@ -63,3 +63,6 @@ alias srm="xcrun simctl uninstall booted"
 # Rust
 alias cg="cargo"
 
+# Swift
+alias spm="swift package"
+
