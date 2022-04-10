@@ -50,7 +50,7 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 # Show file extensions in Finder:
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-# Show full path
+# Show full path in title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # Show hidden files
@@ -59,8 +59,6 @@ defaults write com.apple.finder AppleShowAllFiles TRUE
 
 # Avoid creation of .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-
-killall Finder
 
 # ACTIVITY MONITOR
 
@@ -82,8 +80,6 @@ defaults write com.apple.dock autohide -bool true
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
 
-killall Dock
-
 # FONTS
 
 # disable font smoothing
@@ -104,8 +100,6 @@ defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
 
 # Update extensions automatically
 defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
-
-killall Safari
 
 # ITERM
 
@@ -144,8 +138,6 @@ defaults write org.m0k.transmission WarningDonate -bool false
 # Hide the legal disclaimer
 defaults write org.m0k.transmission WarningLegal -bool false
 
-killall Transmission
-
 # XCODE
 
 # Show build time
@@ -163,3 +155,8 @@ defaults write com.apple.dt.Xcode IDEIndexerActivityShowNumericProgress -bool YE
 echo "✅ Configured successfully"
 
 echo "ℹ️ Settings -> Trackpad -> More Gestures -> App Exposé"
+
+killall Dock
+killall Finder
+killall Safari
+killall Transmission
