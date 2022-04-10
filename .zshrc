@@ -1,6 +1,7 @@
 HOMEBREW_PATH="/opt/homebrew/bin"
 RUST_PATH="$HOME/.cargo/bin"
-export PATH="$PATH:$HOME:$HOMEBREW_PATH:$RUST_PATH:/.local/bin"
+SUBLIME_PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin"
+export PATH="$PATH:$HOME:$HOMEBREW_PATH:$RUST_PATH:$SUBLIME_PATH/:.local/bin"
 export DOTFILES_PATH="$( dirname $( realpath ${(%):-%N} ) )"
 SHELL_CONFIG_PATH="$DOTFILES_PATH/shell"
 
@@ -25,5 +26,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] \
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-# fig unlock
+# Fig post block. Keep at the bottom of this file.
 eval "$(fig init zsh post)"
+

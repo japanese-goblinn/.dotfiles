@@ -11,12 +11,20 @@ ERROR_CODE=1
 
 # -------------------------------------- UTILS -------------------------------------------
 
-function _is_git_repo() { 
-  git rev-parse --is-inside-work-tree 2>/dev/null && echo true || echo false 
+function print_warning() { 
+  echo "⚠️  ${YELLOW}${1}${COLOR_RESET}"
 }
 
-function _print_error() { 
-  echo -e "\n❌ ${BOLD}${RED}${1}${RESET}"
+function print_error() { 
+  echo "❌ ${RED}${1}${COLOR_RESET}"
+}
+
+function print_success() { 
+  echo "✅ ${GREEN}${1}${COLOR_RESET}"
+}
+
+function _is_git_repo() { 
+  git rev-parse --is-inside-work-tree 2>/dev/null && echo true || echo false 
 }
 
 # ------------------------------------ FUNCTIONS -----------------------------------------

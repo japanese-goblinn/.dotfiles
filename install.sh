@@ -1,16 +1,6 @@
 #!/bin/bash
 
-set -e
-
-YELLOW="\033[33m"
-GREEN="\033[32m"
-PURPLE="\033[95m"
-RED="\033[31m"
-COLOR_RESET="\033[0m"
-
-function print_warning() { echo -e "⚠️  ${YELLOW}${1}${COLOR_RESET}"; }
-function print_error() { echo -e "❌ ${RED}${1}${COLOR_RESET}"; }
-function print_success() { echo -e "✅ ${GREEN}${1}${COLOR_RESET}"; }
+set -x
 
 function pre_scripts_install() { 
   xcode-select --install 2> /dev/null || print_warning "Xcode CLI tools already installed"
@@ -20,8 +10,14 @@ function install_rust() {
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 }
 
+function is_installed() {
+  [ `command -v "$1"` 2>/dev/null ] && echo true || echo false
+}
+
 function brew_install() {
-  /bin/bash -c "$( curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh )" 
+  if $( ! is_installed "brew" ); then
+    /bin/bash -c "$( curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh )" 
+  fi
   
   # GUI apps
   brew install --cask firefox # primary browser 
@@ -33,12 +29,14 @@ function brew_install() {
   brew install --cask fork # amazing git client
   brew install --cask sublime-text # amazing text editor
   brew install --cask sublime-merge # another amazing git client
-  brew install --cask visual-studio-code # 
+  brew install --cask visual-studio-code 
   brew install --cask paw # api tool (http client and more)
   brew install --cask transmission # torrent client 
   brew install --cask discord
   brew install --cask slack
-  brew install --cask steam
+  brew install --cask dash
+  brew install --cask obsidian
+  brew install --cask spotify
 
   # cli 
   brew install ripgrep # better grep
@@ -70,11 +68,13 @@ function dotfiles_install() {
   (cd $DOTFILES_PATH && git submodule update --init --recursive) 
   source "$DOTFILES_PATH/shell/exports.sh"
   source "$DOTFILES_PATH/shell/functions.sh"
-  (cd "$DOTFILES_DEPENDECIES_PATH/xcode_theme" && ./install.sh) 
-  set_personal_macos_defaults
+  ln -sF "$DOTFILES_PATH/.zshrc" "$HOME"
+  # (cd "$DOTFILES_DEPENDECIES_PATH/xcode_theme" && ./install.sh) 
+  # set_personal_macos_defaults
 }
 
 function configs_install() {
+
   # git
   ln -sF "$DOTFILES_CONFIG_PATH/git/.gitconfig" ~/.gitconfig 
   ln -sF "$DOTFILES_CONFIG_PATH/git/.github_token" ~/.github_token 
@@ -90,10 +90,7 @@ function configs_install() {
   local VSCODE_PATH="$DOTFILES_CONFIG_PATH/vscode/"
   xargs -L1 code --install-extension < "$VSCODE_PATH/extensions.txt"
   ln -sF "$VSCODE_PATH/settings.json" ~/Library/Application\ Support/Code/User/settings.json
-  
-  # raycast
-  git clone "https://github.com/japanese-goblinn/script-commands.git"
-  
+    
   # iterm2
   print_warning "iTerm needs manual install of config"
   mk "$HOME/Library/Application Support/iTerm2/Scripts/AutoLaunch/"
@@ -104,7 +101,7 @@ function configs_install() {
 
   # sublime 
   ln -sF "$DOTFILES_CONFIG_PATH/sublime/sublime-profiles/" "$HOME/Library/Application Support/Sublime Text/Packages/"
-  ln -sF "$DOTFILES_CONFIG_PATH/sublime/User" "$HOME/Library/Application Support/Sublime Text/Packages/User/"
+  ln -sF "$DOTFILES_CONFIG_PATH/sublime/User" "$HOME/Library/Application Support/Sublime Text/Packages/"
 
   # sublime merge
   print_success "Installing CLI tool of Sublime Merge..."
@@ -116,7 +113,7 @@ function configs_install() {
 
 function keys_install() {
   # gpg key
-  brew install gpg-suite && print_warning "Go and generate a new GPG key"
+  # brew install gpg-suite && print_warning "Go and generate a new GPG key"
   # gpg --list-secret-keys --keyid-format LONG (get A3CDF698F9B37035 from this)
   # gpg --armor --export A3CDF698F9B37035
   # add to github
