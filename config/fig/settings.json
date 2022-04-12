@@ -3,7 +3,7 @@
   "app.hideMenubarIcon" : true,
   "autocomplete.disable" : false,
   "autocomplete.fontFamily" : "SF Mono",
-  "autocomplete.fontSize" : 12,
+  "autocomplete.fontSize" : 13,
   "autocomplete.fuzzySearch" : true,
   "autocomplete.immediatelyExecuteAfterSpace" : false,
   "autocomplete.keybindings.enter" : "insertSelected",
