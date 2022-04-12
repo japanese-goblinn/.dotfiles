@@ -26,6 +26,4 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] \
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-# Fig post block. Keep at the bottom of this file.
 eval "$(fig init zsh post)"
-

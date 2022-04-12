@@ -28,9 +28,6 @@ defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # FINDER
 
-# Show the ~/Library directory
-chflags nohidden "${HOME}/Library"
-
 # Save to disk (not to iCloud) by default
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
@@ -49,9 +46,6 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
 # Show file extensions in Finder:
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-
-# Show full path in title
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # Show hidden files
 defaults write com.apple.Finder AppleShowAllFiles -bool true
