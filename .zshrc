@@ -1,12 +1,13 @@
+# Fig pre block. Keep at the top of this file.
+export PATH="${PATH}:${HOME}/.local/bin"
+eval "$(fig init zsh pre)"
+
 HOMEBREW_PATH="/opt/homebrew/bin"
 RUST_PATH="$HOME/.cargo/bin"
 SUBLIME_PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin"
-export PATH="$PATH:$HOME:$HOMEBREW_PATH:$RUST_PATH:$SUBLIME_PATH/:.local/bin"
+export PATH="$PATH:$HOME:$HOMEBREW_PATH:$RUST_PATH:$SUBLIME_PATH"
 export DOTFILES_PATH="$( dirname $( realpath ${(%):-%N} ) )"
 SHELL_CONFIG_PATH="$DOTFILES_PATH/shell"
-
-# fig prelock
-eval "$(fig init zsh pre)"
 
 source "$SHELL_CONFIG_PATH/exports.sh"
 source "$SHELL_CONFIG_PATH/aliases.sh"
@@ -26,4 +27,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] \
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
+# Fig post block. Keep at the bottom of this file.
 eval "$(fig init zsh post)"
+

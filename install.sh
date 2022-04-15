@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -x
-
 function pre_scripts_install() { 
   xcode-select --install 2> /dev/null || print_warning "Xcode CLI tools already installed"
 }
@@ -34,15 +32,15 @@ function brew_install() {
   brew install --cask transmission # torrent client 
   brew install --cask discord
   brew install --cask slack
-  brew install --cask dash
-  brew install --cask obsidian
-  brew install --cask spotify
+  brew install --cask dash # search docks like a king
+  brew install --cask obsidian # knowledge base editor
+  brew install --cask spotify # music
+  brew install --cask karabiner-elements # keyboard keys remapper
 
   # cli 
   brew install ripgrep # better grep
   brew install fd # better find
   brew install jq # json processor
-  brew install micro # cli text editor
   brew install shellcheck # tool for static analysis of shellscript
   brew install bat # beautiful printing directly to terminal
   brew install exa # modern ls replacement
@@ -69,8 +67,11 @@ function dotfiles_install() {
   source "$DOTFILES_PATH/shell/exports.sh"
   source "$DOTFILES_PATH/shell/functions.sh"
   ln -sF "$DOTFILES_PATH/.zshrc" "$HOME"
-  # (cd "$DOTFILES_DEPENDECIES_PATH/xcode_theme" && ./install.sh) 
-  # set_personal_macos_defaults
+  (cd "$DOTFILES_DEPENDECIES_PATH/xcode_theme" && ./install.sh) 
+  set_personal_macos_defaults
+  # TODO: run run config scripts (like setup_sudo*.sh)
+  (cd "$DOTFILES_PATH/config/git" && touch ".github_token" && echo -e "[user]\n\ttoken = " > .github_token)
+  print_warning "GitHub Token setup needed"
 }
 
 function configs_install() {
@@ -82,14 +83,12 @@ function configs_install() {
   
   # run crontab
   crontab "$DOTFILES_CONFIG_PATH/auto_backups/cronetab.txt" && crontab -l 
-  
-  # micro
-  ln -sF "$DOTFILES_CONFIG_PATH/micro" ~/.config/
-    
+      
   # vscode
   local VSCODE_PATH="$DOTFILES_CONFIG_PATH/vscode/"
   xargs -L1 code --install-extension < "$VSCODE_PATH/extensions.txt"
   ln -sF "$VSCODE_PATH/settings.json" ~/Library/Application\ Support/Code/User/settings.json
+  ln -sF "$VSCODE_PATH/keybindings.json" ~/Library/Application\ Support/Code/User/keybindings.json
     
   # iterm2
   print_warning "iTerm needs manual install of config"
@@ -108,19 +107,10 @@ function configs_install() {
   sudo ln -sF "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" "/usr/local/bin"
 
   # fig
+  link_fig_config
 
-}
-
-function keys_install() {
-  # gpg key
-  # brew install gpg-suite && print_warning "Go and generate a new GPG key"
-  # gpg --list-secret-keys --keyid-format LONG (get A3CDF698F9B37035 from this)
-  # gpg --armor --export A3CDF698F9B37035
-  # add to github
-  
-  # ssh for github
-  print_warning "Go and generate SSH key in Xcode"
-  # ssh-keyscan github.com >> ~/.ssh/known_hosts
+  # rust
+  install_rust
 }
 
 function additional_setup() { 
@@ -132,6 +122,5 @@ pre_scripts_install
 brew_install
 dotfiles_install
 configs_install
-keys_install
 additional_setup
 source "$HOME/.zshrc"
