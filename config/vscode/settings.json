@@ -1,10 +1,10 @@
 {
-  "window.autoDetectHighContrast": false,
-  "window.autoDetectColorScheme": true,
-  "window.zoomLevel": 0,
+  "window.autoDetectHighContrast" : false,
+  "window.autoDetectColorScheme" : true,
+  "window.zoomLevel" : 0,
 
   "files.autoSave" : "afterDelay",
-  "files.insertFinalNewline": true,
+  "files.insertFinalNewline" : true,
 
   "terminal.external.osxExec" : "iTerm.app",
   "terminal.integrated.inheritEnv" : false,
@@ -14,39 +14,37 @@
   "explorer.confirmDragAndDrop" : false,
 
   "breadcrumbs.enabled" : true,
-  
-  "editor.tabSize": 2, // tab is always 2 spaces
-  "editor.insertSpaces": true, // always use spaces
-  "editor.detectIndentation": false, // do not inherit indentation from file
-  "editor.bracketPairColorization.enabled": true,
-  "editor.fontSize" : 12,
+        
+  "editor.tabSize" : 2, // tab is always 2 spaces
+  "editor.insertSpaces" : true, // always use spaces
+  "editor.detectIndentation" : false, // do not inherit indentation from file
+  "editor.bracketPairColorization.enabled" : true,
+  "editor.fontSize" : 13,
   "editor.fontFamily" : "SF Mono, Monaco, 'Courier New', monospace",
-  "editor.suggest.preview": true,
+  "editor.suggest.preview" : true,
   "editor.accessibilitySupport" : "off",
   "editor.minimap.enabled" : false,
   "editor.cursorBlinking" : "smooth",
 
   "workbench.settings.editor": "json",
+  "workbench.editor.centeredLayoutAutoResize" : true,
   "workbench.editor.highlightModifiedTabs" : true,
   "workbench.panel.defaultLocation" : "bottom", // terminal and stuff location
   "workbench.editor.tabCloseButton" : "left",
   "workbench.preferredDarkColorTheme" : "GitHub Dark Default",
   "workbench.preferredLightColorTheme" : "GitHub Light Default",
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
-  },
 
   "git.autofetch": true,
   "git.showUnpublishedCommitsButton": "always",
 
   "javascript.updateImportsOnFileMove.enabled" : "always",
 
-  "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+  "python.defaultInterpreterPath" : "/opt/homebrew/bin/python3",
     
-  "shellcheck.executablePath": "/opt/homebrew/bin/shellcheck",
-  "workbench.productIconTheme": "fluent-icons",
-  "workbench.colorTheme": "GitHub Dark Default",
-  "terminal.integrated.env.osx": {
+  "shellcheck.executablePath" : "/opt/homebrew/bin/shellcheck",
+  "workbench.productIconTheme" : "fluent-icons",
+  "workbench.colorTheme" : "GitHub Dark Default",
+  "terminal.integrated.env.osx" : {
     "FIG_NEW_SESSION": "1"
   },
 }
