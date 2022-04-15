@@ -1,0 +1,40 @@
+[
+  { 
+    "key": "cmd+shift+y",         
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+cmd+left",
+    "command": "workbench.action.navigateBack"
+  },
+  {
+    "key": "ctrl+cmd+right",
+    "command": "workbench.action.navigateForward"
+  },
+  {
+    "key": "cmd+0",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "alt+cmd+[",
+    "command": "editor.action.moveLinesUpAction"
+  },
+  {
+    "key": "alt+cmd+]",
+    "command": "editor.action.moveLinesDownAction"
+  },
+  {
+    "key": "cmd+shift+o",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "alt+l",
+    "command": "copyFilePath",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+cmd+l",
+    "command": "copyRelativeFilePath",
+    "when": "editorFocus"
+  },
+]
