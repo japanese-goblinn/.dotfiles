@@ -149,6 +149,7 @@ defaults write com.apple.dt.Xcode IDEIndexerActivityShowNumericProgress -bool YE
 echo "✅ Configured successfully"
 
 echo "ℹ️ Settings -> Trackpad -> More Gestures -> App Exposé"
+echo "ℹ️ Settings -> Keyboard -> Shortcuts -> Mission Control -> Disable 'Move left/right a space'"
 
 killall Dock
 killall Finder
