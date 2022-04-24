@@ -4,7 +4,7 @@
 	"save_on_focus_lost": true,
 
 	"font_face": "SF Mono",
-	"font_size": 12.5,
+	"font_size": 13,
 
 	"theme": "Adaptive.sublime-theme",
 	"color_scheme": "auto",
