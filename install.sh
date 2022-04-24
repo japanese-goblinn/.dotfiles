@@ -116,6 +116,16 @@ function configs_install() {
 function additional_setup() { 
   print_warning "SF Mono install needed" 
   print_warning "Raycast config needed"
+
+  # TODO: Write script to automaticly upload ssh key
+  # https://github.com/TheArqsz/auto-ssh-key
+  # Generate ssh key
+  (
+    cd ~/.ssh && \
+    ssh-keygen -t ecdsa -C "cool45akol@gmail.com" && \
+    cat id_ecdsa.pub | pbcopy && \
+    print_warning "Go to https://github.com/settings/keys and register SSH key from pastboard"
+  )
 }
 
 pre_scripts_install

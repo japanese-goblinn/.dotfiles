@@ -1,6 +1,5 @@
 # Fig pre block. Keep at the top of this file.
-export PATH="${PATH}:${HOME}/.local/bin"
-eval "$(fig init zsh pre)"
+. "$HOME/.fig/shell/zshrc.pre.zsh"
 
 HOMEBREW_PATH="/opt/homebrew/bin"
 RUST_PATH="$HOME/.cargo/bin"
@@ -28,5 +27,4 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] \
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Fig post block. Keep at the bottom of this file.
-eval "$(fig init zsh post)"
-
+. "$HOME/.fig/shell/zshrc.post.zsh"
