@@ -36,6 +36,7 @@ function brew_install() {
   brew install --cask obsidian # knowledge base editor
   brew install --cask spotify # music
   brew install --cask karabiner-elements # keyboard keys remapper
+  brew install --cask netnewswire # Nice open-source RSS client for macOS/iOS
 
   # cli 
   brew install ripgrep # better grep
