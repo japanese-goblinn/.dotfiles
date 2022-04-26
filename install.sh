@@ -82,7 +82,7 @@ function configs_install() {
   ln -sF "$DOTFILES_CONFIG_PATH/git/.gitignore" ~/.gitignore 
   
   # run crontab
-  crontab "$DOTFILES_CONFIG_PATH/auto_backups/cronetab.txt" && crontab -l 
+  crontab "$DOTFILES_CONFIG_PATH/auto_backups/crontab.txt" && crontab -l 
       
   # vscode
   local VSCODE_PATH="$DOTFILES_CONFIG_PATH/vscode/"
