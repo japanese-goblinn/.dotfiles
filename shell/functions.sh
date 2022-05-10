@@ -29,6 +29,20 @@ function _is_git_repo() {
 
 # ------------------------------------ FUNCTIONS -----------------------------------------
 
+# open current git repository remote
+function or() {
+  if [ "$(_is_git_repo)" = false ]; then
+    print_error 'NOT A GIT REPO'
+    return $ERROR_CODE
+  fi
+  local repo_url="$(git config remote.origin.url)"
+  if [ -z "$repo_url" ]; then 
+    print_error "CAN'T FIND REMOTE"
+    return $ERROR_CODE
+  fi
+  open "$repo_url" || print_error "CAN'T OPEN REMOTE"
+}
+
 function link_fig_config() {
   ln -sF "$DOTFILES_CONFIG_PATH/fig/settings.json" "$HOME/.fig/"
 }
@@ -41,7 +55,7 @@ function wh() {
    print_error "NAME SHOULD BE PASSED"
    return $ERROR_CODE
   fi
-  whence -f "$prog" | bat --language bash
+  whence -f "$prog" | bat --language bash # TODO: fix syntax highlighting for different themes 
 }
 
 # another tldr
