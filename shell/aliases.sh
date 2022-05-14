@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # General
+alias mk="mkdir -p"
 alias mv="mv -iv"
 alias cp="cp -riv"
 alias ls="exa"
@@ -12,10 +13,10 @@ alias reload="source ~/.zshrc"
 alias f="fork"
 alias m="make"
 alias e="subl"
-alias nano="micro"
 alias sz="du -sh ."
 alias find="fd"
 alias grep="rg"
+alias b="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo $BAT_DARK_THEME || echo $BAT_LIGHT_THEME)"
 
 # Navigation
 alias .="cd -"

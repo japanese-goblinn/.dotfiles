@@ -1,19 +1,19 @@
 #!/bin/bash
 
 function pre_scripts_install() { 
-  xcode-select --install 2> /dev/null || print_warning "Xcode CLI tools already installed"
+  xcode-select --install 2> /dev/null || _print_warning "Xcode CLI tools already installed"
 }
 
-function install_rust() {
+function _install_rust() {
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 }
 
-function is_installed() {
+function _is_installed() {
   [ `command -v "$1"` 2>/dev/null ] && echo true || echo false
 }
 
-function brew_install() {
-  if $( ! is_installed "brew" ); then
+function _brew_install() {
+  if $( ! _is_installed "brew" ); then
     /bin/bash -c "$( curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh )" 
   fi
   
@@ -62,21 +62,25 @@ function brew_install() {
   gem install xcode-install
 }
 
-function dotfiles_install() {
+_function dotfiles_install() {
   export DOTFILES_PATH="$( cd "$(dirname "$0")" && pwd )"
   (cd $DOTFILES_PATH && git submodule update --init --recursive) 
+  
   source "$DOTFILES_PATH/shell/exports.sh"
   source "$DOTFILES_PATH/shell/functions.sh"
+  
   ln -sF "$DOTFILES_PATH/.zshrc" "$HOME"
+  
   (cd "$DOTFILES_DEPENDECIES_PATH/xcode_theme" && ./install.sh) 
-  set_personal_macos_defaults
+  
+  source "$DOTFILES_PATH/config/macos/defaults.sh"
+  
   # TODO: run run config scripts (like setup_sudo*.sh)
   (cd "$DOTFILES_PATH/config/git" && touch ".github_token" && echo -e "[user]\n\ttoken = " > .github_token)
-  print_warning "GitHub Token setup needed"
+  _print_warning "GitHub Token setup needed"
 }
 
-function configs_install() {
-
+function _configs_install() {
   # git
   ln -sF "$DOTFILES_CONFIG_PATH/git/.gitconfig" ~/.gitconfig 
   ln -sF "$DOTFILES_CONFIG_PATH/git/.github_token" ~/.github_token 
@@ -92,7 +96,7 @@ function configs_install() {
   ln -sF "$VSCODE_PATH/keybindings.json" ~/Library/Application\ Support/Code/User/keybindings.json
     
   # iterm2
-  print_warning "iTerm needs manual install of config"
+  _print_warning "iTerm needs manual install of config"
   mk "$HOME/Library/Application Support/iTerm2/Scripts/AutoLaunch/"
   ln -sF "$DOTFILES_CONFIG_PATH/iterm/auto_dark_mode.py" ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch/auto_dark_mode.py
 
@@ -104,19 +108,19 @@ function configs_install() {
   ln -sF "$DOTFILES_CONFIG_PATH/sublime/User" "$HOME/Library/Application Support/Sublime Text/Packages/"
 
   # sublime merge
-  print_success "Installing CLI tool of Sublime Merge..."
+  _print_success "Installing CLI tool of Sublime Merge..."
   sudo ln -sF "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" "/usr/local/bin"
 
-  # fig
-  link_fig_config
-
   # rust
-  install_rust
+  _install_rust
+
+  # lazygit
+  _lazygit_config
 }
 
-function additional_setup() { 
-  print_warning "SF Mono install needed" 
-  print_warning "Raycast config needed"
+function _additional_setup() { 
+  _print_warning "SF Mono install needed" 
+  _print_warning "Raycast config needed"
 
   # TODO: Write script to automaticly upload ssh key
   # https://github.com/TheArqsz/auto-ssh-key
@@ -125,13 +129,13 @@ function additional_setup() {
     cd ~/.ssh && \
     ssh-keygen -t ecdsa -C "cool45akol@gmail.com" && \
     cat id_ecdsa.pub | pbcopy && \
-    print_warning "Go to https://github.com/settings/keys and register SSH key from pastboard"
+    _print_warning "Go to https://github.com/settings/keys and register SSH key from pastboard"
   )
 }
 
-pre_scripts_install
-brew_install
-dotfiles_install
-configs_install
-additional_setup
+_pre_scripts_install
+_brew_install
+_dotfiles_install
+_configs_install
+_additional_setup
 source "$HOME/.zshrc"

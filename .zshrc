@@ -1,13 +1,11 @@
-# Fig pre block. Keep at the top of this file.
-. "$HOME/.fig/shell/zshrc.pre.zsh"
-
 HOMEBREW_PATH="/opt/homebrew/bin"
 RUST_PATH="$HOME/.cargo/bin"
 SUBLIME_PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin"
 export PATH="$PATH:$HOME:$HOMEBREW_PATH:$RUST_PATH:$SUBLIME_PATH"
+typeset -U PATH # Remove duplicates in $PATH
+
 export DOTFILES_PATH="$( dirname $( realpath ${(%):-%N} ) )"
 SHELL_CONFIG_PATH="$DOTFILES_PATH/shell"
-
 source "$SHELL_CONFIG_PATH/exports.sh"
 source "$SHELL_CONFIG_PATH/aliases.sh"
 source "$SHELL_CONFIG_PATH/functions.sh"
@@ -25,6 +23,3 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] \
 	|| printf %s "${XDG_CONFIG_HOME}/nvm")"
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-# Fig post block. Keep at the bottom of this file.
-. "$HOME/.fig/shell/zshrc.post.zsh"

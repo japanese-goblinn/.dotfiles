@@ -5,18 +5,12 @@ export DOTFILES_DEPENDECIES_PATH="$DOTFILES_PATH/dependencies"
 export DOTFILES_CONFIG_PATH="$DOTFILES_PATH/config"
 export LAZYGIT_CONFIG_PATH="$DOTFILES_CONFIG_PATH/lazygit"
 
-# zsh-autosuggestions
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#cf2f98"
-
 # zsh-you-should-use
 export YSU_MESSAGE_POSITION="after"
 
-# micro
-export MICRO_TRUECOLOR=1
-
 # bat
-export BAT_LIGHT_THEME="Coldark-Cold"
-export BAT_DARK_THEME="OneHalfDark"
+export BAT_LIGHT_THEME="gruvbox-light"
+export BAT_DARK_THEME="gruvbox-dark"
 
 # fzf
 export FZF_DEFAULT_OPTS="
