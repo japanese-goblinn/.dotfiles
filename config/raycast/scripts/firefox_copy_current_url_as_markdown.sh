@@ -17,7 +17,7 @@ LANG="en_US.UTF-8"
 name=$( osascript -e 'tell application "System Events" to tell process "Firefox" to get name of front window')
 link=$( osascript -e  'tell application "System Events" to tell process "Firefox" to get value of UI element 1 of combo box 1 of toolbar "Navigation" of first group of front window' )
 
-# TODO: fix link if it contains spaces (properly encode them with %20, and other symbols)
+# TODO: proper url encoding (e.g. if contains spaces encode them with %20)
 
 echo "[$name]($link)" | pbcopy
 echo "Link Copied"
