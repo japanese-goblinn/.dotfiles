@@ -7,9 +7,9 @@ import iterm2
 async def update(connection, theme):
     parts = theme.split(" ")
     if "dark" in parts:
-        preset = await iterm2.ColorPreset.async_get(connection, "Raycast_Dark")
+        preset = await iterm2.ColorPreset.async_get(connection, "GitHub_Dark")
     else:
-        preset = await iterm2.ColorPreset.async_get(connection, "Raycast_Light")
+        preset = await iterm2.ColorPreset.async_get(connection, "GitHub_Light")
     profiles = await iterm2.PartialProfile.async_query(connection)
     for partial in profiles:
         profile = await partial.async_get_full_profile()
