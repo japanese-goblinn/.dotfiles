@@ -7,7 +7,7 @@
   "files.insertFinalNewline" : true,
 
   "terminal.external.osxExec" : "iTerm.app",
-  "terminal.integrated.inheritEnv" : false,
+  "terminal.integrated.inheritEnv" : true,
   "terminal.integrated.tabs.enabled": true,
 
   "explorer.confirmDelete" : false,
