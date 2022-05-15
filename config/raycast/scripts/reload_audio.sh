@@ -7,5 +7,5 @@
 # @raycast.mode silent
 
 sudo launchctl stop com.apple.audio.coreaudiod && sudo launchctl start com.apple.audio.coreaudiod
-echo "Core Audio Reloaded"
+echo "Done"
 

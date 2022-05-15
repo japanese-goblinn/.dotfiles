@@ -6,7 +6,8 @@
 # @raycast.packageName Firefox
 # @raycast.mode silent
 
-set -e
+# [Getting URL and Tab Title from Firefox with AppleScript · Matt's programming blog](https://matthewbilyeu.com/blog/2018-08-24/getting-url-and-tab-title-from-firefox-with-applescript)
+# [macos - Get URL of opened Firefox tabs from terminal - Ask Different](https://apple.stackexchange.com/questions/404841/get-url-of-opened-firefox-tabs-from-terminal)
 
 LANG="en_US.UTF-8"
 
