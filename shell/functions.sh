@@ -48,7 +48,7 @@ function fkill() {
   local pid
   pid=$(ps -ef | sed 1d | awk '{print $2, $8}' | fzf | awk '{print $1}')
   if [ -z "$pid" ]; then
-    _print_error "Can't find process PID"
+    _print_warning "Terminated"
     return $ERROR_CODE
   fi
   echo $pid | xargs kill -${1:-9}
@@ -146,6 +146,26 @@ function to() {
   fi
   touch "$file_name"
   e "$file_name"
+}
+
+# move to trash every file of current direcotry
+alias tca="ta ."
+
+# move to trash every file of passed directory 
+function ta() {
+  local dir
+  dir="$1"
+  if [[ -z "$dir" ]]; then
+    _print_error "No arguments passed"
+    return $ERROR_CODE
+  fi
+  if [[ ! -d "$dir" ]]; then
+    _print_error "Passed argument is not a directory"
+    return $ERROR_CODE
+  fi
+  for file in "$dir"/*; do
+    t "$file"
+  done
 }
 
 # move to Trash specified files/directories/etc.
