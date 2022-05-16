@@ -8,8 +8,6 @@ Light Theme             |  Dark Theme
 
 ## Install
 
-⚠️ **To make it work please use `zsh`**
-
-1. Clone this repo in any directory
-2. Run `install.sh` and script will do the rest
-3. If no errors occurred everything is ready to use
+```shell
+git clone "https://github.com/japanese-goblinn/.dotfiles.git" && cd ".dotfiles/" && make install
+```

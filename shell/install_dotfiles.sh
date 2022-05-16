@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function pre_scripts_install() { 
+function _pre_scripts_install() { 
   xcode-select --install 2> /dev/null || _print_warning "Xcode CLI tools already installed"
 }
 
@@ -62,7 +62,7 @@ function _brew_install() {
   gem install xcode-install
 }
 
-_function dotfiles_install() {
+function _dotfiles_install() {
   export DOTFILES_PATH="$( cd "$(dirname "$0")" && pwd )"
   (cd $DOTFILES_PATH && git submodule update --init --recursive) 
   
