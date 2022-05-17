@@ -24,7 +24,7 @@ function _print_success() {
 }
 
 function _is_git_repo() { 
-  git rev-parse --is-inside-work-tree 2>/dev/null && true || false 
+  git rev-parse --is-inside-work-tree &>/dev/null && true || false 
 }
 
 function _is_macos_dark() {
@@ -56,7 +56,7 @@ function fkill() {
 
 # open current git repository remote
 function gr() {
-  if [ "$(_is_git_repo)" = false ]; then
+  if ! _is_git_repo; then
     _print_error 'Not a git repo'
     return $ERROR_CODE
   fi
