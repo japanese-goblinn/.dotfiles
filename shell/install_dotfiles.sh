@@ -55,7 +55,6 @@ function _brew_install() {
   brew install lazygit # better work with git from cli
   brew install tree # print tree of directories structure
   brew install git-delta # syntax-highlighting pager for git, diff, and grep output
-  brew install fig # autocomplete tool
 
   # apple
   brew install cocoapods 
