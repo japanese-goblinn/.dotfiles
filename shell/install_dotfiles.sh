@@ -129,7 +129,7 @@ function _additional_setup() {
     cd ~/.ssh && \
     ssh-keygen -t ecdsa -C "cool45akol@gmail.com" && \
     cat id_ecdsa.pub | pbcopy && \
-    _print_warning "Go to https://github.com/settings/keys and register SSH key from pastboard"
+    _print_warning "Go to https://github.com/settings/keys and register SSH key from pasteboard"
   )
 }
 
