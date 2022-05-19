@@ -48,7 +48,7 @@ function fkill() {
   local pid
   pid=$(ps -ef | sed 1d | awk '{print $2, $8}' | fzf | awk '{print $1}')
   if [ -z "$pid" ]; then
-    _print_warning "Terminated"
+    _print_warning "Terminated" 
     return $ERROR_CODE
   fi
   echo $pid | xargs kill -${1:-9}
