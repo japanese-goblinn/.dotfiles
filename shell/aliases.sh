@@ -32,7 +32,6 @@ alias bri="brew install"
 alias brup="brew update && brew cleanup"
 
 # git
-alias gu='git add .; git commit -m "update"; git push'
 alias g="git"
 alias gb="git branch"
 alias gc="git commit"
