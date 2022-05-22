@@ -43,6 +43,11 @@ function _lazygit_config() {
 
 # ------------------------------------ FUNCTIONS -----------------------------------------
 
+# opens man page in Preview.app
+function manpdf() {
+  man -t "$1" | open -fa "/System/Applications/Preview.app/"
+}
+
 # fuzzy kill process
 function fkill() {
   local pid
