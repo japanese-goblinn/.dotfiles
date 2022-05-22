@@ -54,6 +54,9 @@ defaults write com.apple.finder AppleShowAllFiles TRUE
 # Avoid creation of .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
+# Show Path Bar at bottom
+defaults write com.apple.finder ShowPathbar -bool true
+
 # ACTIVITY MONITOR
 
 # Show all processes in Activity Monitor
@@ -145,6 +148,9 @@ defaults write com.apple.dt.Xcode IDEIndexShowLog -bool YES
 
 # Show Indexing numeric progress
 defaults write com.apple.dt.Xcode IDEIndexerActivityShowNumericProgress -bool YES
+
+# Reduce the number of compile tasks and stop indexing
+defaults write com.apple.dt.XCode IDEIndexDisable 1 
 
 echo "✅ Configured successfully"
 
