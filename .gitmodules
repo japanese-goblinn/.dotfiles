@@ -13,3 +13,6 @@
 [submodule "dependencies/zsh-you-should-use"]
 	path = dependencies/zsh-you-should-use
 	url = https://github.com/MichaelAquilina/zsh-you-should-use.git
+[submodule "dependencies/zsh-autocomplete"]
+	path = dependencies/zsh-autocomplete
+	url = https://github.com/marlonrichert/zsh-autocomplete.git
