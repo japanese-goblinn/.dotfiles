@@ -25,7 +25,7 @@ export FZF_DEFAULT_OPTS="
 export HOMEBREW_NO_ANALYTICS=1  
 
 # colorized man page
-export MANPAGER="sh -c 'col -bx | bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo $BAT_DARK_THEME || echo $BAT_LIGHT_THEME) -l man -p'"
+export MANPAGER="sh -c 'col -bx | bat --paging=never --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo $BAT_DARK_THEME || echo $BAT_LIGHT_THEME) -l man -p'"
 
 # vim errors fix
 export LC_ALL="en_US.UTF-8"
