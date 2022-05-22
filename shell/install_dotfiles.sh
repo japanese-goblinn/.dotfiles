@@ -39,6 +39,7 @@ function _brew_install() {
   brew install --cask netnewswire # Nice open-source RSS client for macOS/iOS
 
   # cli 
+  brew install mas # download apps from app store 
   brew install ripgrep # better grep
   brew install fd # better find
   brew install tealdeer # better tldr
@@ -59,6 +60,9 @@ function _brew_install() {
   # apple
   brew install cocoapods 
   gem install xcode-install
+
+  # App Store 
+  mas install 1569600264 # Pandan. Time Tracking app
 }
 
 function _dotfiles_install() {
