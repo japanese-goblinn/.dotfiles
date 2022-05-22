@@ -41,12 +41,12 @@ function _brew_install() {
   # cli 
   brew install ripgrep # better grep
   brew install fd # better find
+  brew install tealdeer # better tldr
   brew install jq # json processor
   brew install shellcheck # tool for static analysis of shellscript
   brew install bat # beautiful printing directly to terminal
   brew install exa # modern ls replacement
   brew install httpie # fancy curl
-  brew install tldr # short intro to any command
   brew install gh # working with github from cli
   brew install coreutils # some linux utils that now available by default on macOS
   brew install gnupg # gpg

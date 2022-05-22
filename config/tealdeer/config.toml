@@ -1,0 +1,25 @@
+[style.description]
+foreground = "purple"
+italic = true
+
+[style.example_text]
+foreground = "black"
+bold = true
+
+[style.command_name]
+foreground = "green"
+
+[style.example_code]
+foreground = "white"
+
+[style.example_variable]
+foreground = "white"
+underline = true
+
+[display]
+compact = false
+use_pager = false
+
+[updates]
+auto_update = true
+auto_update_interval_hours = 48
