@@ -7,6 +7,9 @@ echo "Configuring macOS defaults..."
 echo "Disabling automatically adjusting brightness..."
 sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Automatic Display Enabled" -bool false
 
+# This one allows to use Tab to change focused control in pop up windows
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
@@ -49,7 +52,6 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 # Show hidden files
 defaults write com.apple.Finder AppleShowAllFiles -bool true
-defaults write com.apple.finder AppleShowAllFiles TRUE
 
 # Avoid creation of .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
@@ -67,6 +69,9 @@ defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 # DOCK
+
+# Disable ability to resize dock
+defaults write com.apple.Dock size-immutable -bool yes
 
 # Wipe all (default) app icons from the Dock
 defaults write com.apple.dock persistent-apps -array
