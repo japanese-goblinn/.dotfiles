@@ -70,6 +70,17 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 # DOCK
 
+# Position
+defaults write com.apple.dock orientation -string "bottom"
+
+# Size
+defaults write com.apple.dock tilesize -int 48
+
+# Set magnification effect
+defaults write com.apple.dock magnification -bool yes
+# Set magnification dock size
+defaults write com.apple.dock largesize -float 68 
+
 # Disable ability to resize dock
 defaults write com.apple.Dock size-immutable -bool yes
 
