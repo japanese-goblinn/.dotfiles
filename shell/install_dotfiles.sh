@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function _pre_scripts_install() { 
-  xcode-select --install 2> /dev/null || _print_warning "Xcode CLI tools already installed"
+  xcode-select --install 2>/dev/null || _print_warning "Xcode CLI tools already installed"
 }
 
 function _install_rust() {
