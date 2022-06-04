@@ -10,6 +10,10 @@ source "./.firefox_utils.sh"
 # @raycast.mode silent
 
 name="$( firefox_get_current_tab_name )"
+# We have to escape `"` in AppleScript like this `\"`
+# This will replace ALL `"` with `\"`.
+# To learn more see https://github.com/dylanaraps/pure-bash-bible#parameter-expansion=
+name=${name//'"'/'\"'} 
 link="$( firefox_get_current_tab_url )"
 
 osascript << EOF
