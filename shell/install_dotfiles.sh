@@ -1,11 +1,8 @@
 #!/bin/zsh
 
-function dotfiles_install() {
+function dotfiles_install() { 
   _print_info "\nRunning dotfiles install phase..."
-  export DOTFILES_PATH="$( cd "../$(dirname "$0")" && pwd )"
   
-  source "$DOTFILES_PATH/shell/exports.sh"
-  source "$DOTFILES_PATH/shell/functions.sh"
   ln -sF "$DOTFILES_PATH/.zshrc" "$HOME"
   
   (cd $DOTFILES_PATH && git submodule update --init --recursive) 
@@ -119,6 +116,10 @@ function additional_setup() {
       && _print_warning "Go to https://github.com/settings/keys and register SSH key from pasteboard"
   )
 }
+
+export DOTFILES_PATH="$( cd "$(dirname "$0")/"../ && pwd )"
+source "$DOTFILES_PATH/shell/exports.sh"
+source "$DOTFILES_PATH/shell/functions.sh"
 
 xcode-select --install 2>/dev/null || _print_warning "Xcode CLI tools already installed"
 dotfiles_install
