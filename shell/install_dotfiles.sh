@@ -1,78 +1,13 @@
-#!/bin/bash
+#!/bin/zsh
 
-function _pre_scripts_install() { 
-  xcode-select --install 2>/dev/null || _print_warning "Xcode CLI tools already installed"
-}
-
-function _install_rust() {
-  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-}
-
-function _is_installed() {
-  [ `command -v "$1"` 2>/dev/null ] && echo true || echo false
-}
-
-function _brew_install() {
-  if $( ! _is_installed "brew" ); then
-    /bin/bash -c "$( curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh )" 
-  fi
-  
-  # GUI apps
-  brew install --cask firefox # primary browser 
-  brew install --cask raycast # best relacement of spotlight and smol tools
-  brew install --cask iina # best video player
-  brew install --cask telegram # best messanger
-  brew install --cask airbuddy # better airpods experience 
-  brew install --cask iterm2 # best terminal 
-  brew install --cask fork # amazing git client
-  brew install --cask sublime-text # amazing text editor
-  brew install --cask sublime-merge # another amazing git client
-  brew install --cask visual-studio-code 
-  brew install --cask paw # api tool (http client and more)
-  brew install --cask transmission # torrent client 
-  brew install --cask discord
-  brew install --cask slack
-  brew install --cask dash # search docks like a king
-  brew install --cask obsidian # knowledge base editor
-  brew install --cask spotify # music
-  brew install --cask karabiner-elements # keyboard keys remapper
-  brew install --cask netnewswire # Nice open-source RSS client for macOS/iOS
-
-  # cli 
-  brew install mas # download apps from app store 
-  brew install ripgrep # better grep
-  brew install fd # better find
-  brew install tealdeer # better tldr
-  brew install jq # json processor
-  brew install shellcheck # tool for static analysis of shellscript
-  brew install bat # beautiful printing directly to terminal
-  brew install exa # modern ls replacement
-  brew install httpie # fancy curl
-  brew install gh # working with github from cli
-  brew install coreutils # some linux utils that now available by default on macOS
-  brew install gnupg # gpg
-  brew install fzf # fuzzy search 
-  $(brew --prefix)/opt/fzf/install
-  brew install lazygit # better work with git from cli
-  brew install tree # print tree of directories structure
-  brew install git-delta # syntax-highlighting pager for git, diff, and grep output
-
-  # apple
-  brew install cocoapods 
-  gem install xcode-install
-
-  # App Store 
-  mas install 1569600264 # Pandan. Time Tracking app
-}
-
-function _dotfiles_install() {
-  export DOTFILES_PATH="$( cd "$(dirname "$0")" && pwd )"
-  (cd $DOTFILES_PATH && git submodule update --init --recursive) 
+function dotfiles_install() {
+  export DOTFILES_PATH="$( cd "../$(dirname "$0")" && pwd )"
   
   source "$DOTFILES_PATH/shell/exports.sh"
   source "$DOTFILES_PATH/shell/functions.sh"
-  
   ln -sF "$DOTFILES_PATH/.zshrc" "$HOME"
+  
+  (cd $DOTFILES_PATH && git submodule update --init --recursive) 
   
   (cd "$DOTFILES_DEPENDECIES_PATH/xcode_theme" && ./install.sh) 
   
@@ -83,7 +18,54 @@ function _dotfiles_install() {
   _print_warning "GitHub Token setup needed"
 }
 
-function _configs_install() {
+function brew_install() {
+  if $( ! _is_installed "brew" ); then
+    /bin/bash -c "$( curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh )" 
+  fi
+  
+  # GUI apps
+  _maybe_brew_cask_install "firefox" # primary browser 
+  _maybe_brew_cask_install "raycast" # best relacement of spotlight and smol tools
+  _maybe_brew_cask_install "iina" # best video player
+  _maybe_brew_cask_install "telegram" # best messanger
+  _maybe_brew_cask_install "airbuddy" # better airpods experience 
+  _maybe_brew_cask_install "iterm2" # best terminal 
+  _maybe_brew_cask_install "fork" # amazing git client
+  _maybe_brew_cask_install "sublime-text" # amazing text editor
+  _maybe_brew_cask_install "sublime-merge" # another amazing git client
+  _maybe_brew_cask_install "visual-studio-code" 
+  _maybe_brew_cask_install "paw" # api tool (http client and more)
+  _maybe_brew_cask_install "transmission" # torrent client 
+  _maybe_brew_cask_install "discord"
+  _maybe_brew_cask_install "slack"
+  _maybe_brew_cask_install "dash" # search docks like a king
+  _maybe_brew_cask_install "obsidian" # knowledge base editor
+  _maybe_brew_cask_install "spotify" # music
+  _maybe_brew_cask_install "netnewswire" # Nice open-source RSS client for macOS/iOS
+
+  # cli 
+  _maybe_brew_install "mas" # download apps from app store 
+  _maybe_brew_install "ripgrep" # better grep
+  _maybe_brew_install "fd" # better find
+  _maybe_brew_install "tealdeer" # better tldr
+  _maybe_brew_install "jq" # json processor
+  _maybe_brew_install "shellcheck" # tool for static analysis of shellscript
+  _maybe_brew_install "bat" # beautiful printing directly to terminal
+  _maybe_brew_install "exa" # modern ls replacement
+  _maybe_brew_install "httpie" # fancy curl
+  _maybe_brew_install "gh" # working with github from cli
+  _maybe_brew_install "coreutils" # some linux utils that now available by default on macOS
+  _maybe_brew_install "gnupg" # gpg
+  _maybe_brew_install "fzf" && $(brew --prefix)/opt/fzf/install # fuzzy search 
+  _maybe_brew_install "lazygit" # better work with git from cli
+  _maybe_brew_install "tree" # print tree of directories structure
+  _maybe_brew_install "git-delta" # syntax-highlighting pager for git, diff, and grep output
+
+  # App Store 
+  _mas_install "1569600264" # Pandan. Time Tracking app
+}
+
+function configs_install() {
   # git
   ln -sF "$DOTFILES_CONFIG_PATH/git/.gitconfig" ~/.gitconfig 
   ln -sF "$DOTFILES_CONFIG_PATH/git/.github_token" ~/.github_token 
@@ -115,30 +97,29 @@ function _configs_install() {
   sudo ln -sF "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" "/usr/local/bin"
 
   # rust
-  _install_rust
+  curl --proto '=https' --tlsv1.2 -sSf "https://sh.rustup.rs" | sh
 
   # lazygit
   _lazygit_config
 }
 
-function _additional_setup() { 
-  _print_warning "SF Mono install needed" 
-  _print_warning "Raycast config needed"
+function additional_setup() { 
+  _print_warning "'SF Mono' install needed" 
+  _print_warning "'raycast config' import needed"
 
   # TODO: Write script to automaticly upload ssh key
   # https://github.com/TheArqsz/auto-ssh-key
   # Generate ssh key
   (
-    cd ~/.ssh && \
-    ssh-keygen -t ecdsa -C "cool45akol@gmail.com" && \
-    cat id_ecdsa.pub | pbcopy && \
-    _print_warning "Go to https://github.com/settings/keys and register SSH key from pasteboard"
+    cd ~/.ssh \
+      && ssh-keygen -t ecdsa -C "cool45akol@gmail.com" \
+      && cat id_ecdsa.pub | pbcopy \
+      && _print_warning "Go to https://github.com/settings/keys and register SSH key from pasteboard"
   )
 }
 
-_pre_scripts_install
-_brew_install
-_dotfiles_install
-_configs_install
-_additional_setup
+dotfiles_install
+xcode-select --install 2>/dev/null || _print_warning "Xcode CLI tools already installed"
+brew_install
+configs_install
 source "$HOME/.zshrc"

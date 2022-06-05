@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # path's
 export DOTFILES_DEPENDECIES_PATH="$DOTFILES_PATH/dependencies"
 export DOTFILES_CONFIG_PATH="$DOTFILES_PATH/config"

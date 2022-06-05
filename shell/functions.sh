@@ -1,4 +1,4 @@
-#!/bin/bash
+# ----------------------------------- CONSTANTS ------------------------------------------
 
 RED="\033[31m"
 GREEN="\033[32m"
@@ -7,20 +7,21 @@ BOLD="\033[1m"
 PURPLE="\033[95m"
 RESET="\033[0m"
 
-ERROR_CODE=1
+SUCCESS_CODE="0"
+ERROR_CODE="1"
 
 # -------------------------------------- UTILS -------------------------------------------
 
 function _print_warning() { 
-  echo "${YELLOW}${1}${COLOR_RESET}"
+  echo "${YELLOW}$1${RESET}"
 }
 
 function _print_error() { 
-  echo "${RED}${1}${COLOR_RESET}"
+  echo "${RED}$1${RESET}"
 }
 
 function _print_success() { 
-  echo "${GREEN}${1}${COLOR_RESET}"
+  echo "${GREEN}$1${RESET}"
 }
 
 function _is_git_repo() { 
@@ -39,6 +40,59 @@ function _lazygit_config() {
   else 
     cat "$LAZYGIT_CONFIG_PATH/light_theme.yml" > "$config_location"
   fi
+}
+
+function _is_installed() {
+  [ `command -v "$1"` 2>/dev/null ] && true || false
+}
+
+function _is_brew_insalled() {
+  local program
+  program="$1"
+  brew list "$program" &>/dev/null && true || false
+}
+
+function _maybe_brew_install() {
+  local program
+  program="$1"
+  if $( _is_brew_insalled "$program" ); then
+    _print_warning "'$program' already installed"
+    return "$SUCCESS_CODE"
+  fi
+  _print_success "Installing '$program'..."
+  brew install "$program" \
+    && _print_success "Successfully installed '$program'" \
+    || _print_error "Failed to install '$program'"
+}
+
+function _maybe_brew_cask_install() {
+  local program
+  program="$1"
+  if $( _is_brew_insalled "$program" ); then
+    _print_warning "'$program' already installed"
+    return "$SUCCESS_CODE"
+  fi
+  # application (cask) can be installed not from 'brew' so we check that case here
+  # this transforms "program-name" to "Program Name.app/"
+  # not every application follows this convension so that is pretty failable 
+  # for example "karabiner-elements" turns into "Karabiner-Elements.app/"
+  # but because most casks do - we'll try anyway
+  # capitilze name, remove `-` and add `.app/` postfix
+  macos_program_name="${(C)program//-/ }.app/" 
+  if [[ -d "/Applications/$macos_program_name" ]]; then
+    _print_warning "'$program' already installed"
+    return "$SUCCESS_CODE"
+  fi
+  _print_success "Installing '$program'..."
+  brew install --cask "$program" \
+    && _print_success "Successfully installed '$program'" \
+    || _print_error "Failed to install '$program'"
+}
+
+function _mas_install() {
+  local program_id
+  program_id="$1"
+  mas install "$program_id" || _print_error "Failed to install '$program_id'"
 }
 
 # ------------------------------------ FUNCTIONS -----------------------------------------
