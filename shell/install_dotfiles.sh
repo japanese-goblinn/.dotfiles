@@ -1,6 +1,7 @@
 #!/bin/zsh
 
 function dotfiles_install() {
+  _print_info "\nRunning dotfiles install phase..."
   export DOTFILES_PATH="$( cd "../$(dirname "$0")" && pwd )"
   
   source "$DOTFILES_PATH/shell/exports.sh"
@@ -11,14 +12,13 @@ function dotfiles_install() {
   
   (cd "$DOTFILES_DEPENDECIES_PATH/xcode_theme" && ./install.sh) 
   
-  source "$DOTFILES_PATH/config/macos/defaults.sh"
-  
   # TODO: run run config scripts (like setup_sudo*.sh)
   (cd "$DOTFILES_PATH/config/git" && touch ".github_token" && echo -e "[user]\n\ttoken = " > .github_token)
   _print_warning "GitHub Token setup needed"
 }
 
 function brew_install() {
+  _print_info "\nRunning brew install phase..."
   if $( ! _is_installed "brew" ); then
     /bin/bash -c "$( curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh )" 
   fi
@@ -66,6 +66,7 @@ function brew_install() {
 }
 
 function configs_install() {
+  _print_info "\nRunning configs install phase..."
   # git
   ln -sF "$DOTFILES_CONFIG_PATH/git/.gitconfig" ~/.gitconfig 
   ln -sF "$DOTFILES_CONFIG_PATH/git/.github_token" ~/.github_token 
@@ -104,6 +105,7 @@ function configs_install() {
 }
 
 function additional_setup() { 
+  _print_info "\nRunning additional setup phase..."
   _print_warning "'SF Mono' install needed" 
   _print_warning "'raycast config' import needed"
 
@@ -118,8 +120,9 @@ function additional_setup() {
   )
 }
 
-dotfiles_install
 xcode-select --install 2>/dev/null || _print_warning "Xcode CLI tools already installed"
+dotfiles_install
 brew_install
 configs_install
 source "$HOME/.zshrc"
+source "$DOTFILES_PATH/config/macos/defaults.sh"

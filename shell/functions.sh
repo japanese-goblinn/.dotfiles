@@ -12,6 +12,10 @@ ERROR_CODE="1"
 
 # -------------------------------------- UTILS -------------------------------------------
 
+function _print_info() {
+  echo "${PURPLE}$1${RESET}"
+}
+
 function _print_warning() { 
   echo "${YELLOW}$1${RESET}"
 }
@@ -32,16 +36,6 @@ function _is_macos_dark() {
   defaults read -globalDomain AppleInterfaceStyle &>/dev/null && true || false
 }
 
-function _lazygit_config() {
-  local config_location
-  config_location="$HOME/Library/Application Support/lazygit/config.yml"
-  if _is_macos_dark; then
-    cat "$LAZYGIT_CONFIG_PATH/dark_theme.yml" > "$config_location"
-  else 
-    cat "$LAZYGIT_CONFIG_PATH/light_theme.yml" > "$config_location"
-  fi
-}
-
 function _is_installed() {
   [ `command -v "$1"` 2>/dev/null ] && true || false
 }
@@ -50,6 +44,32 @@ function _is_brew_insalled() {
   local program
   program="$1"
   brew list "$program" &>/dev/null && true || false
+}
+
+function _lazygit_config() {
+  local my_config_location
+  my_config_location="$DOTFILES_CONFIG_PATH/lazygit"
+  local config_location
+  config_location="$HOME/Library/Application Support/lazygit/config.yml"
+  if _is_macos_dark; then
+    cat "$my_config_location/dark_theme.yml" > "$config_location"
+  else 
+    cat "$my_config_location/light_theme.yml" > "$config_location"
+  fi
+}
+
+function _maybe_killall() {
+  local should_kill
+  for program_to_kill in "$@"; do
+    should_kill="$( pgrep "$program_to_kill" 1>/dev/null && echo true || echo false )"
+    if [[ ! "$should_kill" ]]; then
+      _print_warning "'$program_to_kill' is not running, no need to kill"
+      break
+    fi
+    killall "$program_to_kill" &>/dev/null \
+      && _print_success "'$program_to_kill' killed successfully" \
+      || _print_error "Failed to kill '$program_to_kill'"
+  done
 }
 
 function _maybe_brew_install() {

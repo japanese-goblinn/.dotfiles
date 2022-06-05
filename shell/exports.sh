@@ -1,7 +1,6 @@
 # path's
 export DOTFILES_DEPENDECIES_PATH="$DOTFILES_PATH/dependencies"
 export DOTFILES_CONFIG_PATH="$DOTFILES_PATH/config"
-export LAZYGIT_CONFIG_PATH="$DOTFILES_CONFIG_PATH/lazygit"
 
 # zsh-you-should-use
 export YSU_MESSAGE_POSITION="after"
