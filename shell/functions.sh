@@ -75,7 +75,7 @@ function _maybe_killall() {
 function _maybe_brew_install() {
   local program
   program="$1"
-  if $( _is_brew_insalled "$program" ); then
+  if _is_brew_insalled "$program"; then
     _print_warning "'$program' already installed"
     return "$SUCCESS_CODE"
   fi
@@ -88,10 +88,11 @@ function _maybe_brew_install() {
 function _maybe_brew_cask_install() {
   local program
   program="$1"
-  if $( _is_brew_insalled "$program" ); then
+  if _is_brew_insalled "$program"; then
     _print_warning "'$program' already installed"
     return "$SUCCESS_CODE"
   fi
+  local macos_program_name
   # application (cask) can be installed not from 'brew' so we check that case here
   # this transforms "program-name" to "Program Name.app/"
   # not every application follows this convension so that is pretty failable 
@@ -125,25 +126,25 @@ function manpdf() {
 # fuzzy kill process
 function fkill() {
   local pid
-  pid=$(ps -ef | sed 1d | awk '{print $2, $8}' | fzf | awk '{print $1}')
+  pid="$( ps -ef | sed 1d | awk '{print $2, $8}' | fzf | awk '{print $1}' )"
   if [ -z "$pid" ]; then
     _print_warning "Terminated" 
-    return $ERROR_CODE
+    return "$ERROR_CODE"
   fi
-  echo $pid | xargs kill -${1:-9}
+  echo "$pid" | xargs kill -${1:-9} && _print_success "Killed!"
 }
 
 # open current git repository remote
 function gr() {
   if ! _is_git_repo; then
     _print_error 'Not a git repo'
-    return $ERROR_CODE
+    return "$ERROR_CODE"
   fi
   local repo_url
-  repo_url="$(git config remote.origin.url)"
+  repo_url="$( git config remote.origin.url )"
   if [ -z "$repo_url" ]; then 
     _print_error "Can't find remote"
-    return $ERROR_CODE
+    return "$ERROR_CODE"
   fi
   open "$repo_url" || _print_error "Can't open remote"
 }
@@ -154,7 +155,7 @@ function wh() {
   prog="$1"
   if [ -z "$prog" ]; then
    _print_error "Name should be passed"
-   return $ERROR_CODE
+   return "$ERROR_CODE"
   fi
   whence -f "$prog" | b --plain --language bash
 }
@@ -163,7 +164,7 @@ function wh() {
 function cht() { 
   local prog
   prog="$1"
-  if [ -z "$prog" ]; then return $ERROR_CODE; fi
+  if [ -z "$prog" ]; then return "$ERROR_CODE"; fi
   curl -s "http://cht.sh/$prog"
 }
 
@@ -171,7 +172,7 @@ function cht() {
 function gl() {
   if ! _is_git_repo; then 
     _print_error "Not a git repo"
-    return $ERROR_CODE 
+    return "$ERROR_CODE"
   fi
   local light_option
   if ! _is_macos_dark; then
@@ -192,8 +193,8 @@ function gl() {
 # fuzzy serach environment variables
 function fenv() {
   local out
-  out=$(env | fzf)
-  echo $(echo $out | cut -d= -f2)
+  out="$( env | fzf )"
+  echo "$( echo "$out" | cut -d= -f2 )"
 }
 
 # delta wrapper
@@ -218,10 +219,10 @@ function lg() {
 # create file and edit
 function to() {
   local file_name
-  file_name=$1
+  file_name="$1"
   if [ -z "$file_name" ]; then 
     _print_error "File name should be passed"
-    return $ERROR_CODE
+    return "$ERROR_CODE"
   fi
   touch "$file_name"
   e "$file_name"
@@ -259,7 +260,7 @@ function t() {
 # move to Trash current direcotry
 function tc() {
   local dir
-  dir="$(pwd)"
+  dir="$( pwd )"
   cd ../
   t "$dir"
 }
@@ -267,10 +268,10 @@ function tc() {
 # make directory and cd into
 function mkcd() {
   local dir
-  dir=$1
+  dir="$1"
   if [ -n "$dir" ]; then
     mk "$dir"
-    cd "$dir" || return $ERROR_CODE
+    cd "$dir" || return "$ERROR_CODE"
   else
     _print_error "Directory name should not be empty"
   fi

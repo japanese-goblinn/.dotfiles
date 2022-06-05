@@ -9,14 +9,14 @@ function dotfiles_install() {
   
   (cd "$DOTFILES_DEPENDECIES_PATH/xcode_theme" && ./install.sh) 
   
-  # TODO: run run config scripts (like setup_sudo*.sh)
+  # TODO: run config scripts (like setup_sudo*.sh)
   (cd "$DOTFILES_PATH/config/git" && touch ".github_token" && echo -e "[user]\n\ttoken = " > .github_token)
   _print_warning "GitHub Token setup needed"
 }
 
 function brew_install() {
   _print_info "\nRunning brew install phase..."
-  if $( ! _is_installed "brew" ); then
+  if ! _is_installed "brew"; then
     /bin/bash -c "$( curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh )" 
   fi
   
