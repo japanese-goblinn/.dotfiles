@@ -57,6 +57,7 @@ function brew_install() {
 
   # App Store 
   _mas_install "1569600264" # Pandan. Time Tracking app
+  _mas_install "640199958" # Developer. App to watch WWDC etc.
 }
 
 function tools_install() {
