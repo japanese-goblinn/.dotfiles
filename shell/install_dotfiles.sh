@@ -34,10 +34,10 @@ function brew_install() {
   _maybe_brew_cask_install "dash" # search docks like a king
   _maybe_brew_cask_install "obsidian" # knowledge base editor
   _maybe_brew_cask_install "spotify" # music
-  _maybe_brew_cask_install "netnewswire" # Nice open-source RSS client for macOS/iOS
+  _maybe_brew_cask_install "netnewswire" # nice open-source RSS client for macOS/iOS
+  _maybe_brew_cask_install "xcodes" # quick install and manage Xcode (using this not cli becouse CLI is building from source and needs xcode already installed to succeed)
 
   # cli 
-  _maybe_brew_install "robotsandpencils/made/xcodes" # xcode versions manager
   _maybe_brew_install "mas" # download apps from app store 
   _maybe_brew_install "ripgrep" # better grep
   _maybe_brew_install "fd" # better find
@@ -58,6 +58,8 @@ function brew_install() {
   # App Store 
   _mas_install "1569600264" # Pandan. Time Tracking app
   _mas_install "640199958" # Developer. App to watch WWDC etc.
+  # only arm mac's support iPhone/iPad apps
+  [[ "$( uname -a )" == *"arm"* ]] && _mas_install "888422857" # Overcast. Podcast player
 }
 
 function tools_install() {
@@ -130,7 +132,6 @@ export DOTFILES_PATH="$( cd "$(dirname "$0")/"../ && pwd )"
 source "$DOTFILES_PATH/shell/exports.sh"
 source "$DOTFILES_PATH/shell/functions.sh"
 
-xcode-select --install 2>/dev/null || _print_warning "Xcode CLI tools already installed"
 dotfiles_install
 brew_install
 tools_install

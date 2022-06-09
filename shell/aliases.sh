@@ -25,6 +25,7 @@ alias ...="cd ../../"
 alias dev="cd ~/Developer"
 alias dw="cd ~/Downloads"
 alias dtf="cd ~/.dotfiles"
+alias kb="cd /Users/japanese_goblinn/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Knowledge\ Base"
 
 # brew
 alias br="brew"

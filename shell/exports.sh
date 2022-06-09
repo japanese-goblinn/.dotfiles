@@ -1,3 +1,9 @@
+HOMEBREW_PATH="/opt/homebrew/bin"
+RUST_PATH="$HOME/.cargo/bin"
+SUBLIME_PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin"
+export PATH="$PATH:$HOME:$HOMEBREW_PATH:$RUST_PATH:$SUBLIME_PATH"
+typeset -U PATH # Remove duplicates in $PATH
+
 # path's
 export DOTFILES_DEPENDECIES_PATH="$DOTFILES_PATH/dependencies"
 export DOTFILES_CONFIG_PATH="$DOTFILES_PATH/config"
