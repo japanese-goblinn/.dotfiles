@@ -58,8 +58,12 @@ function brew_install() {
   # App Store 
   _mas_install "1569600264" # Pandan. Time Tracking app
   _mas_install "640199958" # Developer. App to watch WWDC etc.
+  _mas_install "1496833156" # Swift Playgrounds
+
   # only arm mac's support iPhone/iPad apps
-  [[ "$( uname -a )" == *"arm"* ]] && _mas_install "888422857" # Overcast. Podcast player
+  if [[ "$( uname -a )" == *"arm"* ]]; then  
+    _mas_install "888422857" # Overcast. Podcast player
+  fi
 }
 
 function tools_install() {
@@ -117,8 +121,6 @@ function additional_setup() {
   _print_warning "'SF Mono' install needed" 
   _print_warning "'raycast config' import needed"
 
-  # TODO: Write script to automaticly upload ssh key
-  # https://github.com/TheArqsz/auto-ssh-key
   # Generate ssh key
   (
     cd ~/.ssh \
