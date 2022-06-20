@@ -1,10 +1,11 @@
 [user]
 	email = cool45akol@gmail.com
-	name = japanese-goblinn
+	name = Kirill Gorbachyonok
+[credential]
+	username = japanese-goblinn
+	helper = osxkeychain
 [init]
 	defaultBranch = main
-[credential]
-	helper = osxkeychain
 [core]
 	excludesfile = ~/.gitignore
 [include]
