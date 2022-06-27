@@ -36,7 +36,8 @@ function brew_install() {
   _maybe_brew_cask_install "netnewswire" # nice open-source RSS client for macOS/iOS
   _maybe_brew_cask_install "xcodes" # quick install and manage Xcode (using this not cli becouse CLI is building from source and needs xcode already installed to succeed)
   _maybe_brew_cask_install "db-browser-for-sqlite" # simple sqlite db explorer 
-
+  _maybe_brew_cask_install "lookin" # better alternative to Xcode view debugger 
+  
   # cli 
   _maybe_brew_install "mas" # download apps from app store 
   _maybe_brew_install "ripgrep" # better grep

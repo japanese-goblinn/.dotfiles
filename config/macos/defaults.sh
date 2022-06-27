@@ -31,6 +31,9 @@ function setup_global() {
   
   # Allow text selection in the Quick Look window
   defaults write com.apple.finder QLEnableTextSelection -bool true
+
+  # Set date-time format in menumar
+  defaults write com.apple.menuextra.clock DateFormat -string "HH:mm"
 }
 
 # Finder
