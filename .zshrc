@@ -8,7 +8,7 @@ SHELL_CONFIG_PATH="$DOTFILES_PATH/shell"
 source "$SHELL_CONFIG_PATH/exports.sh"
 source "$SHELL_CONFIG_PATH/aliases.sh"
 source "$SHELL_CONFIG_PATH/functions.sh"
-source "$SHELL_CONFIG_PATH/prompt.sh"
+# source "$SHELL_CONFIG_PATH/prompt.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

@@ -25,7 +25,6 @@ function brew_install() {
   _maybe_brew_cask_install "iterm2" # best terminal 
   _maybe_brew_cask_install "fork" # amazing git client
   _maybe_brew_cask_install "sublime-text" # amazing text editor
-  _maybe_brew_cask_install "sublime-merge" # another amazing git client
   _maybe_brew_cask_install "visual-studio-code" 
   _maybe_brew_cask_install "paw" # api tool (http client and more)
   _maybe_brew_cask_install "transmission" # torrent client 
@@ -107,12 +106,11 @@ function configs_install() {
   ln -sF "$DOTFILES_CONFIG_PATH/sublime/sublime-profiles/" "$HOME/Library/Application Support/Sublime Text/Packages/"
   ln -sF "$DOTFILES_CONFIG_PATH/sublime/User" "$HOME/Library/Application Support/Sublime Text/Packages/"
 
-  # sublime merge
-  _print_success "Installing CLI tool of Sublime Merge..."
-  sudo ln -sF "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" "/usr/local/bin"
-
   # lazygit
   _lazygit_config
+
+  # warp
+  ln -sF "$DOTFILES_CONFIG_PATH/.warp" "$HOME/.warp"
 }
 
 function additional_setup() { 
