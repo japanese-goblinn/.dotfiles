@@ -273,11 +273,11 @@ function tc() {
 }
 
 # make directory and j (zoxide) into
-function mkj() {
+function mj() {
   local dir
   dir="$1"
   if [ -n "$dir" ]; then
-    mk "$dir"
+    m "$dir"
     j "$dir" || return "$ERROR_CODE"
   else
     _print_error "Directory name should not be empty"
@@ -285,11 +285,11 @@ function mkj() {
 }
 
 # make directory and cd into
-function mkcd() {
+function mcd() {
   local dir
   dir="$1"
   if [ -n "$dir" ]; then
-    mk "$dir"
+    m "$dir"
     cd "$dir" || return "$ERROR_CODE"
   else
     _print_error "Directory name should not be empty"

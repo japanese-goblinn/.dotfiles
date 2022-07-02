@@ -1,48 +1,34 @@
-#!/bin/bash
+#!/bin/zsh
 
 # General
-alias mk="mkdir -p"
+alias m="mkdir -p"
 alias mv="mv -iv"
 alias cp="cp -riv"
 alias ls="exa"
 alias ll="exa -la"
-alias o="open"
-alias oc="open ."
-alias diff="code -nd"
-alias reload="source ~/.zshrc"
+alias rld="source ~/.zshrc"
 alias f="fork"
-alias m="make"
+alias mk="make"
 alias e="subl"
-alias sz="du -sh ."
 alias find="fd"
 alias grep="rg"
 alias b="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo $BAT_DARK_THEME || echo $BAT_LIGHT_THEME)"
 
 # Navigation
+alias jo="open"
+alias joc="open ."
 alias ..="cd .."
 alias ...="cd ../../"
 
-# brew
-alias br="brew"
-alias bri="brew install"
-alias brup="brew update && brew cleanup"
-
 # git
 alias g="git"
-alias gb="git branch"
 alias gcm="git commit -m"
-alias gch="git checkout"
 alias gs="git status"
 alias ga="git add"
-alias gac="git add ."
 alias gph="git push"
 alias gpl="git pull"
 alias gfe="git fetch"
 alias gcl="git clone"
-
-# Python
-alias p="python3" 
-alias p2="python"
 
 # Rust
 alias cg="cargo"
