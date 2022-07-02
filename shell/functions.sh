@@ -228,6 +228,13 @@ function to() {
   e "$file_name"
 }
 
+# clear trash 
+function ct() {
+  rm -rf ~/.Trash/* \
+    && _print_success "Trash cleared" \
+    || _print_error "Failed to clear Trash"
+}
+
 # move to trash every file of current direcotry
 alias tca="ta ."
 
@@ -263,6 +270,18 @@ function tc() {
   dir="$( pwd )"
   cd ../
   t "$dir"
+}
+
+# make directory and j (zoxide) into
+function mkj() {
+  local dir
+  dir="$1"
+  if [ -n "$dir" ]; then
+    mk "$dir"
+    j "$dir" || return "$ERROR_CODE"
+  else
+    _print_error "Directory name should not be empty"
+  fi
 }
 
 # make directory and cd into

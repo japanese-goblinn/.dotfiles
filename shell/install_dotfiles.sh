@@ -56,6 +56,7 @@ function brew_install() {
   _maybe_brew_install "lazygit" # better work with git from cli
   _maybe_brew_install "tree" # print tree of directories structure
   _maybe_brew_install "git-delta" # syntax-highlighting pager for git, diff, and grep output
+  _maybe_brew_install "zoxide" # better cd https://github.com/ajeetdsouza/zoxide
 
   # App Store 
   _mas_install "1569600264" # Pandan. Time Tracking app
