@@ -189,9 +189,6 @@ function setup_xcode() {
   
   # Show Indexing numeric progress
   defaults write com.apple.dt.Xcode IDEIndexerActivityShowNumericProgress -bool YES
-  
-  # Reduce the number of compile tasks and stop indexing
-  defaults write com.apple.dt.XCode IDEIndexDisable 1
 }
 
 _print_info "Configuring macOS defaults.."
