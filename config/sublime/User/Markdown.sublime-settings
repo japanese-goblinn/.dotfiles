@@ -1,5 +1,28 @@
 {
+	"font_face": "Writer",
+	"font_size": 16,
+	"caret_extra_width": 2,
+	"draw_centered": true,
+  	"draw_indent_guides": false,
+  	"draw_white_space": ["none"],
+  	"gutter": false,	
+  	"highlight_line": false,
+  	"line_padding_bottom": 3,
+	"line_padding_top": 3,
+	"margin": 10,
+	"scroll_context_lines": 2,
+	"scroll_past_end": 0.5,
+	"word_wrap": true,
+	"wrap_width": 72,
+	"light_color_scheme": "Writer.sublime-color-scheme",
+	"dark_color_scheme": "Writer Dark.sublime-color-scheme",
+
+	"spell_check": true,
+
+	"typewriter_mode_scrolling" : true,
+
 	"mde.auto_fold_link.enabled": true,
 	"mde.list_indent_bullets": ["-"],
 	"mde.italic_marker_asterisk": true,
+	
 }
