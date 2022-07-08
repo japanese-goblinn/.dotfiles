@@ -16,9 +16,8 @@ function firefox_get_current_tab_name() {
     echo "$name"
 }
 
-# [Getting URL and Tab Title from Firefox with AppleScript · Matt's programming blog](https://matthewbilyeu.com/blog/2018-08-24/getting-url-and-tab-title-from-firefox-with-applescript)
-# [macos - Get URL of opened Firefox tabs from terminal - Ask Different](https://apple.stackexchange.com/questions/404841/get-url-of-opened-firefox-tabs-from-terminal)
 function firefox_get_current_tab_url() {
+    # IMPORTANT: requires manual configuration to work https://apple.stackexchange.com/questions/404841/get-url-of-opened-firefox-tabs-from-terminal
     url=$( osascript -e  'tell application "System Events" to tell process "Firefox" to get value of UI element 1 of combo box 1 of toolbar "Navigation" of first group of front window' )
     # IMPORTANT: to use this regex syntax you need #!/bin/zsh not #!/bin/bash
     # if url is http - firefox copies it in format `path/` instead of `http://path/` and here is a fix
