@@ -6,7 +6,7 @@
   "files.autoSave" : "afterDelay",
   "files.insertFinalNewline" : true,
 
-  "terminal.external.osxExec" : "iTerm.app",
+  "terminal.external.osxExec" : "Warp.app", // cmd + shift + c
   "terminal.integrated.inheritEnv" : true,
   "terminal.integrated.tabs.enabled": true,
 

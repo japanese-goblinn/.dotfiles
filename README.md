@@ -4,6 +4,4 @@
 git clone "https://github.com/japanese-goblinn/.dotfiles.git" && cd ".dotfiles/" && make install
 ```
 
-Currently switched to [Warp](https://www.warp.dev/) as my main terminal.
-
-![prompt](media/new_prompt.png)
+![Warp Terminal](media/new_prompt.png)

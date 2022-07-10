@@ -22,7 +22,7 @@ function brew_install() {
   _maybe_brew_cask_install "iina" # best video player
   _maybe_brew_cask_install "telegram" # best messanger
   _maybe_brew_cask_install "airbuddy" # better airpods experience 
-  _maybe_brew_cask_install "iterm2" # best terminal 
+  _maybe_brew_cask_install "warp" # best terminal 
   _maybe_brew_cask_install "fork" # amazing git client
   _maybe_brew_cask_install "sublime-text" # amazing text editor
   _maybe_brew_cask_install "visual-studio-code" 
@@ -98,11 +98,6 @@ function configs_install() {
   ln -sF "$VSCODE_PATH/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
   ln -sF "$VSCODE_PATH/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
     
-  # iterm2
-  _print_warning "iTerm needs manual install of config"
-  mk "$HOME/Library/Application Support/iTerm2/Scripts/AutoLaunch/"
-  ln -sF "$DOTFILES_CONFIG_PATH/iterm/auto_dark_mode.py" "$HOME/Library/Application Support/iTerm2/Scripts/AutoLaunch/auto_dark_mode.py"
-
   # color picker
   cp "$DOTFILES_CONFIG_PATH/color_picker/Color Picker.app" "/Applications"
 

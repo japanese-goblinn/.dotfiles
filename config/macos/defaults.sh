@@ -128,14 +128,6 @@ function setup_safari() {
   defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 }
 
-# iTerm2
-function setup_iterm2() {
-  _print_info "\nRunning iTerm2 setup phase..."
-  
-  # Don’t display the annoying prompt when quitting iTerm
-  defaults write com.googlecode.iterm2 PromptOnQuit -bool false
-}
-
 # App Store
 function setup_app_store() {
   _print_info "\nRunning App Store setup phase..."
@@ -198,7 +190,6 @@ setup_finder
 setup_activity_monitor
 setup_dock
 setup_safari
-setup_iterm2
 setup_app_store
 setup_transmission
 setup_xcode
@@ -216,6 +207,6 @@ case "$need_restart" in
     ;;
   *)
     _print_warning "\n🔪 Killing some app's..."
-    _maybe_killall "Finder" "Activity Monitor" "Dock" "Safari" "iTerm2" "App Store" "Transmission" "Xcode"
+    _maybe_killall "Finder" "Activity Monitor" "Dock" "Safari" "App Store" "Transmission" "Xcode"
     ;;
 esac
