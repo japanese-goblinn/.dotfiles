@@ -1,50 +1,54 @@
 [
-	{ 
-		"keys": ["option+command+["], 
-		"command": "swap_line_up" 
-	},
-	{ 
-		"keys": ["option+command+]"], 
-		"command": "swap_line_down" 
-	},
-	{ 
-		"keys": ["command+0"], 
-		"command": "toggle_side_bar"
-	},
-	{ 
-		"keys": ["ctrl+p"], 
-		"command": "toggle_profile"
-	},
-	{ 
-		"keys": ["command+shift+o"], 
-		"command": "show_overlay", 
-		"args": { "overlay": "goto", "show_files": true } 
-	},
-	{ 
-		"keys": ["command+p"], 
-		"command": "show_overlay", 
-		"args": {"overlay": "command_palette"} 
-	},
-	{ 
-		"keys": ["ctrl+command+left"], 
-		"command": "jump_back" 
-	},
-	{ 
-		"keys": ["ctrl+command+right"], 
-		"command": "jump_forward" 
-	},
-	{ 
-		"keys": ["command+shift+j"], 
-		"command": "open_dir", 
-		"args": { "dir": "$file_path", "file": "$file_name" } 
-	},
-	{ 
-		"keys": ["command+shift+y"], 
-		"command": "show_panel", 
-		"args": { "panel": "console", "toggle": true} 
-	},
-	{ 
-		"keys": ["alt+l"], 
-		"command": "copy_path" 
-	}
+    {
+        "keys": ["ctrl+shift+`"],
+        "command": "toggle_inline_diff"
+    },
+    { 
+        "keys": ["option+command+["], 
+        "command": "swap_line_up" 
+    },
+    { 
+        "keys": ["option+command+]"], 
+        "command": "swap_line_down" 
+    },
+    { 
+        "keys": ["command+0"], 
+        "command": "toggle_side_bar"
+    },
+    { 
+        "keys": ["ctrl+p"], 
+        "command": "toggle_profile"
+    },
+    { 
+        "keys": ["command+shift+o"], 
+        "command": "show_overlay", 
+        "args": { "overlay": "goto", "show_files": true } 
+    },
+    { 
+        "keys": ["command+p"], 
+        "command": "show_overlay", 
+        "args": {"overlay": "command_palette"} 
+    },
+    { 
+        "keys": ["ctrl+command+left"], 
+        "command": "jump_back" 
+    },
+    { 
+        "keys": ["ctrl+command+right"], 
+        "command": "jump_forward" 
+    },
+    { 
+        "keys": ["command+shift+j"], 
+        "command": "open_dir", 
+        "args": { "dir": "$file_path", "file": "$file_name" } 
+    },
+    { 
+        "keys": ["command+shift+y"], 
+        "command": "show_panel", 
+        "args": { "panel": "console", "toggle": true} 
+    },
+    { 
+        "keys": ["alt+l"], 
+        "command": "copy_path" 
+    }
 ]
