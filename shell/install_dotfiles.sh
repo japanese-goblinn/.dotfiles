@@ -105,6 +105,10 @@ function configs_install() {
   ln -sF "$DOTFILES_CONFIG_PATH/sublime/sublime-profiles/" "$HOME/Library/Application Support/Sublime Text/Packages/"
   ln -sF "$DOTFILES_CONFIG_PATH/sublime/User" "$HOME/Library/Application Support/Sublime Text/Packages/"
 
+  # tealdear
+  tldr --seed-config
+  ln -sF "$DOTFILES_CONFIG_PATH/tealdeer/config.toml" "$HOME/Library/Application Support/tealdeer/"
+
   # lazygit
   _lazygit_config
 

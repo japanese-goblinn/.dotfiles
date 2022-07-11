@@ -1,19 +1,19 @@
 [style.description]
-foreground = "purple"
+foreground = "blue"
 italic = true
 
 [style.example_text]
-foreground = "black"
+foreground = "blue"
 bold = true
 
 [style.command_name]
 foreground = "green"
 
 [style.example_code]
-foreground = "white"
+foreground = "purple"
 
 [style.example_variable]
-foreground = "white"
+foreground = "purple"
 underline = true
 
 [display]
