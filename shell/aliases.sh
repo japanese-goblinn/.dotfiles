@@ -1,6 +1,8 @@
 #!/bin/zsh
 
 # General
+alias cd="j"
+alias icd="ji"
 alias m="mkdir -p"
 alias mv="mv -iv"
 alias cp="cp -riv"
@@ -15,8 +17,8 @@ alias grep="rg"
 alias b="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo $BAT_DARK_THEME || echo $BAT_LIGHT_THEME)"
 
 # Navigation
-alias jo="open"
-alias joc="open ."
+alias o="open"
+alias oc="open ."
 alias ..="cd .."
 alias ...="cd ../../"
 

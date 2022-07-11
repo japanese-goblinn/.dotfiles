@@ -135,7 +135,7 @@ function fkill() {
 }
 
 # open current git repository remote
-function gr() {
+function or() {
   if ! _is_git_repo; then
     _print_error 'Not a git repo'
     return "$ERROR_CODE"
@@ -270,18 +270,6 @@ function tc() {
   dir="$( pwd )"
   cd ../
   t "$dir"
-}
-
-# make directory and j (zoxide) into
-function mj() {
-  local dir
-  dir="$1"
-  if [ -n "$dir" ]; then
-    m "$dir"
-    j "$dir" || return "$ERROR_CODE"
-  else
-    _print_error "Directory name should not be empty"
-  fi
 }
 
 # make directory and cd into
