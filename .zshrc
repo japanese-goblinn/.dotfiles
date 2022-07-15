@@ -8,7 +8,9 @@ SHELL_CONFIG_PATH="$DOTFILES_PATH/shell"
 source "$SHELL_CONFIG_PATH/exports.sh"
 source "$SHELL_CONFIG_PATH/aliases.sh"
 source "$SHELL_CONFIG_PATH/functions.sh"
-# source "$SHELL_CONFIG_PATH/prompt.sh"
+if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
+  source "$SHELL_CONFIG_PATH/prompt.sh"
+fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -19,8 +21,8 @@ source "$DOTFILES_DEPENDECIES_PATH/zsh-you-should-use/you-should-use.plugin.zsh"
 
 # node version manager
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] \
-	&& printf %s "${HOME}/.nvm" \
-	|| printf %s "${XDG_CONFIG_HOME}/nvm")"
+  && printf %s "${HOME}/.nvm" \
+  || printf %s "${XDG_CONFIG_HOME}/nvm")"
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
