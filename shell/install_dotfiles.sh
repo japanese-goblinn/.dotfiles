@@ -61,7 +61,6 @@ function brew_install() {
   # App Store 
   _mas_install "1569600264" # Pandan. Time Tracking app
   _mas_install "640199958" # Developer. App to watch WWDC etc.
-  _mas_install "1496833156" # Swift Playgrounds
 
   # only arm mac's support iPhone/iPad apps
   if [[ "$( uname -a )" == *"arm"* ]]; then  
