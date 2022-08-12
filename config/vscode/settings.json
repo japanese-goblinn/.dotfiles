@@ -22,9 +22,9 @@
   "editor.fontSize" : 13,
   "editor.fontFamily" : "SF Mono, Monaco, 'Courier New', monospace",
   "editor.suggest.preview" : true,
-  "editor.accessibilitySupport" : "off",
-  "editor.minimap.enabled" : false,
+  "editor.accessibilitySupport": "off",
   "editor.cursorBlinking" : "smooth",
+  "editor.wordWrap": "on",
 
   "workbench.settings.editor": "json",
   "workbench.editor.centeredLayoutAutoResize" : true,
@@ -47,4 +47,5 @@
   "terminal.integrated.env.osx" : {
     "FIG_NEW_SESSION": "1"
   },
+  "editor.minimap.enabled": false,
 }
