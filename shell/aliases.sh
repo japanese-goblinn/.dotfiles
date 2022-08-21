@@ -1,8 +1,8 @@
 #!/bin/zsh
 
 # General
-alias cd="j"
-alias icd="ji"
+alias cd="z"
+alias icd="zi"
 alias m="mkdir -p"
 alias mv="mv -iv"
 alias cp="cp -riv"

@@ -26,5 +26,5 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] \
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-# better cd (using j instead of default z)
-eval "$(zoxide init --cmd j zsh)"
+# better cd
+eval "$(zoxide init zsh)"
