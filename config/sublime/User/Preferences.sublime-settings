@@ -11,14 +11,11 @@
 	"light_color_scheme": "GitHub Light.sublime-color-scheme",
 	"dark_color_scheme": "GitHub Dark.sublime-color-scheme",
 	
-	"show_full_path": true,
 	"show_rel_path": true,
 
 	"draw_centered": true,
 	"word_wrap": true,
 	"wrap_width": 90,
-
-	"hardware_acceleration": "opengl",
 
 	"bold_folder_labels": true,
 
