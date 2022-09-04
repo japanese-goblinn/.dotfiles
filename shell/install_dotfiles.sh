@@ -109,6 +109,9 @@ function configs_install() {
   tldr --seed-config
   ln -sF "$DOTFILES_CONFIG_PATH/tealdeer/config.toml" "$HOME/Library/Application Support/tealdeer/"
 
+  # system keys ramapping (applies after restart)
+  ln -sF "$DOTFILES_CONFIG_PATH/macos/com.local.KeyRemapping.plist" "$HOME/Library/LaunchAgents/"
+
   # lazygit
   _lazygit_config
 
