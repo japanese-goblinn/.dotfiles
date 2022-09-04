@@ -39,6 +39,7 @@ function brew_install() {
   _maybe_brew_cask_install "lookin" # better alternative to Xcode view debugger 
   _maybe_brew_cask_install "keyboardcleantool" # app to lock keyboard while cleanin it up
   _maybe_brew_cask_install "michaelvillar-timer" # minimal timer app
+  _maybe_brew_cask_install "little-snitch" # internet traffic 
   
   # cli 
   _maybe_brew_install "mas" # download apps from app store 
