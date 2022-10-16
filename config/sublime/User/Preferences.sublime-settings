@@ -13,9 +13,12 @@
 	
 	"show_rel_path": true,
 
+	"scroll_past_end": 0.6,
+	"typewriter_mode_scrolling" : true,
+
 	"draw_centered": true,
 	"word_wrap": true,
-	"wrap_width": 90,
+	"wrap_width": 80,
 
 	"bold_folder_labels": true,
 
@@ -38,5 +41,9 @@
 	[
 		"Markdown",
 		"Vintage",
+	],
+	"added_words":
+	[
+		"swifty"
 	],
 }
