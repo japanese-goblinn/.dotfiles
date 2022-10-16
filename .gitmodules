@@ -1,18 +1,6 @@
-[submodule "dependencies/pure"]
-	path = dependencies/pure
-	url = https://github.com/sindresorhus/pure
-[submodule "dependencies/zsh-autosuggestions"]
-	path = dependencies/zsh-autosuggestions
-	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule "dependencies/zsh-syntax-highlighting"]
-	path = dependencies/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting
 [submodule "dependencies/xcode_theme"]
 	path = dependencies/xcode_theme
 	url = https://github.com/cntrump/xcode-github-theme.git
 [submodule "dependencies/zsh-you-should-use"]
 	path = dependencies/zsh-you-should-use
 	url = https://github.com/MichaelAquilina/zsh-you-should-use.git
-[submodule "dependencies/zsh-autocomplete"]
-	path = dependencies/zsh-autocomplete
-	url = https://github.com/marlonrichert/zsh-autocomplete.git

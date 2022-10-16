@@ -8,15 +8,9 @@ SHELL_CONFIG_PATH="$DOTFILES_PATH/shell"
 source "$SHELL_CONFIG_PATH/exports.sh"
 source "$SHELL_CONFIG_PATH/aliases.sh"
 source "$SHELL_CONFIG_PATH/functions.sh"
-if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
-  source "$SHELL_CONFIG_PATH/prompt.sh"
-fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source "$DOTFILES_DEPENDECIES_PATH/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
-source "$DOTFILES_DEPENDECIES_PATH/zsh-autosuggestions/zsh-autosuggestions.zsh"
-source "$DOTFILES_DEPENDECIES_PATH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$DOTFILES_DEPENDECIES_PATH/zsh-you-should-use/you-should-use.plugin.zsh"
 
 # node version manager
