@@ -15,6 +15,7 @@ alias e="subl"
 alias find="fd"
 alias grep="rg"
 alias b="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo $BAT_DARK_THEME || echo $BAT_LIGHT_THEME)"
+alias speedtest="networkQuality -v"
 
 # Navigation
 alias o="open"
