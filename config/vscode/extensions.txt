@@ -1,13 +1,9 @@
 be5invis.toml
 GitHub.github-vscode-theme
-matklad.rust-analyzer
 miguelsolorio.fluent-icons
-ms-python.python
-ms-python.vscode-pylance
-ms-vscode-remote.remote-ssh
-ms-vscode-remote.remote-ssh-edit
-rebornix.ruby
-stevemoser.xcode-keybindings
-timonwong.shellcheck
+ms-vscode.makefile-tools
+rust-lang.rust-analyzer
+sswg.swift-lang
 usernamehw.errorlens
+vadimcn.vscode-lldb
 wingrunr21.vscode-ruby
