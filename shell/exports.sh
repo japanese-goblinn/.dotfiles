@@ -8,6 +8,9 @@ typeset -U PATH # Remove duplicates in $PATH
 export DOTFILES_DEPENDECIES_PATH="$DOTFILES_PATH/dependencies"
 export DOTFILES_CONFIG_PATH="$DOTFILES_PATH/config"
 
+# goku
+export GOKU_EDN_CONFIG_FILE="$DOTFILES_CONFIG_PATH/goku/karabiner.edn"
+
 # bat
 export BAT_LIGHT_THEME="gruvbox-light"
 export BAT_DARK_THEME="gruvbox-dark"

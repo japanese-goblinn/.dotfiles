@@ -41,7 +41,7 @@ function brew_install() {
   _maybe_brew_cask_install "michaelvillar-timer" # minimal timer app
   _maybe_brew_cask_install "little-snitch" # internet traffic 
   _maybe_brew_cask_install "calibre" # e-books editor
-
+  
   # cli 
   _maybe_brew_install "mas" # download apps from app store 
   _maybe_brew_install "ripgrep" # better grep
@@ -60,6 +60,9 @@ function brew_install() {
   _maybe_brew_install "tree" # print tree of directories structure
   _maybe_brew_install "git-delta" # syntax-highlighting pager for git, diff, and grep output
   _maybe_brew_install "zoxide" # better cd https://github.com/ajeetdsouza/zoxide
+
+  _maybe_brew_cask_install "karabiner-elements" # remap your keyboard
+  _maybe_brew_install "install yqrashawn/goku/goku" # DSL for karabiner
 
   # App Store 
   _mas_install "1569600264" # Pandan. Time Tracking app
