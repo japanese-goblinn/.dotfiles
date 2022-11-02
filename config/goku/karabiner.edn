@@ -1,25 +1,25 @@
 {
-  :profiles { :Default { :default true } }
-  :layers {:hyper-mode {:key :caps_lock :alone { :key :escape } } }
+  :profiles {:Default {:default true}}
+  :layers { :hyper-mode {:key :caps_lock :alone {:key :escape}} }
   :main [
     {:des "map f4 to left_option+space to trigger raycast", 
-      :rules [[:f4 :!Ospacebar]]},
+     :rules [[:f4 :!Ospacebar]]}
     {:des "map caps_lock hold to option+shift+<key>",
-      :rules [:hyper-mode 
-        [:a :!OSa]
-        [:c :!OSc]
-        [:f :!OSf]
-        [:g :!OSg]
-        [:m :!OSm]
-        [:o :!OSo]
-        [:r :!OSr]
-        [:s :!OSs]
-        [:t :!OSt]
-        [:v :!OSv]
-        [:w :!OSw]
-        [:x :!OSx]
-        [:spacebar :!Ospacebar]
-        [:right_command :!Tspacebar]
+     :rules [:hyper-mode 
+            [:a :!OSa]
+            [:c :!OSc]
+            [:f :!OSf]
+            [:g :!OSg]
+            [:m :!OSm]
+            [:o :!OSo]
+            [:r :!OSr]
+            [:s :!OSs]
+            [:t :!OSt]
+            [:v :!OSv]
+            [:w :!OSw]
+            [:x :!OSx]
+            [:spacebar :!Ospacebar]
+            [:right_command :!Tspacebar]
       ]
     }
   ]
