@@ -2,24 +2,31 @@
   :profiles {:Default {:default true}}
   :layers { :hyper-mode {:key :caps_lock :alone {:key :escape}} }
   :main [
-    {:des "map f4 to left_option+space to trigger raycast", 
-     :rules [[:f4 :!Ospacebar]]}
-    {:des "map caps_lock hold to option+shift+<key>",
+    {:des "disbale some keystrokes"
+     :rules [
+            [:escape :vk_none] ;; disable escape, use caps_lock instead
+     ]}
+    {:des "map f4 to left_option+space to toggle Raycast", 
+     :rules [
+            [:f4 :!Ospacebar]
+     ]}
+    {:des "map caps_lock hold to option+shift+<key>. option+shift+<key> map is happening in Raycast",
      :rules [:hyper-mode 
-            [:a :!OSa]
-            [:c :!OSc]
-            [:f :!OSf]
-            [:g :!OSg]
-            [:m :!OSm]
-            [:o :!OSo]
-            [:r :!OSr]
-            [:s :!OSs]
-            [:t :!OSt]
-            [:v :!OSv]
-            [:w :!OSw]
-            [:x :!OSx]
-            [:spacebar :!Ospacebar]
-            [:right_command :!Tspacebar]
+            [:a :!OSa]                   ;; toggle Arc
+            [:c :!OSc]                   ;; toggle Calendar
+            [:f :!OSf]                   ;; toggle Finder
+            [:g :!OSg]                   ;; toggle Fork (g for git)
+            [:l :!OSg]                   ;; toggle sLack
+            [:m :!OSm]                   ;; toggle Spotify (m for music)
+            [:o :!OSo]                   ;; toggle Obsidian
+            [:r :!OSr]                   ;; toggle Things (r for reminders)
+            [:s :!OSs]                   ;; toggle Sublime Text
+            [:t :!OSt]                   ;; toggle Telegram
+            [:v :!OSv]                   ;; toggle Clipboard Manager
+            [:w :!OSw]                   ;; toggle Warp
+            [:x :!OSx]                   ;; toggle Xcode             
+            [:spacebar :!Ospacebar]      ;; toggle Raycast
+            [:right_command :!Tspacebar] ;; toggle Search Menu Items in Raycast
       ]
     }
   ]
