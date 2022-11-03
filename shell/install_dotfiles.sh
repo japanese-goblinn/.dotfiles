@@ -62,7 +62,7 @@ function brew_install() {
   _maybe_brew_install "zoxide" # better cd https://github.com/ajeetdsouza/zoxide
 
   _maybe_brew_cask_install "karabiner-elements" # remap your keyboard
-  _maybe_brew_install "install yqrashawn/goku/goku" # DSL for karabiner
+  _maybe_brew_install "yqrashawn/goku/goku" # DSL for karabiner
 
   # App Store 
   _mas_install "1569600264" # Pandan. Time Tracking app
