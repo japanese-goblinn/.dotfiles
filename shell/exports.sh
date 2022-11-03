@@ -9,7 +9,7 @@ export DOTFILES_DEPENDECIES_PATH="$DOTFILES_PATH/dependencies"
 export DOTFILES_CONFIG_PATH="$DOTFILES_PATH/config"
 
 # goku
-export GOKU_EDN_CONFIG_FILE="$DOTFILES_CONFIG_PATH/goku/karabiner.edn"
+export GOKU_EDN_CONFIG_FILE="$DOTFILES_CONFIG_PATH/karabiner/dsl.edn"
 
 # bat
 export BAT_LIGHT_THEME="gruvbox-light"

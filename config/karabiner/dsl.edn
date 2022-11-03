@@ -16,7 +16,7 @@
             [:c :!OSc]                   ;; toggle Calendar
             [:f :!OSf]                   ;; toggle Finder
             [:g :!OSg]                   ;; toggle Fork (g for git)
-            [:l :!OSg]                   ;; toggle sLack
+            [:l :!OSl]                   ;; toggle sLack
             [:m :!OSm]                   ;; toggle Spotify (m for music)
             [:o :!OSo]                   ;; toggle Obsidian
             [:r :!OSr]                   ;; toggle Things (r for reminders)
