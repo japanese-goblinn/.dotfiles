@@ -1,6 +1,10 @@
 {
-  :profiles {:Default {:default true}}
-  :layers { :hyper-mode {:key :caps_lock :alone {:key :escape}} }
+  :profiles {
+   :Default {:default true} 
+  }
+  :layers {
+   :hyper-mode {:key :caps_lock :alone {:key :escape}} 
+  }
   :main [
     {:des "disbale some keystrokes"
      :rules [
@@ -14,7 +18,8 @@
      :rules [:hyper-mode 
             [:a :!OSa]                   ;; toggle Arc
             [:c :!OSc]                   ;; toggle Calendar
-            [:f :!OSf]                   ;; toggle Finder
+            [:d :!OSd]                   ;; toggle Dash
+            [:f :!OSf]                   ;; toggle Finder 
             [:g :!OSg]                   ;; toggle Fork (g for git)
             [:l :!OSl]                   ;; toggle sLack
             [:m :!OSm]                   ;; toggle Spotify (m for music)
@@ -24,9 +29,11 @@
             [:t :!OSt]                   ;; toggle Telegram
             [:v :!OSv]                   ;; toggle Clipboard Manager
             [:w :!OSw]                   ;; toggle Warp
-            [:x :!OSx]                   ;; toggle Xcode             
+            [:x :!OSx]                   ;; toggle Xcode
             [:spacebar :!Ospacebar]      ;; toggle Raycast
             [:right_command :!Tspacebar] ;; toggle Search Menu Items in Raycast
+            [:left_command :!Cspacebar]  ;; change input source
+            [:right_option :!TOspacebar] ;; quick add to Things
       ]
     }
   ]
