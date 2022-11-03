@@ -16,7 +16,8 @@
 	"scroll_past_end": 0.6,
 	"typewriter_mode_scrolling" : true,
 
-	"draw_centered": true,
+	// "draw_white_space": "all",
+	// "draw_centered": true,
 	"word_wrap": true,
 	"wrap_width": 80,
 
