@@ -19,6 +19,7 @@
             [:a :!OSa]                   ; toggle Arc
             [:c :!OSc]                   ; toggle Calendar
             [:d :!OSd]                   ; toggle Dash
+            [:e :!OSe]                   ; toggle reder (RSS)
             [:f :!OSf]                   ; toggle Finder 
             [:g :!OSg]                   ; toggle Fork (g for git)
             [:l :!OSl]                   ; toggle sLack
