@@ -31,6 +31,7 @@
             [:v :!OSv]                   ; toggle Clipboard Manager
             [:w :!OSw]                   ; toggle Warp
             [:x :!OSx]                   ; toggle Xcode
+            [:p :!OSp]                   ; toggle System Preferences/Passwords
             [:spacebar :!Ospacebar]      ; toggle Raycast
             [:right_command :!Tspacebar] ; toggle Search Menu Items in Raycast
             [:left_command :!Cspacebar]  ; change input source
