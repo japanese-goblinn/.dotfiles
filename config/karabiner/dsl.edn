@@ -1,3 +1,12 @@
+; C  | left_command
+; T  | left_control
+; O  | left_option
+; S  | left_shift
+; F  | fn
+; Q  | right_command
+; W  | right_control
+; E  | right_option
+; R  | right_shift
 {
   :profiles {
    :default {:default true} 
@@ -12,31 +21,31 @@
      ]}
     {:des "map f4 to left_option+space to toggle Raycast", 
      :rules [
-            [:f4 :!Ospacebar]
+            [:f4 :!OTSspacebar]
+     ]}
+    {:des "map caps_lock hold to brake you fingers shortcuts"
+     :rules [:hyper-mode
+            [:spacebar :!OTSspacebar]       ; toggle Raycast
+            [:left_command :!CTOSspacebar]  ; change input source
      ]}
     {:des "map caps_lock hold to option+shift+<key>. option+shift+<key> map is happening in Raycast",
      :rules [:hyper-mode 
-            [:a :!OSa]                   ; toggle Arc
-            [:c :!OSc]                   ; toggle Calendar
-            [:d :!OSd]                   ; toggle Dash
-            [:e :!OSe]                   ; toggle reder (RSS)
-            [:i :!OSi]                   ; toggle fInder 
-            [:f :!OSf]                   ; toggle Fork (g for git)
-            [:l :!OSl]                   ; toggle sLack
-            [:m :!OSm]                   ; toggle Spotify (m for music)
-            [:o :!OSo]                   ; toggle Obsidian
-            [:r :!OSr]                   ; toggle Things (r for reminders)
-            [:s :!OSs]                   ; toggle Sublime Text
-            [:t :!OSt]                   ; toggle Telegram
-            [:v :!OSv]                   ; toggle Clipboard Manager
-            [:w :!OSw]                   ; toggle Warp
-            [:x :!OSx]                   ; toggle Xcode
-            [:p :!OSp]                   ; toggle System Preferences/Passwords
-            [:spacebar :!Ospacebar]      ; toggle Raycast
-            [:right_command :!Tspacebar] ; toggle Search Menu Items in Raycast
-            [:left_command :!Cspacebar]  ; change input source
-            [:right_option :!TOspacebar] ; quick add to Things
-      ]
-    }
-  ]
-}
+            [:a :!OSa]                      ; toggle Arc
+            [:c :!OSc]                      ; toggle Calendar
+            [:d :!OSd]                      ; toggle Dash
+            [:e :!OSe]                      ; toggle reder (RSS)
+            [:i :!OSi]                      ; toggle fInder 
+            [:f :!OSf]                      ; toggle Fork (g for git)
+            [:l :!OSl]                      ; toggle sLack
+            [:m :!OSm]                      ; toggle Spotify (m for music)
+            [:o :!OSo]                      ; toggle Obsidian
+            [:r :!OSr]                      ; toggle Things (r for reminders)
+            [:s :!OSs]                      ; toggle Sublime Text
+            [:t :!OSt]                      ; toggle Telegram
+            [:v :!OSv]                      ; toggle Clipboard Manager
+            [:w :!OSw]                      ; toggle Warp
+            [:x :!OSx]                      ; toggle Xcode
+            [:p :!OSp]                      ; toggle System Preferences/Passwords
+            [:right_command :!Tspacebar]    ; toggle Search Menu Items in Raycast
+            [:right_option :!TOspacebar]    ; quick add to Things
+      ]}]}
