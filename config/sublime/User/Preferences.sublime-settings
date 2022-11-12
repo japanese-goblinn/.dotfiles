@@ -19,7 +19,7 @@
 	// "draw_white_space": "all",
 	// "draw_centered": true,
 	"word_wrap": true,
-	"wrap_width": 80,
+	// "wrap_width": 80,
 
 	"bold_folder_labels": true,
 
