@@ -41,7 +41,8 @@ function brew_install() {
   _maybe_brew_cask_install "michaelvillar-timer" # minimal timer app
   _maybe_brew_cask_install "little-snitch" # internet traffic 
   _maybe_brew_cask_install "calibre" # e-books editor
-  
+  _maybe_brew_cask_install "licecap" # cool screen recorder to make lightweight gifs for you project and/or arcicles
+
   # cli 
   _maybe_brew_install "mas" # download apps from app store 
   _maybe_brew_install "ripgrep" # better grep
