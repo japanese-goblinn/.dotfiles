@@ -1,2 +1,3 @@
 ---
 "input:clear_screen": cmd-r
+"workspace:show_command_search": shift-cmd-F
