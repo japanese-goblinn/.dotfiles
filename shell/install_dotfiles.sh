@@ -16,8 +16,7 @@ function brew_install() {
     /bin/bash -c "$( curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh )" 
   fi
   
-  # GUI apps
-  _maybe_brew_cask_install "firefox" # primary browser 
+  # GUI apps 
   _maybe_brew_cask_install "raycast" # best relacement of spotlight and smol tools
   _maybe_brew_cask_install "iina" # best video player
   _maybe_brew_cask_install "telegram" # best messanger
@@ -33,13 +32,11 @@ function brew_install() {
   _maybe_brew_cask_install "dash" # search docks like a king
   _maybe_brew_cask_install "obsidian" # knowledge base editor
   _maybe_brew_cask_install "spotify" # music
-  _maybe_brew_cask_install "netnewswire" # nice open-source RSS client for macOS/iOS
   _maybe_brew_cask_install "xcodes" # quick install and manage Xcode (using this not cli becouse CLI is building from source and needs xcode already installed to succeed)
   _maybe_brew_cask_install "db-browser-for-sqlite" # simple sqlite db explorer 
   _maybe_brew_cask_install "lookin" # better alternative to Xcode view debugger 
   _maybe_brew_cask_install "keyboardcleantool" # app to lock keyboard while cleanin it up
   _maybe_brew_cask_install "michaelvillar-timer" # minimal timer app
-  _maybe_brew_cask_install "little-snitch" # internet traffic 
   _maybe_brew_cask_install "calibre" # e-books editor
   _maybe_brew_cask_install "licecap" # cool screen recorder to make lightweight gifs for you project and/or arcicles
 
@@ -68,6 +65,7 @@ function brew_install() {
   # App Store 
   _mas_install "1569600264" # Pandan. Time Tracking app
   _mas_install "640199958" # Developer. App to watch WWDC etc.
+  _mas_install "1529448980" # Reeder. RSS client
 
   # only arm mac's support iPhone/iPad apps
   if [[ "$( uname -a )" == *"arm"* ]]; then  
