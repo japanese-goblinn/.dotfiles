@@ -46,18 +46,6 @@ function _is_brew_insalled() {
   brew list "$program" &>/dev/null && true || false
 }
 
-function _lazygit_config() {
-  local my_config_location
-  my_config_location="$DOTFILES_CONFIG_PATH/lazygit"
-  local config_location
-  config_location="$HOME/Library/Application Support/lazygit/config.yml"
-  if _is_macos_dark; then
-    cat "$my_config_location/dark_theme.yml" > "$config_location"
-  else 
-    cat "$my_config_location/light_theme.yml" > "$config_location"
-  fi
-}
-
 function _maybe_killall() {
   local should_kill
   for program_to_kill in "$@"; do
@@ -118,22 +106,6 @@ function _mas_install() {
 
 # ------------------------------------ FUNCTIONS -----------------------------------------
 
-# opens man page in Preview.app
-function manpdf() {
-  man -t "$1" | open -fa "/System/Applications/Preview.app/"
-}
-
-# fuzzy kill process
-function fkill() {
-  local pid
-  pid="$( ps -ef | sed 1d | awk '{print $2, $8}' | fzf | awk '{print $1}' )"
-  if [ -z "$pid" ]; then
-    _print_warning "Terminated" 
-    return "$ERROR_CODE"
-  fi
-  echo "$pid" | xargs kill -${1:-9} && _print_success "Killed!"
-}
-
 # open current git repository remote
 function or() {
   if ! _is_git_repo; then
@@ -160,36 +132,6 @@ function wh() {
   whence -f "$prog" | b --plain --language bash
 }
 
-# another tldr
-function cht() { 
-  local prog
-  prog="$1"
-  if [ -z "$prog" ]; then return "$ERROR_CODE"; fi
-  curl -s "http://cht.sh/$prog"
-}
-
-# fuzzy git log
-function gl() {
-  if ! _is_git_repo; then 
-    _print_error "Not a git repo"
-    return "$ERROR_CODE"
-  fi
-  local light_option
-  if ! _is_macos_dark; then
-    light_option="--light"
-  fi
-  git log \
-    --graph \
-    --color=always \
-    --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" \
-  | fzf \
-    --ansi \
-    --no-sort \
-    --reverse \
-    --tiebreak=index \
-    --preview="f() { set -- \$(echo -- \$@ | grep -o '[a-f0-9]\{7\}'); [ \$# -eq 0 ] || git show --color=always \$1 | delta --line-numbers $light_option; }; f {}"
-}
-
 # fuzzy serach environment variables
 function fenv() {
   local out
@@ -208,12 +150,6 @@ function d() {
     light_option="--light"
   fi
   delta $light_option "$file0" "$file1"
-}
-
-# lazygit wrapper
-function lg() {
-  _lazygit_config
-  lazygit
 }
 
 # create file and edit

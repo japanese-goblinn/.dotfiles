@@ -54,7 +54,6 @@ function brew_install() {
   _maybe_brew_install "coreutils" # some linux utils that now available by default on macOS
   _maybe_brew_install "gnupg" # gpg
   _maybe_brew_install "fzf" && $(brew --prefix)/opt/fzf/install # fuzzy search 
-  _maybe_brew_install "lazygit" # better work with git from cli
   _maybe_brew_install "tree" # print tree of directories structure
   _maybe_brew_install "git-delta" # syntax-highlighting pager for git, diff, and grep output
   _maybe_brew_install "zoxide" # better cd https://github.com/ajeetdsouza/zoxide
@@ -115,9 +114,6 @@ function configs_install() {
 
   # system keys ramapping (applies after restart)
   ln -sF "$DOTFILES_CONFIG_PATH/macos/com.local.KeyRemapping.plist" "$HOME/Library/LaunchAgents/"
-
-  # lazygit
-  _lazygit_config
 
   # warp
   ln -sF "$DOTFILES_CONFIG_PATH/.warp" "$HOME/.warp"
