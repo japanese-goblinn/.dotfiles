@@ -36,7 +36,6 @@
             [:e :!OSe]                      ; toggle reder (RSS)
             [:i :!OSi]                      ; toggle fInder 
             [:f :!OSf]                      ; toggle Fork (g for git)
-            [:l :!OSl]                      ; toggle sLack
             [:m :!OSm]                      ; toggle Spotify (m for music)
             [:o :!OSo]                      ; toggle Obsidian
             [:r :!OSr]                      ; toggle Things (r for reminders)
