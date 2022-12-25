@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # @raycast.schemaVersion 1
-# @raycast.icon 🎧
-# @raycast.title Reload CoreAudio
+# @raycast.icon 🔈
+# @raycast.title Fix Sound Quality
 # @raycast.packageName Utils
 # @raycast.mode silent
 
