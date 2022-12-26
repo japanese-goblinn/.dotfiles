@@ -36,7 +36,6 @@ function brew_install() {
   _maybe_brew_cask_install "db-browser-for-sqlite" # simple sqlite db explorer 
   _maybe_brew_cask_install "lookin" # better alternative to Xcode view debugger 
   _maybe_brew_cask_install "keyboardcleantool" # app to lock keyboard while cleanin it up
-  _maybe_brew_cask_install "michaelvillar-timer" # minimal timer app
   _maybe_brew_cask_install "calibre" # e-books editor
   _maybe_brew_cask_install "licecap" # cool screen recorder to make lightweight gifs for you project and/or arcicles
 
@@ -45,12 +44,9 @@ function brew_install() {
   _maybe_brew_install "ripgrep" # better grep
   _maybe_brew_install "fd" # better find
   _maybe_brew_install "tealdeer" # better tldr
-  _maybe_brew_install "jq" # json processor
-  _maybe_brew_install "shellcheck" # tool for static analysis of shellscript
   _maybe_brew_install "bat" # beautiful printing directly to terminal
   _maybe_brew_install "exa" # modern ls replacement
   _maybe_brew_install "httpie" # fancy curl
-  _maybe_brew_install "gh" # working with github from cli
   _maybe_brew_install "coreutils" # some linux utils that now available by default on macOS
   _maybe_brew_install "gnupg" # gpg
   _maybe_brew_install "fzf" && $(brew --prefix)/opt/fzf/install # fuzzy search 
