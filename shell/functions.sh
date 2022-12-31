@@ -213,7 +213,7 @@ function mcd() {
   local dir
   dir="$1"
   if [ -n "$dir" ]; then
-    m "$dir"
+    md "$dir"
     cd "$dir" || return "$ERROR_CODE"
   else
     _print_error "Directory name should not be empty"

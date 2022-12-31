@@ -3,7 +3,7 @@
 # General
 alias cd="z"
 alias icd="zi"
-alias m="mkdir -p"
+alias md="mkdir -p"
 alias mv="mv -iv"
 alias cp="cp -riv"
 alias ls="exa"
