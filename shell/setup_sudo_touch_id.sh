@@ -10,7 +10,7 @@ sudo_file="/etc/pam.d/sudo"
 if grep -q "pam_tid.so" "$sudo_file"; then
   _print_warning "Touch ID for 'sudo' already configured"
 else
-  # lines after are aligned this way becouse otherwise lines inserted with spacing at the beggining :c
+  # lines after are aligned this way because otherwise lines inserted with spacing at the beginning :c
   sed -i '' '1a\
 auth       sufficient     pam_tid.so\
 ' "$sudo_file"
