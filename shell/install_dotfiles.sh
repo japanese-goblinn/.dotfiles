@@ -38,6 +38,9 @@ function brew_install() {
   _maybe_brew_cask_install "keyboardcleantool" # app to lock keyboard while cleanin it up
   _maybe_brew_cask_install "calibre" # e-books editor
   _maybe_brew_cask_install "licecap" # cool screen recorder to make lightweight gifs for you project and/or arcicles
+  _maybe_brew_cask_install "imageoptim" # image compressor
+  _maybe_brew_cask_install "dozer" # Hide items from menu item
+  _maybe_brew_cask_install "deepl" # AI translator
 
   # cli 
   _maybe_brew_install "mas" # download apps from app store 
@@ -53,6 +56,7 @@ function brew_install() {
   _maybe_brew_install "tree" # print tree of directories structure
   _maybe_brew_install "git-delta" # syntax-highlighting pager for git, diff, and grep output
   _maybe_brew_install "zoxide" # better cd https://github.com/ajeetdsouza/zoxide
+  _maybe_brew_install "ncdu" # show disc usage 
 
   _maybe_brew_cask_install "karabiner-elements" # remap your keyboard
   _maybe_brew_install "yqrashawn/goku/goku" # DSL for karabiner
