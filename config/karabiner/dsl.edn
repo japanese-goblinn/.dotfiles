@@ -39,6 +39,7 @@
             [:m :!TSm]                      ; toggle Spotify (m for music)
             [:o :!TSo]                      ; toggle Obsidian
             [:r :!TSr]                      ; toggle Things (r for reminders)
+            [:l :!TSl]                      ; toggle Logseq
             [:s :!TSs]                      ; toggle Sublime Text
             [:t :!TSt]                      ; toggle Telegram
             [:v :!TSv]                      ; toggle Clipboard Manager
