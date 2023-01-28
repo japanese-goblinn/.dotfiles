@@ -40,7 +40,6 @@
 	"show_definitions": false,
 	"ignored_packages":
 	[
-		"Markdown",
 		"Vintage",
 	],
 	"added_words":
