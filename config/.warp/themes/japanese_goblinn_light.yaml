@@ -5,13 +5,13 @@ accent: "#55BEF0"
 terminal_colors:
   normal:
     white: "#1A1A1A"
-    yellow: "#1A1A1A"
+    yellow: "#FFCC00"
     blue: "#1A1A1A"
     magenta: "#1A1A1A"
     black: "#1A1A1A"
     cyan: "#1A1A1A"
-    green: "#1A1A1A"
-    red: "#1A1A1A"
+    green: "#28CD41"
+    red: "#FF3B30"
   bright:
     black: "#8e8e8e"
     red: "#ffc4bd"
