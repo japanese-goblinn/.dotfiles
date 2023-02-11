@@ -35,7 +35,8 @@
             [:d :!TSd]                      ; toggle Dash
             [:e :!TSe]                      ; toggle dEepL (translator)
             [:i :!TSi]                      ; toggle fInder 
-            [:f :!TSf]                      ; toggle Fork (g for git)
+            [:f :!TSf]                      ; toggle Fork
+            [:g :!TSg]                      ; toggle ChatGPT (g for GPT)
             [:m :!TSm]                      ; toggle Spotify (m for music)
             [:o :!TSo]                      ; toggle Obsidian
             [:r :!TSr]                      ; toggle Things (r for reminders)
