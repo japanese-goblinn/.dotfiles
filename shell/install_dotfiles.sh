@@ -64,6 +64,7 @@ function brew_install() {
   # App Store 
   _mas_install "1569600264" # Pandan. Time Tracking app
   _mas_install "1529448980" # Reeder. RSS client
+  _mas_install "1545870783" # System Color Picker. Color picker with great UX
 
   # only arm mac's support iPhone/iPad apps
   if [[ "$( uname -a )" == *"arm"* ]]; then  
