@@ -38,7 +38,6 @@ function brew_install() {
   _maybe_brew_cask_install "keyboardcleantool" # app to lock keyboard while cleanin it up
   _maybe_brew_cask_install "calibre" # e-books editor
   _maybe_brew_cask_install "licecap" # cool screen recorder to make lightweight gifs for you project and/or arcicles
-  _maybe_brew_cask_install "imageoptim" # image compressor
   _maybe_brew_cask_install "dozer" # Hide items from menu item
   _maybe_brew_cask_install "deepl" # AI translator
 
