@@ -31,12 +31,12 @@
     {:des "map caps_lock hold to option+shift+<key>. option+shift+<key> map is happening in Raycast",
      :rules [:hyper-mode 
             [:a :!TSa]                      ; toggle Arc
+            [:b :!TSb]                      ; toggle MusicBox (b for box)
             [:c :!TSc]                      ; toggle Calendar
             [:d :!TSd]                      ; toggle Dash
             [:e :!TSe]                      ; toggle dEepL (translator)
             [:i :!TSi]                      ; toggle fInder 
             [:f :!TSf]                      ; toggle Fork
-            [:g :!TSg]                      ; toggle ChatGPT (g for GPT)
             [:m :!TSm]                      ; toggle Spotify (m for music)
             [:o :!TSo]                      ; toggle Obsidian
             [:r :!TSr]                      ; toggle Things (r for reminders)
