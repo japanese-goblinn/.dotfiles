@@ -16,9 +16,9 @@ function brew_install() {
     /bin/bash -c "$( curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh )" 
   fi
   
-  # GUI apps 
-  _maybe_brew_cask_install "raycast" # best relacement of spotlight and smol tools
+  # GUI Apps 
   _maybe_brew_cask_install "arc" # best browser
+  _maybe_brew_cask_install "raycast" # best relacement of spotlight and smol tools
   _maybe_brew_cask_install "iina" # best video player
   _maybe_brew_cask_install "telegram" # best messanger
   _maybe_brew_cask_install "warp" # best terminal 
@@ -45,7 +45,16 @@ function brew_install() {
   _maybe_brew_cask_install "onyx" # system junk cleanup (like clean my mac but free)
   _maybe_brew_cask_install "ilya-birman-typography-layout" # [Типографская раскладка Ильи Бирмана](https://ilyabirman.ru/typography-layout/)
 
-  # cli 
+  # App Store 
+  _mas_install "904280696"  # Things 3. Task manager
+  _mas_install "1569600264" # Pandan. Time Tracking app
+  _mas_install "1529448980" # Reeder. RSS client
+  _mas_install "1614730313" # MusicBox. Read it later for music
+  _mas_install "1380446739" # Injection III. Hot reload for iOS and macOS (UIKit, SwiftUI)
+  _mas_install "1614730313" # MusicBox. Save music for later for Spotify etc.
+  _mas_install "888422857"  # Overcast. Podcast player
+
+  # Command Line Utils
   _maybe_brew_install "mas" # download apps from app store 
   _maybe_brew_install "ripgrep" # better grep
   _maybe_brew_install "fd" # better find
@@ -63,19 +72,6 @@ function brew_install() {
 
   _maybe_brew_cask_install "karabiner-elements" # remap your keyboard
   _maybe_brew_install "yqrashawn/goku/goku" # DSL for karabiner
-
-  # App Store 
-  _mas_install "904280696"  # Things 3. Task manager
-  _mas_install "1569600264" # Pandan. Time Tracking app
-  _mas_install "1529448980" # Reeder. RSS client
-  _mas_install "1614730313" # MusicBox. Read it later for music
-  _mas_install "1380446739" # Injection III. Hot reload for iOS and macOS (UIKit, SwiftUI)
-  _mas_install "1614730313" # MusicBox. Save music for later for Spotify etc.
-
-  # only arm mac's support iPhone/iPad apps
-  if [[ "$( uname -a )" == *"arm"* ]]; then  
-    _mas_install "888422857" # Overcast. Podcast player
-  fi
 }
 
 function tools_install() {
