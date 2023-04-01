@@ -18,19 +18,19 @@ function brew_install() {
   
   # GUI apps 
   _maybe_brew_cask_install "raycast" # best relacement of spotlight and smol tools
+  _maybe_brew_cask_install "arc" # best browser
   _maybe_brew_cask_install "iina" # best video player
   _maybe_brew_cask_install "telegram" # best messanger
-  _maybe_brew_cask_install "airbuddy" # better airpods experience 
   _maybe_brew_cask_install "warp" # best terminal 
-  _maybe_brew_cask_install "fork" # amazing git client
-  _maybe_brew_cask_install "sublime-text" # amazing text editor
+  _maybe_brew_cask_install "fork" # best git client
+  _maybe_brew_cask_install "sublime-text" # best text editor
+  _maybe_brew_cask_install "airbuddy" # better airpods experience 
   _maybe_brew_cask_install "visual-studio-code" 
+  _maybe_brew_cask_install "zed" # maybe a replace for sublime and poverful as vscode
   _maybe_brew_cask_install "paw" # api tool (http client and more)
-  _maybe_brew_cask_install "transmission" # torrent client 
-  _maybe_brew_cask_install "discord"
-  _maybe_brew_cask_install "slack"
   _maybe_brew_cask_install "dash" # search docks like a king
-  _maybe_brew_cask_install "obsidian" # knowledge base editor
+  _maybe_brew_cask_install "logseq" # my main knowledge base editor
+  _maybe_brew_cask_install "obsidian" # additional knowledge base editor
   _maybe_brew_cask_install "spotify" # music
   _maybe_brew_cask_install "xcodes" # quick install and manage Xcode (using this not cli becouse CLI is building from source and needs xcode already installed to succeed)
   _maybe_brew_cask_install "db-browser-for-sqlite" # simple sqlite db explorer 
@@ -38,8 +38,12 @@ function brew_install() {
   _maybe_brew_cask_install "keyboardcleantool" # app to lock keyboard while cleanin it up
   _maybe_brew_cask_install "calibre" # e-books editor
   _maybe_brew_cask_install "licecap" # cool screen recorder to make lightweight gifs for you project and/or arcicles
-  _maybe_brew_cask_install "dozer" # Hide items from menu item
+  _maybe_brew_cask_install "dozer" # hide items from menu item
   _maybe_brew_cask_install "deepl" # AI translator
+  _maybe_brew_cask_install "trex" # image to text recognision (bind it to cmd+shift+7 to make screenshot → regonize, and cmd+shift+8 to recognize from image in clipboard)
+  _maybe_brew_cask_install "pika" # open source native color picker
+  _maybe_brew_cask_install "onyx" # system junk cleanup (like clean my mac but free)
+  _maybe_brew_cask_install "ilya-birman-typography-layout" # [Типографская раскладка Ильи Бирмана](https://ilyabirman.ru/typography-layout/)
 
   # cli 
   _maybe_brew_install "mas" # download apps from app store 
@@ -55,15 +59,18 @@ function brew_install() {
   _maybe_brew_install "tree" # print tree of directories structure
   _maybe_brew_install "git-delta" # syntax-highlighting pager for git, diff, and grep output
   _maybe_brew_install "zoxide" # better cd https://github.com/ajeetdsouza/zoxide
-  _maybe_brew_install "ncdu" # show disc usage 
+  _maybe_brew_install "jid" # interactive jq (tool to process JSON)
 
   _maybe_brew_cask_install "karabiner-elements" # remap your keyboard
   _maybe_brew_install "yqrashawn/goku/goku" # DSL for karabiner
 
   # App Store 
+  _mas_install "904280696"  # Things 3. Task manager
   _mas_install "1569600264" # Pandan. Time Tracking app
   _mas_install "1529448980" # Reeder. RSS client
-  _mas_install "1545870783" # System Color Picker. Color picker with great UX
+  _mas_install "1614730313" # MusicBox. Read it later for music
+  _mas_install "1380446739" # Injection III. Hot reload for iOS and macOS (UIKit, SwiftUI)
+  _mas_install "1614730313" # MusicBox. Save music for later for Spotify etc.
 
   # only arm mac's support iPhone/iPad apps
   if [[ "$( uname -a )" == *"arm"* ]]; then  
