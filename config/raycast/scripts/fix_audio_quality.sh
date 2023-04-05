@@ -2,7 +2,7 @@
 
 # @raycast.schemaVersion 1
 # @raycast.icon 🔈
-# @raycast.title Fix Sound Quality
+# @raycast.title Fix Audio Quality
 # @raycast.packageName Utils
 # @raycast.mode silent
 
