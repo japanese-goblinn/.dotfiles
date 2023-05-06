@@ -47,6 +47,8 @@
             [:w :!TSw]                      ; toggle Warp
             [:x :!TSx]                      ; toggle Xcode
             [:p :!TSp]                      ; toggle System Preferences/Passwords
+            [:h :!TOCh]                     ; toggle Flow (pomodoro timer)
             [:right_command :!Tspacebar]    ; toggle Search Menu Items in Raycast
             [:right_option :!TOspacebar]    ; quick add to Things
+            [:left_option :!TOCspacebar]    ; toggle Contexts search (change this to caps+right_cmg when figure out double press to change language)
       ]}]}
