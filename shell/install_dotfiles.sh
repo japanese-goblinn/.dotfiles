@@ -40,10 +40,9 @@ function brew_install() {
   _maybe_brew_cask_install "licecap" # cool screen recorder to make lightweight gifs for you project and/or arcicles
   _maybe_brew_cask_install "dozer" # hide items from menu item
   _maybe_brew_cask_install "deepl" # AI translator
-  _maybe_brew_cask_install "trex" # image to text recognision (bind it to cmd+shift+7 to make screenshot → regonize, and cmd+shift+8 to recognize from image in clipboard)
-  _maybe_brew_cask_install "pika" # open source native color picker
   _maybe_brew_cask_install "onyx" # system junk cleanup (like clean my mac but free)
   _maybe_brew_cask_install "ilya-birman-typography-layout" # [Типографская раскладка Ильи Бирмана](https://ilyabirman.ru/typography-layout/)
+  _maybe_brew_cask_install "shottr" # best screenshot tool (with color picker, text recognision and more)
 
   # App Store 
   _mas_install "904280696"  # Things 3. Task manager
