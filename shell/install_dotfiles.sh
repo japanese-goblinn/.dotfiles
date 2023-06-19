@@ -43,6 +43,8 @@ function brew_install() {
   _maybe_brew_cask_install "onyx" # system junk cleanup (like clean my mac but free)
   _maybe_brew_cask_install "ilya-birman-typography-layout" # [Типографская раскладка Ильи Бирмана](https://ilyabirman.ru/typography-layout/)
   _maybe_brew_cask_install "shottr" # best screenshot tool (with color picker, text recognision and more)
+  _maybe_brew_cask_install "fliqlo" # clock screensaver
+  _maybe_brew_cask_install "keycastr" # keystroke visualizer
 
   # App Store 
   _mas_install "904280696"  # Things 3. Task manager
