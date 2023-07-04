@@ -11,6 +11,8 @@
 	"light_color_scheme": "GitHub Light.sublime-color-scheme",
 	"dark_color_scheme": "GitHub Dark.sublime-color-scheme",
 	
+	"tab_size": 2,
+
 	"show_rel_path": true,
 
 	"scroll_past_end": 0.6,
