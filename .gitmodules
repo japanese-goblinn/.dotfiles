@@ -1,6 +1,0 @@
-[submodule "dependencies/xcode_theme"]
-	path = dependencies/xcode_theme
-	url = https://github.com/cntrump/xcode-github-theme.git
-[submodule "dependencies/zsh-you-should-use"]
-	path = dependencies/zsh-you-should-use
-	url = https://github.com/MichaelAquilina/zsh-you-should-use.git

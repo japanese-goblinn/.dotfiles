@@ -12,8 +12,6 @@ source "$SHELL_CONFIG_PATH/functions.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source "$DOTFILES_DEPENDECIES_PATH/zsh-you-should-use/you-should-use.plugin.zsh"
-
 # node version manager
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] \
   && printf %s "${HOME}/.nvm" \
