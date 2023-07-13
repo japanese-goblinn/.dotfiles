@@ -54,6 +54,7 @@ function brew_install() {
   _mas_install "1380446739" # Injection III. Hot reload for iOS and macOS (UIKit, SwiftUI)
   _mas_install "1614730313" # MusicBox. Save music for later for Spotify etc.
   _mas_install "888422857"  # Overcast. Podcast player
+  _mas_install "1629008763" # Little Snitch Mini. Monitor where apps sends their requests and block suspicious one 😑
 
   # Command Line Utils
   _maybe_brew_install "mas" # download apps from app store 
