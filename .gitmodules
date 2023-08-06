@@ -1,0 +1,3 @@
+[submodule "config/.warp/themes"]
+	path = config/.warp/themes
+	url = https://github.com/japanese-goblinn/warp-theme.git
