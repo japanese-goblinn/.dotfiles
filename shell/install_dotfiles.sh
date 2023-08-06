@@ -26,11 +26,10 @@ function brew_install() {
   _maybe_brew_cask_install "sublime-text" # best text editor
   _maybe_brew_cask_install "airbuddy" # better airpods experience 
   _maybe_brew_cask_install "visual-studio-code" 
-  _maybe_brew_cask_install "zed" # maybe a replace for sublime and poverful as vscode
+  _maybe_brew_cask_install "zed" # maybe a replace for sublime and powerful as vscode
   _maybe_brew_cask_install "paw" # api tool (http client and more)
   _maybe_brew_cask_install "dash" # search docks like a king
   _maybe_brew_cask_install "logseq" # my main knowledge base editor
-  _maybe_brew_cask_install "obsidian" # additional knowledge base editor
   _maybe_brew_cask_install "spotify" # music
   _maybe_brew_cask_install "xcodes" # quick install and manage Xcode (using this not cli becouse CLI is building from source and needs xcode already installed to succeed)
   _maybe_brew_cask_install "db-browser-for-sqlite" # simple sqlite db explorer 
@@ -43,16 +42,13 @@ function brew_install() {
   _maybe_brew_cask_install "onyx" # system junk cleanup (like clean my mac but free)
   _maybe_brew_cask_install "ilya-birman-typography-layout" # [Типографская раскладка Ильи Бирмана](https://ilyabirman.ru/typography-layout/)
   _maybe_brew_cask_install "shottr" # best screenshot tool (with color picker, text recognision and more)
-  _maybe_brew_cask_install "fliqlo" # clock screensaver
   _maybe_brew_cask_install "keycastr" # keystroke visualizer
 
   # App Store 
   _mas_install "904280696"  # Things 3. Task manager
   _mas_install "1569600264" # Pandan. Time Tracking app
   _mas_install "1529448980" # Reeder. RSS client
-  _mas_install "1614730313" # MusicBox. Read it later for music
   _mas_install "1380446739" # Injection III. Hot reload for iOS and macOS (UIKit, SwiftUI)
-  _mas_install "1614730313" # MusicBox. Save music for later for Spotify etc.
   _mas_install "888422857"  # Overcast. Podcast player
   _mas_install "1629008763" # Little Snitch Mini. Monitor where apps sends their requests and block suspicious one 😑
 
