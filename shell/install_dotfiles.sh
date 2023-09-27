@@ -52,6 +52,7 @@ function brew_install() {
   _mas_install "1380446739" # Injection III. Hot reload for iOS and macOS (UIKit, SwiftUI)
   _mas_install "888422857"  # Overcast. Podcast player
   _mas_install "1629008763" # Little Snitch Mini. Monitor where apps sends their requests and block suspicious one 😑
+  _mas_install "1006739057" # NepTunes. last.fm scrobber
 
   # Command Line Utils
   _maybe_brew_install "mas" # download apps from app store 
@@ -68,9 +69,12 @@ function brew_install() {
   _maybe_brew_install "git-delta" # syntax-highlighting pager for git, diff, and grep output
   _maybe_brew_install "zoxide" # better cd https://github.com/ajeetdsouza/zoxide
   _maybe_brew_install "jid" # interactive jq (tool to process JSON)
+  _maybe_brew_install "ffmpeg" # video processing tool
 
   _maybe_brew_cask_install "karabiner-elements" # remap your keyboard
   _maybe_brew_install "yqrashawn/goku/goku" # DSL for karabiner
+
+  _maybe_brew_install "blackhole-2ch" # virtual audio channel. redirect simulator audio ouput here to get rid of speaker cracking on playing audio while running something of simulator
 }
 
 function tools_install() {
