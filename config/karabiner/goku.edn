@@ -32,8 +32,7 @@
             [:spacebar :!OTSspacebar]       ; toggle Raycast
             [:left_command :!CTOSspacebar]  ; change input source
 												[:right_command :!Tspacebar]    ; toggle Search Menu Items in Raycast
-            [:right_option :!TOspacebar]    ; quick add to Things
-            [:left_option :!TOCspacebar]    ; toggle Contexts search (change this to caps+right_cmg when figure out double press to change language)
+            [:right_option :!TOCspacebar]    ; toggle Contexts search (change this to caps+right_cmg when figure out double press to change language)
      ]}
     {:des "map caps_lock hold to option+shift+<key>. option+shift+<key> map is happening in Raycast",
      :rules [:hyper-mode 
