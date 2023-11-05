@@ -197,6 +197,7 @@ setup_xcode
 _print_warning "\nSettings -> Trackpad -> More Gestures -> App Exposé"
 _print_warning "Settings -> Keyboard -> Shortcuts -> Mission Control -> Disable 'Move left/right a space'"
 _print_warning "Install Universal Layout https://github.com/tonsky/Universal-Layout/releases"
+_print_warning "Install Inteli Bar https://github.com/intellibar/main/releases"
 
 _print_warning "\nSome defaults can be applied only after restart" 
 _print_warning "Do you want to restart your mac now? (y)"

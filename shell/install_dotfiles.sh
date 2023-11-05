@@ -42,6 +42,7 @@ function brew_install() {
   _maybe_brew_cask_install "keycastr" # keystroke visualizer
   _maybe_brew_cask_install "imageoptim" # image compressor
   _maybe_brew_cask_install "nota" # knowlege base notes
+  _maybe_brew_cask_install "contexts" # window switcher
 
   # App Store 
   _mas_install "904280696"  # Things 3. Task manager
