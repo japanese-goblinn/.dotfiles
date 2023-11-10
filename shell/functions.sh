@@ -204,7 +204,7 @@ function t() {
 function tc() {
   local dir
   dir="$( pwd )"
-  cd ../
+  cd ..
   t "$dir"
 }
 

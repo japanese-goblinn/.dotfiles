@@ -44,16 +44,6 @@ function brew_install() {
   _maybe_brew_cask_install "nota" # knowlege base notes
   _maybe_brew_cask_install "contexts" # window switcher
 
-  # App Store 
-  _mas_install "904280696"  # Things 3. Task manager
-  _mas_install "1569600264" # Pandan. Time Tracking app
-  _mas_install "1529448980" # Reeder. RSS client
-  _mas_install "1380446739" # Injection III. Hot reload for iOS and macOS (UIKit, SwiftUI)
-  _mas_install "1006739057" # NepTunes. last.fm scrobber
-  _mas_install "405399194" # Kindle App
-  _mas_install "963034692" # Streaks. Habbit’s tracker app
-  _mas_install "1423210932" # Flow. Pomodoro app
-
   # Command Line Utils
   _maybe_brew_install "mas" # download apps from app store 
   _maybe_brew_install "ripgrep" # better grep
@@ -75,6 +65,16 @@ function brew_install() {
   _maybe_brew_install "yqrashawn/goku/goku" # DSL for karabiner
 
   _maybe_brew_install "blackhole-2ch" # virtual audio channel. redirect simulator audio ouput here to get rid of speaker cracking on playing audio while running something of simulator
+
+    # App Store 
+  _mas_install "904280696"  # Things 3. Task manager
+  _mas_install "1569600264" # Pandan. Time Tracking app
+  _mas_install "1529448980" # Reeder. RSS client
+  _mas_install "1380446739" # Injection III. Hot reload for iOS and macOS (UIKit, SwiftUI)
+  _mas_install "1006739057" # NepTunes. last.fm scrobber
+  _mas_install "405399194" # Kindle App
+  _mas_install "963034692" # Streaks. Habbit’s tracker app
+  _mas_install "1423210932" # Flow. Pomodoro app
 }
 
 function tools_install() {
@@ -82,9 +82,6 @@ function tools_install() {
 
   # rust
   curl --proto '=https' --tlsv1.2 -sSf "https://sh.rustup.rs" | sh
-
-  # xcode
-  xcodes install --latest
 }
 
 function configs_install() {
@@ -106,7 +103,7 @@ function configs_install() {
   ln -sF "$VSCODE_PATH/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
   ln -sF "$VSCODE_PATH/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
     
-  # color picker
+  # color pickerw
   cp "$DOTFILES_CONFIG_PATH/color_picker/Color Picker.app" "/Applications"
 
   # sublime 
@@ -129,10 +126,15 @@ function additional_setup() {
   
   _print_warning "'SF Mono' install needed" 
   _print_warning "'raycast config' import needed"
+  _print_warning "Settings -> Trackpad -> More Gestures -> App Exposé"
+  _print_warning "Settings -> Keyboard -> Shortcuts -> Mission Control -> Disable 'Move left/right a space'"
+  _print_warning "Settings -> Keyboard -> Shortcuts -> Input Sources -> Change to shortuct from karabiner config"
+  _print_warning "Install Universal Layout https://github.com/tonsky/Universal-Layout/releases"
+  _print_warning "Install Inteli Bar https://github.com/intellibar/main/releases"
 
   # Generate ssh key
   (
-    cd ~/.ssh \
+    mkdir -p ~/.ssh && cd "$_" \
       && ssh-keygen -t ecdsa -C "cool45akol@gmail.com" \
       && cat id_ecdsa.pub | pbcopy \
       && _print_warning "Go to https://github.com/settings/keys and register SSH key from pasteboard"
@@ -147,6 +149,7 @@ dotfiles_install
 brew_install
 tools_install
 configs_install
+additional_setup
 
 source "$HOME/.zshrc"
 
