@@ -43,6 +43,7 @@ function brew_install() {
   _maybe_brew_cask_install "imageoptim" # image compressor
   _maybe_brew_cask_install "nota" # knowlege base notes
   _maybe_brew_cask_install "contexts" # window switcher
+  _maybe_brew_cask_install "the-unarchiver" 
 
   # Command Line Utils
   _maybe_brew_install "mas" # download apps from app store 

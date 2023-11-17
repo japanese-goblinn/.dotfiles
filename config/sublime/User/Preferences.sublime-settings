@@ -8,8 +8,8 @@
 
 	"theme": "Adaptive.sublime-theme",
 	"color_scheme": "auto",
-	"light_color_scheme": "GitHub Light.sublime-color-scheme",
-	"dark_color_scheme": "GitHub Dark.sublime-color-scheme",
+	"light_color_scheme": "Alabaster.sublime-color-scheme",
+	"dark_color_scheme": "Alabaster Dark.sublime-color-scheme",
 	
 	"tab_size": 2,
 

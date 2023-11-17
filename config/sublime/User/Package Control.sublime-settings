@@ -5,8 +5,8 @@
 	],
 	"installed_packages":
 	[
+		"Alabaster Color Scheme",
 		"AlignTab",
-		"GitHub Theme",
 		"MarkdownEditing",
 		"Package Control",
 		"PackageResourceViewer",

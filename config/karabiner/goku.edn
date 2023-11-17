@@ -15,9 +15,9 @@
    :hyper-mode {:key :caps_lock :alone {:key :escape}} 
   }
   :main [
-    {:des "disbale some keystrokes"
+    {:des "disable escape, use caps_lock instead"
      :rules [
-            [:escape :vk_none] ; disable escape, use caps_lock instead
+            [:escape :vk_none] 
      ]}
     {:des "map f4 to left_option+space to toggle Raycast", 
      :rules [
