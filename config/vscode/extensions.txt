@@ -1,9 +1,0 @@
-be5invis.toml
-GitHub.github-vscode-theme
-miguelsolorio.fluent-icons
-ms-vscode.makefile-tools
-rust-lang.rust-analyzer
-sswg.swift-lang
-usernamehw.errorlens
-vadimcn.vscode-lldb
-wingrunr21.vscode-ruby

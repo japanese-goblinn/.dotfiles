@@ -34,6 +34,32 @@ function setup_global() {
 
   # Set date-time format in menumar
   defaults write com.apple.menuextra.clock DateFormat -string "HH:mm"
+
+  # disable "Application Downloaded from Internet" popup
+  defaults write com.apple.LaunchServices "LSQuarantine" -bool "false"
+
+  # expand panel that appear on "Save As..." by default
+  defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+  defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+  # expand panel that appear on "Print..." by default
+  defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+  defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
+  # disable automatic capitalization
+  defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+
+  # disable smart dashes
+  defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+  # disable automatic period substitution 
+  defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+
+  # disable smart quotes
+  defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
+  # disable auto-correct
+  defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 }
 
 # Finder
@@ -94,7 +120,7 @@ function setup_dock() {
   # Set magnification effect
   defaults write com.apple.dock magnification -bool yes
   # Set magnification dock size
-  defaults write com.apple.dock largesize -float 72
+  defaults write com.apple.dock largesize -float 82
   
   # Disable ability to resize dock
   defaults write com.apple.Dock size-immutable -bool yes
@@ -109,7 +135,7 @@ function setup_dock() {
   defaults write com.apple.dock showhidden -bool true
 }
 
-# SAFARI
+# Safari
 function setup_safari() {
   _print_info "\nRunning Safari setup phase..."
   

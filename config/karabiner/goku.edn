@@ -19,11 +19,11 @@
      :rules [
             [:escape :vk_none] 
      ]}
-    {:des "map f4 to left_option+space to toggle Raycast", 
+    {:des "map f4 to left_option+space to toggle Raycast"
      :rules [
             [:f4 :!OTSspacebar]
      ]}
-     {:des "map f6 to lock screen in Raycast", 
+     {:des "map f6 to lock screen in Raycast"
      :rules [
             [:f6 :!TOCl]
      ]}
@@ -34,19 +34,17 @@
 												[:right_command :!Tspacebar]    ; toggle Search Menu Items in Raycast
             [:right_option :!TOCspacebar]    ; toggle Contexts search (change this to caps+right_cmg when figure out double press to change language)
      ]}
-    {:des "map caps_lock hold to option+shift+<key>. option+shift+<key> map is happening in Raycast",
+    {:des "map caps_lock hold to ctrl+shift+<key>. ctrl+shift+<key> map is happening in Raycast"
      :rules [:hyper-mode 
-            [:a :!TSa]                      ; toggle Arc
-            [:b :!TSb]                      ; toggle MusicBox (b for box)
+            [:a :!TSa]                      ; toggle Safari (a for sAfari)
             [:c :!TSc]                      ; toggle InteliBar - ChatGPT UI (c for ChatGPT)
             [:d :!TSd]                      ; toggle Dash
             [:e :!TSe]                      ; toggle dEepL (translator)
             [:i :!TSi]                      ; toggle fInder 
             [:f :!TSf]                      ; toggle Fork
             [:m :!TSm]                      ; toggle Spotify (m for music)
-            [:o :!TSo]                      ; toggle Obsidian
             [:r :!TSr]                      ; toggle Things (r for reminders)
-            [:l :!TSl]                      ; toggle Logseq
+            [:l :!TSl]                      ; toggle FantastiCal (c for calendar)
             [:s :!TSs]                      ; toggle Sublime Text
             [:t :!TSt]                      ; toggle Telegram
             [:v :!TSv]                      ; toggle Clipboard Manager
@@ -55,4 +53,5 @@
             [:p :!TSp]                      ; toggle System Preferences/Passwords
             [:h :!TOCh]                     ; toggle Flow (pomodoro timer)
             [:n :!TSn]                      ; toggle Nota (notes app)
+            [:b :!TSb]                      ; search Bookmarks (Raindrop)
       ]}]}

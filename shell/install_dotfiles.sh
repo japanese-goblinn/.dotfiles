@@ -17,7 +17,7 @@ function brew_install() {
   fi
   
   # GUI Apps 
-  _maybe_brew_cask_install "arc" # best browser
+  _maybe_brew_cask_install "arc" # chromium browser with cool features
   _maybe_brew_cask_install "raycast" # best relacement of spotlight and smol tools
   _maybe_brew_cask_install "iina" # best video player
   _maybe_brew_cask_install "telegram" # best messanger
@@ -44,6 +44,10 @@ function brew_install() {
   _maybe_brew_cask_install "nota" # knowlege base notes
   _maybe_brew_cask_install "contexts" # window switcher
   _maybe_brew_cask_install "the-unarchiver" 
+  _maybe_brew_cask_install "aldente" # supports battery health
+  _maybe_brew_cask_install "lulu" # Firewall to block unknown outgoing connections
+  _maybe_brew_cask_install "tempbox" # app to create temprorary disposable emails
+  _maybe_brew_cask_install "fantastical" # calendar app 
 
   # Command Line Utils
   _maybe_brew_install "mas" # download apps from app store 
@@ -69,13 +73,16 @@ function brew_install() {
 
     # App Store 
   _mas_install "904280696"  # Things 3. Task manager
-  _mas_install "1569600264" # Pandan. Time Tracking app
   _mas_install "1529448980" # Reeder. RSS client
   _mas_install "1380446739" # Injection III. Hot reload for iOS and macOS (UIKit, SwiftUI)
   _mas_install "1006739057" # NepTunes. last.fm scrobber
   _mas_install "405399194" # Kindle App
   _mas_install "963034692" # Streaks. Habbit’s tracker app
   _mas_install "1423210932" # Flow. Pomodoro app
+  _mas_install "1629008763" # Little Snitch. Network traffic monitor
+  
+  _mas_install "1030595027" # Wipr. Safari ads blocker
+  _mas_install "1432182561" # Cascadea. Safari custom CSS
 }
 
 function tools_install() {
