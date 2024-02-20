@@ -212,10 +212,13 @@ function tc() {
 function mcd() {
   local dir
   dir="$1"
-  command cd
   if [ -n "$dir" ]; then
     md "$dir"
-    cd "$dir" || return "$ERROR_CODE"
+    __zoxide_z "$dir" || return "$ERROR_CODE"
+  else
+    _print_error "Directory name should not be empty"
+  fi
+}
   else
     _print_error "Directory name should not be empty"
   fi
