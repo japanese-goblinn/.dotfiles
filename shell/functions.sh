@@ -219,6 +219,14 @@ function mcd() {
     _print_error "Directory name should not be empty"
   fi
 }
+
+# cd and ll
+function lcd() {
+  local dir
+  dir="$1"
+  if [ -n "$dir" ]; then
+    md "$dir"
+    __zoxide_z "$dir" && ll || return "$ERROR_CODE"
   else
     _print_error "Directory name should not be empty"
   fi
