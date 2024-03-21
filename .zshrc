@@ -21,3 +21,4 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] \
 
 # better cd
 eval "$(zoxide init zsh)"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
