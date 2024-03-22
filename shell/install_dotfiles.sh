@@ -70,6 +70,7 @@ function brew_install() {
   _maybe_brew_install "yqrashawn/goku/goku" # DSL for karabiner
 
   _maybe_brew_install "blackhole-2ch" # virtual audio channel. redirect simulator audio ouput here to get rid of speaker cracking on playing audio while running something of simulator
+  _maybe_brew_cask_install "lychee" # tool to find broken URL’s in document
 
     # App Store 
   _mas_install "904280696"  # Things 3. Task manager
