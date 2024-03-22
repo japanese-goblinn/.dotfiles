@@ -2,7 +2,7 @@
 
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title Current Tab URL
+# @raycast.title Copy Tab URL
 # @raycast.mode silent
 # @raycast.packageName Safari
 # @raycast.icon 🧭

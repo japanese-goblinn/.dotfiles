@@ -2,8 +2,7 @@
 
 # @raycast.schemaVersion 1
 # @raycast.icon 🧭
-# @raycast.title Current Tab To Things Inbox
-# @raycast.description Add current tab with page title and URL to Things.app inbox
+# @raycast.title Add Tab To Things Inbox
 # @raycast.packageName Safari
 # @raycast.mode silent
 
