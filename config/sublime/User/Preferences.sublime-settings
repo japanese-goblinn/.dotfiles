@@ -1,51 +1,21 @@
 // Settings in here override those in "Default/Preferences.sublime-settings",
 // and are overridden in turn by syntax-specific settings.
 {
-	"save_on_focus_lost": true,
-
+	"font_size": 14,
 	"font_face": "Liga SFMono Nerd Font",
-	"font_size": 13,
-
+	
 	"theme": "Adaptive.sublime-theme",
 	"color_scheme": "auto",
 	"light_color_scheme": "Alabaster.sublime-color-scheme",
 	"dark_color_scheme": "Alabaster Dark.sublime-color-scheme",
 	
 	"tab_size": 2,
-
-	"show_rel_path": true,
-
-	"scroll_past_end": 0.6,
-	"typewriter_mode_scrolling" : true,
-
-	// "draw_white_space": "all",
-	// "draw_centered": true,
+	"save_on_focus_lost": true,
+	"index_files": true,
 	"word_wrap": true,
-	// "wrap_width": 80,
 
-	"bold_folder_labels": true,
-
-	"block_caret": false,
-	"caret_extra_width": 1,
-	"caret_extra_top": 2,
-	"caret_extra_bottom": 2,
-
-	"line_padding_top": 2,
-	"line_padding_bottom": 2,
-
-	"hide_tab_scrolling_buttons": true,
-	"hide_new_tab_button": true,
-
-	"auto_complete": true,
-	"auto_complete_commit_on_tab": false, // false to use Enter for completion
-
-	"show_definitions": false,
-	"ignored_packages":
-	[
-		"Vintage",
-	],
-	"added_words":
-	[
-		"swifty"
-	],
+	"show_rel_path": true, // shows full path from project root in title 
+	"bold_folder_labels": true, 
+	"hide_new_tab_button": true, // removes + in tabs 
+	"hide_tab_scrolling_buttons": true, // removes ←→ in tabs
 }
